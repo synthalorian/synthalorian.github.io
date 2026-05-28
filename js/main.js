@@ -8,30 +8,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
+  const closeMobileMenu = () => {
+    navMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    const spans = navToggle.querySelectorAll('span');
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  };
+
   if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       const spans = navToggle.querySelectorAll('span');
-      if (navMenu.classList.contains('open')) {
+      if (isOpen) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
         spans[1].style.opacity = '0';
         spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
       } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
+        closeMobileMenu();
       }
     });
 
     // Close menu when clicking a link
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        const spans = navToggle.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-      });
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Reset mobile menu on resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 600 && navMenu.classList.contains('open')) {
+        closeMobileMenu();
+      }
     });
   }
 
@@ -112,18 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const animateCounter = (el, target, suffix = '') => {
     const duration = 2000;
-    const start = 0;
     const startTime = performance.now();
 
     const update = (currentTime) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const easeOut = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(start + (target - start) * easeOut);
+      const current = Math.floor(target * easeOut);
       el.textContent = current + suffix;
 
       if (progress < 1) {
         requestAnimationFrame(update);
+      } else {
+        el.textContent = target + suffix;
       }
     };
 
@@ -134,12 +144,22 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
-        const text = el.textContent.trim();
-        const numMatch = text.match(/(\d+)/);
-        const suffix = text.replace(/\d+/, '');
+        // Read target from data attribute if already set, otherwise parse once
+        let target = parseInt(el.dataset.counterTarget, 10);
+        let suffix = el.dataset.counterSuffix || '';
 
-        if (numMatch) {
-          const target = parseInt(numMatch[1], 10);
+        if (isNaN(target)) {
+          const text = el.textContent.trim();
+          const numMatch = text.match(/(\d+)/);
+          suffix = text.replace(/\d+/, '');
+          if (numMatch) {
+            target = parseInt(numMatch[1], 10);
+          }
+          el.dataset.counterTarget = target;
+          el.dataset.counterSuffix = suffix;
+        }
+
+        if (!isNaN(target)) {
           el.textContent = '0' + suffix;
           animateCounter(el, target, suffix);
         }
