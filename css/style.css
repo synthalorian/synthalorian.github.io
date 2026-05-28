@@ -145,6 +145,154 @@ button:focus-visible {
 }
 
 /* ---------------------------------------------------------
+   THEME TOGGLE
+   --------------------------------------------------------- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  backdrop-filter: blur(8px);
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 16px rgba(3, 237, 249, 0.15);
+  transform: rotate(12deg);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+  position: absolute;
+  transition: var(--transition-smooth);
+}
+
+/* Default (synthwave84) shows moon icon (switch to light) */
+html[data-theme="synthwave84"] .theme-icon-sun,
+html[data-theme="cyberlight"] .theme-icon-moon {
+  opacity: 0;
+  transform: scale(0.5) rotate(-45deg);
+  pointer-events: none;
+}
+
+html[data-theme="synthwave84"] .theme-icon-moon,
+html[data-theme="cyberlight"] .theme-icon-sun {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* ---------------------------------------------------------
+   CYBERLIGHT THEME — Alternate (soft purple-tinted light)
+   --------------------------------------------------------- */
+html[data-theme="cyberlight"] {
+  --bg-deep: #f5f0ff;
+  --bg-dark: #ede6f8;
+  --bg-card: rgba(255, 255, 255, 0.72);
+  --bg-card-hover: rgba(255, 255, 255, 0.88);
+  --bg-glass: rgba(245, 240, 255, 0.65);
+
+  --text-bright: #1a0d2e;
+  --text-primary: #2d1b4e;
+  --text-secondary: #5a4080;
+  --text-muted: #8b70b0;
+
+  --accent-purple: #7a00e0;
+  --accent-purple-bright: #9a30ff;
+  --accent-purple-glow: rgba(122, 0, 224, 0.3);
+  --accent-purple-soft: rgba(122, 0, 224, 0.08);
+
+  --accent-yellow: #d4c000;
+  --accent-yellow-glow: rgba(212, 192, 0, 0.3);
+  --accent-yellow-soft: rgba(212, 192, 0, 0.08);
+
+  --accent-pink: #d00060;
+  --accent-pink-bright: #e04080;
+  --accent-pink-glow: rgba(208, 0, 96, 0.3);
+  --accent-pink-soft: rgba(208, 0, 96, 0.08);
+
+  --accent-cyan: #00a0a8;
+  --accent-cyan-bright: #00c8d0;
+  --accent-cyan-glow: rgba(0, 160, 168, 0.3);
+  --accent-cyan-soft: rgba(0, 160, 168, 0.08);
+
+  --accent-magenta: #c000c0;
+  --accent-magenta-glow: rgba(192, 0, 192, 0.3);
+
+  --accent-red: #d00030;
+  --accent-blue: #0060c0;
+
+  --dark-purple: #e0d4f0;
+  --mid-purple: #a080c8;
+
+  --border-subtle: rgba(122, 0, 224, 0.1);
+  --border-hover: rgba(122, 0, 224, 0.25);
+  --border-cyan: rgba(0, 160, 168, 0.12);
+
+  --shadow-glow-purple: 0 0 40px rgba(122, 0, 224, 0.12);
+  --shadow-glow-pink: 0 0 40px rgba(208, 0, 96, 0.12);
+  --shadow-glow-cyan: 0 0 40px rgba(0, 160, 168, 0.12);
+  --shadow-glow-yellow: 0 0 40px rgba(212, 192, 0, 0.1);
+  --shadow-card: 0 12px 48px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme="cyberlight"] body {
+  background: linear-gradient(180deg, #f5f0ff 0%, #ede6f8 100%);
+}
+
+html[data-theme="cyberlight"] .navbar {
+  background: rgba(245, 240, 255, 0.9);
+  border-bottom-color: rgba(122, 0, 224, 0.08);
+}
+
+html[data-theme="cyberlight"] .navbar.scrolled {
+  background: rgba(245, 240, 255, 0.98);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 0 20px rgba(122,0,224,0.04);
+}
+
+html[data-theme="cyberlight"] .nav-menu {
+  background: rgba(245, 240, 255, 0.98);
+}
+
+html[data-theme="cyberlight"] .hero-stars {
+  opacity: 0.35;
+}
+
+html[data-theme="cyberlight"] .hero-sun {
+  opacity: 0.6;
+}
+
+html[data-theme="cyberlight"] .hero-grid-floor {
+  opacity: 0.4;
+}
+
+html[data-theme="cyberlight"] .hero-vignette {
+  background: radial-gradient(ellipse at center, transparent 30%, var(--bg-deep) 85%);
+}
+
+html[data-theme="cyberlight"] .hero-scanlines {
+  opacity: 0.15;
+}
+
+html[data-theme="cyberlight"] .section::before {
+  opacity: 0.15;
+}
+
+/* ---------------------------------------------------------
    NAVIGATION
    --------------------------------------------------------- */
 .navbar {
@@ -813,11 +961,155 @@ button:focus-visible {
 .project-icon svg {
   width: 24px;
   height: 24px;
+  overflow: visible;
+}
+
+/* ===== Project Icon Animations ===== */
+
+/* Waveform bars bounce */
+.icon-synth svg path {
+  transform-origin: center bottom;
+  animation: barBounce 1.6s ease-in-out infinite;
+}
+.icon-synth svg path:nth-child(1) { animation-delay: 0.0s; }
+.icon-synth svg path:nth-child(2) { animation-delay: 0.15s; }
+.icon-synth svg path:nth-child(3) { animation-delay: 0.3s; }
+.icon-synth svg path:nth-child(4) { animation-delay: 0.45s; }
+.icon-synth svg path:nth-child(5) { animation-delay: 0.6s; }
+.icon-synth svg path:nth-child(6) { animation-delay: 0.75s; }
+
+@keyframes barBounce {
+  0%, 100% { transform: scaleY(0.6); opacity: 0.7; }
+  50% { transform: scaleY(1.15); opacity: 1; }
+}
+
+/* Wing flutter */
+.icon-wing svg {
+  animation: wingFlutter 2.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes wingFlutter {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(4deg) scale(1.05); }
+  75% { transform: rotate(-4deg) scale(1.05); }
+}
+
+/* Janus mask rotate */
+.icon-janus svg {
+  animation: maskTilt 3s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes maskTilt {
+  0%, 100% { transform: rotate(0deg); }
+  33% { transform: rotate(6deg); }
+  66% { transform: rotate(-6deg); }
+}
+
+/* Forge spark + hammer */
+.icon-forge svg {
+  animation: forgeStrike 2.8s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes forgeStrike {
+  0%, 90%, 100% { transform: rotate(0deg); }
+  92% { transform: rotate(-8deg) scale(1.05); }
+  94% { transform: rotate(4deg) scale(0.98); }
+}
+
+/* Book page flip */
+.icon-bible svg {
+  animation: pageTurn 3.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes pageTurn {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.85); }
+}
+
+/* Rocket thrust */
+.icon-rocket svg {
+  animation: rocketThrust 2s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes rocketThrust {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-2px); }
+  50% { transform: translateY(1px); }
+}
+
+/* Heartbeat pulse */
+.icon-heart svg {
+  animation: heartbeat 1.8s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.12); }
+  70% { transform: scale(1); }
+}
+
+/* Beacon rotate rays */
+.icon-beacon svg {
+  animation: beaconSpin 6s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes beaconSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Mesh nodes pulse */
+.icon-mesh svg circle {
+  animation: nodePulse 2s ease-in-out infinite;
+  transform-origin: center center;
+}
+.icon-mesh svg circle:nth-child(1) { animation-delay: 0s; }
+.icon-mesh svg circle:nth-child(2) { animation-delay: 0.4s; }
+.icon-mesh svg circle:nth-child(3) { animation-delay: 0.8s; }
+.icon-mesh svg circle:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes nodePulse {
+  0%, 100% { opacity: 1; r: 3; }
+  50% { opacity: 0.5; r: 4; }
+}
+
+/* Sword shimmer */
+.icon-sword svg {
+  animation: swordShimmer 2.4s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes swordShimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Hover boost */
+.project-card:hover .project-icon svg {
+  animation-duration: 0.6s !important;
 }
 
 .project-card:hover .project-icon {
-  transform: scale(1.08) rotate(-3deg);
-  box-shadow: 0 0 20px var(--accent-purple-glow);
+  transform: scale(1.12) rotate(-3deg);
+  box-shadow: 0 0 24px var(--accent-purple-glow);
+}
+
+/* Pause animations when reduced-motion is preferred */
+@media (prefers-reduced-motion: reduce) {
+  .project-icon svg,
+  .project-icon svg path,
+  .project-icon svg circle {
+    animation: none !important;
+  }
 }
 
 .project-meta {
@@ -901,6 +1193,39 @@ button:focus-visible {
 .tech-tag.ruby { color: var(--accent-pink-bright); border-color: rgba(255, 0, 127, 0.15); }
 .tech-tag.ts { color: var(--accent-cyan-bright); border-color: rgba(3, 237, 249, 0.15); }
 .tech-tag.dart { color: var(--accent-yellow); border-color: rgba(255, 255, 102, 0.15); }
+
+.project-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  min-height: 22px;
+}
+
+.repo-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.repo-stat svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.repo-stat-value {
+  font-variant-numeric: tabular-nums;
+}
+
+.project-card:hover .repo-stat {
+  color: var(--text-secondary);
+}
 
 .project-metrics {
   display: flex;
