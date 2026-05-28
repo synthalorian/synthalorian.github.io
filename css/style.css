@@ -341,26 +341,6 @@ button:focus-visible {
   -webkit-mask-image: linear-gradient(to bottom, transparent 35%, black 100%);
 }
 
-/* Laser horizon line — purple forward with pink/cyan edges */
-.hero-scene::before {
-  content: '';
-  position: absolute;
-  bottom: 30%;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    var(--accent-purple) 20%,
-    var(--accent-pink) 45%,
-    var(--accent-cyan) 55%,
-    var(--accent-purple) 80%,
-    transparent 100%
-  );
-  box-shadow: 0 0 20px var(--accent-purple-glow), 0 0 40px var(--accent-pink-glow);
-  z-index: 2;
-}
-
 /* Perspective Grid Floor — purple-tinted with cyan verticals */
 .hero-grid-floor {
   position: absolute;
@@ -835,12 +815,7 @@ button:focus-visible {
   height: 24px;
 }
 
-.project-icon img {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  object-fit: contain;
-}
+
 
 .project-card:hover .project-icon {
   transform: scale(1.08) rotate(-3deg);
@@ -1147,6 +1122,51 @@ button:focus-visible {
   background: linear-gradient(90deg, transparent, var(--accent-purple), var(--accent-pink), var(--accent-cyan), transparent);
   opacity: 0.35;
   box-shadow: 0 0 10px rgba(143, 0, 255, 0.1);
+}
+
+/* Live GitHub Stats Note */
+.github-live-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  transition: opacity 0.5s ease;
+}
+
+.github-live-note.loading {
+  opacity: 0.6;
+}
+
+.github-live-note.error {
+  opacity: 0.5;
+}
+
+.github-live-note a {
+  color: var(--accent-purple-bright);
+  font-weight: 500;
+}
+
+.github-live-note a:hover {
+  color: var(--accent-cyan);
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  animation: livePulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px var(--accent-cyan-glow);
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
 }
 
 .footer-content {

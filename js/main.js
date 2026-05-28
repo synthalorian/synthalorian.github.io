@@ -116,6 +116,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Live GitHub Stats Fetch
+  const fetchGitHubStats = async () => {
+    const liveNote = document.getElementById('github-live-note');
+    const liveCards = document.querySelectorAll('.stat-card[data-stat]');
+
+    if (!liveCards.length) return;
+
+    try {
+      if (liveNote) liveNote.classList.add('loading');
+      const resp = await fetch('https://api.github.com/users/synthalorian', {
+        headers: { 'Accept': 'application/vnd.github.v3+json' }
+      });
+
+      if (!resp.ok) throw new Error('GitHub API error');
+
+      const data = await resp.json();
+
+      liveCards.forEach(card => {
+        const stat = card.dataset.stat;
+        const el = card.querySelector('.stat-number[data-live]');
+        const fallback = card.dataset.fallback;
+        if (!el) return;
+
+        let value;
+        switch (stat) {
+          case 'repos': value = data.public_repos; break;
+          case 'followers': value = data.followers; break;
+          case 'following': value = data.following; break;
+          case 'projects': value = 10; break;
+          default: value = fallback || '—';
+        }
+
+        if (value !== undefined && value !== null) {
+          el.dataset.counterTarget = value;
+          el.dataset.counterSuffix = '';
+          el.textContent = String(value);
+        } else {
+          el.textContent = fallback || '—';
+        }
+      });
+
+      if (liveNote) {
+        liveNote.classList.remove('loading');
+        liveNote.querySelector('span:last-child').innerHTML = 'Stats synced from <a href="https://github.com/synthalorian" target="_blank" rel="noopener">GitHub API</a>';
+      }
+    } catch (err) {
+      console.warn('GitHub stats fetch failed:', err);
+      if (liveNote) {
+        liveNote.classList.remove('loading');
+        liveNote.classList.add('error');
+        liveNote.querySelector('span:last-child').textContent = 'Stats shown are cached — live sync unavailable';
+      }
+      liveCards.forEach(card => {
+        const el = card.querySelector('.stat-number[data-live]');
+        const fallback = card.dataset.fallback;
+        if (el && fallback) el.textContent = fallback;
+      });
+    }
+  };
+
+  fetchGitHubStats();
+
   // Counter Animation for Stats
   const statNumbers = document.querySelectorAll('.stat-number');
 
