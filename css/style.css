@@ -835,6 +835,13 @@ button:focus-visible {
   height: 24px;
 }
 
+.project-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
 .project-card:hover .project-icon {
   transform: scale(1.08) rotate(-3deg);
   box-shadow: 0 0 20px var(--accent-purple-glow);

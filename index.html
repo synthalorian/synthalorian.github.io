@@ -136,35 +136,61 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Forge -->
+        <!-- Open Synth — Featured -->
         <article class="project-card featured" data-reveal>
           <div class="project-header">
             <div class="project-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <img src="assets/icons/open-synth.png" alt="Open Synth icon" loading="lazy">
             </div>
             <div class="project-meta">
-              <span class="project-version">v1.4.0</span>
               <span class="project-status stable">Stable</span>
             </div>
           </div>
-          <h3 class="project-name">Forge</h3>
+          <h3 class="project-name">Open Synth</h3>
           <p class="project-desc">
-            A digital workshop CLI + web GUI for backups, AI orchestration, system tools, and creative workflows. 
-            Features content-deduplicated backups, AES-256-GCM encrypted journaling, real-time Rails dashboard, 
-            and automated GitHub release management.
+            High-performance software synthesizer built with Flutter and the OpenAmp DSP engine. 
+            64-voice polyphony, dual oscillators, resonant filters, arpeggiator, and 377 factory synthwave presets 
+            across 15 categories. Low-latency native audio via PortAudio FFI.
           </p>
           <div class="project-tech">
-            <span class="tech-tag rust">Rust</span>
-            <span class="tech-tag ruby">Rails 8</span>
-            <span class="tech-tag">SQLite</span>
-            <span class="tech-tag">Tailwind</span>
-          </div>
-          <div class="project-metrics">
-            <span>116 Rust tests</span>
-            <span>230+ Rails specs</span>
+            <span class="tech-tag dart">Flutter</span>
+            <span class="tech-tag dart">Dart</span>
+            <span class="tech-tag rust">Rust FFI</span>
+            <span class="tech-tag">PortAudio</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/synthalorian/forge" target="_blank" rel="noopener" class="link-primary" aria-label="View Forge source code on GitHub">
+            <a href="https://github.com/synthalorian/open-synth" target="_blank" rel="noopener" class="link-primary" aria-label="View Open Synth source code on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Hermes Wingman -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon" style="background: var(--accent-cyan-soft); color: var(--accent-cyan-bright);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-version">v0.1.4</span>
+              <span class="project-status beta">Active Dev</span>
+            </div>
+          </div>
+          <h3 class="project-name">Hermes Wingman</h3>
+          <p class="project-desc">
+            The definitive GUI for Hermes Agent. Replaces the entire CLI with a beautiful cross-platform interface 
+            spanning desktop, mobile, and a Rails web dashboard. 29 hand-crafted themes with a synthwave '84 flagship.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag dart">Flutter</span>
+            <span class="tech-tag dart">Dart</span>
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag ruby">Rails 8</span>
+            <span class="tech-tag ts">TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/hermes-wingman" target="_blank" rel="noopener" class="link-primary" aria-label="View Hermes Wingman source code on GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               View Source
             </a>
@@ -174,23 +200,24 @@
         <!-- Janus -->
         <article class="project-card" data-reveal>
           <div class="project-header">
-            <div class="project-icon janus-icon">
+            <div class="project-icon" style="background: var(--accent-purple-soft); color: var(--accent-purple-bright);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
             </div>
             <div class="project-meta">
-              <span class="project-status beta">Active Dev</span>
+              <span class="project-status beta">Beta</span>
             </div>
           </div>
           <h3 class="project-name">Janus</h3>
           <p class="project-desc">
             AI-first communication platform with real-time WebSocket chat, multi-agent orchestration, 
             knowledge graph extraction, and AI-to-AI governance. Features a Bot Forge for agent creation 
-            and a Swarm Engine for task DAG execution.
+            and a Swarm Engine for autonomous task execution.
           </p>
           <div class="project-tech">
             <span class="tech-tag ts">TypeScript</span>
             <span class="tech-tag">React 19</span>
-            <span class="tech-tag">Express 5</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">Socket.IO</span>
           </div>
@@ -202,30 +229,145 @@
           </div>
         </article>
 
-        <!-- Ledger -->
+        <!-- Forge -->
         <article class="project-card" data-reveal>
           <div class="project-header">
-            <div class="project-icon ledger-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <div class="project-icon">
+              <img src="assets/icons/forge.png" alt="Forge icon" loading="lazy">
             </div>
             <div class="project-meta">
-              <span class="project-status stable">Production</span>
+              <span class="project-version">v1.4.0</span>
+              <span class="project-status stable">Stable</span>
             </div>
           </div>
-          <h3 class="project-name">Ledger</h3>
+          <h3 class="project-name">Forge</h3>
           <p class="project-desc">
-            Terminal-native HTTP proxy for API traffic capture, inspection, and replay. 
-            Zero-config setup with SQLite persistence, regex search, HAR/curl export, 
-            and an interactive ratatui TUI for live request streaming.
+            A digital workshop CLI + web GUI for backups, AI orchestration, scripture, system tools, and creative workflows. 
+            Six pillars: Anvil (backups), Bellows (AI), Flame (scripture), Tongs (system), Crucible (creativity), Bridge (integrations).
           </p>
           <div class="project-tech">
             <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag ruby">Rails 8</span>
             <span class="tech-tag">SQLite</span>
-            <span class="tech-tag">Hyper</span>
-            <span class="tech-tag">ratatui</span>
+            <span class="tech-tag">Tailwind</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/synthalorian/ledger" target="_blank" rel="noopener" class="link-primary" aria-label="View Ledger source code on GitHub">
+            <a href="https://github.com/synthalorian/forge" target="_blank" rel="noopener" class="link-primary" aria-label="View Forge source code on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Open Bible -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon" style="background: rgba(3, 237, 249, 0.06); color: var(--accent-cyan-bright);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-version">v1.3.0</span>
+              <span class="project-status stable">Released</span>
+            </div>
+          </div>
+          <h3 class="project-name">Open Bible</h3>
+          <p class="project-desc">
+            Comprehensive offline Bible study app for Android/iOS with 20+ bundled translations, Strong's Concordance, 
+            translation comparison, audio TTS, reading plans, and a Christian History encyclopedia with 122 entries.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag dart">Flutter</span>
+            <span class="tech-tag dart">Dart</span>
+            <span class="tech-tag">Riverpod</span>
+            <span class="tech-tag">Hive</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/open-bible" target="_blank" rel="noopener" class="link-primary" aria-label="View Open Bible source code on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- SC Synthesis -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon" style="background: rgba(255, 255, 102, 0.06); color: var(--accent-yellow);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status stable">Stable</span>
+            </div>
+          </div>
+          <h3 class="project-name">SC Synthesis</h3>
+          <p class="project-desc">
+            Offline-first Star Citizen companion app with 238 ships in a local SQLite database via Rust FFI. 
+            Features ship comparison, fleet manager, per-ship notes, and 6 retro themes. Zero network required.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag dart">Flutter</span>
+            <span class="tech-tag dart">Dart</span>
+            <span class="tech-tag rust">Rust FFI</span>
+            <span class="tech-tag">SQLite</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/sc-synthesis" target="_blank" rel="noopener" class="link-primary" aria-label="View SC Synthesis source code on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Open Assurance -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon">
+              <img src="assets/icons/open-assurance.png" alt="Open Assurance icon" loading="lazy">
+            </div>
+            <div class="project-meta">
+              <span class="project-status stable">Released</span>
+            </div>
+          </div>
+          <h3 class="project-name">Open Assurance</h3>
+          <p class="project-desc">
+            Free open-source mental wellness app providing affirmations, mood tracking, breathing exercises, 
+            ambient sounds, and crisis resources. 100+ curated affirmations across 10 categories with home screen widgets.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag dart">Flutter</span>
+            <span class="tech-tag dart">Dart</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/open-assurance" target="_blank" rel="noopener" class="link-primary" aria-label="View Open Assurance source code on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Reticulum Beacon -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon" style="background: rgba(255, 0, 127, 0.06); color: var(--accent-pink-bright);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status stable">Functional</span>
+            </div>
+          </div>
+          <h3 class="project-name">Reticulum Beacon</h3>
+          <p class="project-desc">
+            Personal Reticulum transport node and service hub — one command to join the mesh. 
+            Features LXMF store-and-forward messaging, REST API, Web UI dashboard, bot framework, and Prometheus metrics.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">Reticulum</span>
+            <span class="tech-tag">LXMF</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/reticulum-beacon" target="_blank" rel="noopener" class="link-primary" aria-label="View Reticulum Beacon source code on GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               View Source
             </a>
@@ -235,24 +377,24 @@
         <!-- Reticulum Forge -->
         <article class="project-card" data-reveal>
           <div class="project-header">
-            <div class="project-icon mesh-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="6" r="3"/><circle cx="19" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="5" y1="9" x2="12" y2="15"/><line x1="19" y1="9" x2="12" y2="15"/></svg>
+            <div class="project-icon" style="background: var(--accent-purple-soft); color: var(--accent-purple-bright);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
             </div>
             <div class="project-meta">
-              <span class="project-status stable">Functional</span>
+              <span class="project-status beta">In Progress</span>
             </div>
           </div>
           <h3 class="project-name">Reticulum Forge</h3>
           <p class="project-desc">
-            "Terraform for mesh networks." A CLI toolkit for building, testing, simulating, and deploying 
-            Reticulum mesh networks. Includes project scaffolding, hardware config generation, 
-            in-process simulation with Graphviz export, SSH deployment, and a real-time TUI monitor.
+            CLI toolkit for building, testing, simulating, and deploying Reticulum mesh networks. 
+            Think Terraform for mesh — project scaffolding, hardware config generation, in-process simulation, 
+            SSH deployment, and real-time TUI monitoring.
           </p>
           <div class="project-tech">
             <span class="tech-tag rust">Rust</span>
             <span class="tech-tag">Tokio</span>
+            <span class="tech-tag">TOML</span>
             <span class="tech-tag">ratatui</span>
-            <span class="tech-tag">petgraph</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/synthalorian/reticulum-forge" target="_blank" rel="noopener" class="link-primary" aria-label="View Reticulum Forge source code on GitHub">
@@ -262,123 +404,30 @@
           </div>
         </article>
 
-        <!-- Retro Spec -->
+        <!-- Open Ascension -->
         <article class="project-card" data-reveal>
           <div class="project-header">
-            <div class="project-icon retro-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22h20"/><path d="M6 22V10l6-6 6 6v12"/><path d="M10 22v-6h4v6"/></svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-status beta">In Progress</span>
-            </div>
-          </div>
-          <h3 class="project-name">Retro Spec</h3>
-          <p class="project-desc">
-            3D city generator that renders Git repository history as an explorable neon metropolis. 
-            Each commit becomes a skyscraper, branches become boulevards, and merges become glowing plazas. 
-            Built with Bevy 0.15 ECS and procedural generation.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag rust">Rust</span>
-            <span class="tech-tag">Bevy 0.15</span>
-            <span class="tech-tag">git2</span>
-            <span class="tech-tag">glTF</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/synthalorian/retro-spec" target="_blank" rel="noopener" class="link-primary" aria-label="View Retro Spec source code on GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              View Source
-            </a>
-          </div>
-        </article>
-
-        <!-- Rift -->
-        <article class="project-card" data-reveal>
-          <div class="project-header">
-            <div class="project-icon rift-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-status beta">In Progress</span>
-            </div>
-          </div>
-          <h3 class="project-name">Rift</h3>
-          <p class="project-desc">
-            Cross-engine game asset pipeline manager. Define assets in a single source-of-truth directory, 
-            and Rift automatically converts, validates, and deploys to Unity, Godot, and Unreal projects. 
-            Includes filesystem watching, SQLite tracking, and a Rails 8 dashboard.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag rust">Rust</span>
-            <span class="tech-tag ruby">Rails 8</span>
-            <span class="tech-tag">SQLite</span>
-            <span class="tech-tag">Axum</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/synthalorian/rift" target="_blank" rel="noopener" class="link-primary" aria-label="View Rift source code on GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              View Source
-            </a>
-          </div>
-        </article>
-
-        <!-- Reticulum Wave -->
-        <article class="project-card" data-reveal>
-          <div class="project-header">
-            <div class="project-icon wave-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-status beta">Active Dev</span>
-            </div>
-          </div>
-          <h3 class="project-name">Reticulum Wave</h3>
-          <p class="project-desc">
-            Offline-first, cross-platform encrypted mesh messaging client for Reticulum/LXMF. 
-            Supports group channels, file transfers, RNode LoRa management, offline maps with signal heatmaps, 
-            and delivery receipts — all without traditional internet infrastructure.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag dart">Dart</span>
-            <span class="tech-tag">Flutter</span>
-            <span class="tech-tag">Riverpod</span>
-            <span class="tech-tag">FFI</span>
-            <span class="tech-tag">LoRa</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/synthalorian/reticulum-wave" target="_blank" rel="noopener" class="link-primary" aria-label="View Reticulum Wave source code on GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              View Source
-            </a>
-          </div>
-        </article>
-
-        <!-- Open-Life -->
-        <article class="project-card" data-reveal>
-          <div class="project-header">
-            <div class="project-icon life-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <div class="project-icon">
+              <img src="assets/icons/open-ascension.png" alt="Open Ascension icon" loading="lazy">
             </div>
             <div class="project-meta">
               <span class="project-version">v1.0</span>
               <span class="project-status stable">Released</span>
             </div>
           </div>
-          <h3 class="project-name">Open Life</h3>
+          <h3 class="project-name">Open Ascension</h3>
           <p class="project-desc">
-            AI-powered life management app with a distinctive synthwave aesthetic. Unifies fitness tracking, 
-            financial management, and health monitoring into one interface, with an AI assistant that 
-            delivers cross-domain insights using Clean Architecture and Riverpod state management.
+            Fully-featured Project Ascension WoW companion app. Classless character builder with 266 abilities, 
+            195 talents, 176 mystic enchants, M+ affix reference, dungeon routes, and 200-item gear database. All offline.
           </p>
           <div class="project-tech">
+            <span class="tech-tag dart">Flutter</span>
             <span class="tech-tag dart">Dart</span>
-            <span class="tech-tag">Flutter</span>
             <span class="tech-tag">Riverpod</span>
-            <span class="tech-tag">Hive</span>
-            <span class="tech-tag">OpenAI</span>
+            <span class="tech-tag">go_router</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/synthalorian/Open-Life" target="_blank" rel="noopener" class="link-primary" aria-label="View Open Life source code on GitHub">
+            <a href="https://github.com/synthalorian/open_ascension" target="_blank" rel="noopener" class="link-primary" aria-label="View Open Ascension source code on GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               View Source
             </a>
