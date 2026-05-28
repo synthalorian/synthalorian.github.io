@@ -20,7 +20,7 @@
   --text-bright: #f0e6ff;
   --text-primary: #d8c4f0;
   --text-secondary: #a88ec8;
-  --text-muted: #7a5f9e;
+  --text-muted: #957db5;
 
   /* Neon Accents */
   --accent-pink: #ff007a;
@@ -383,6 +383,10 @@ button:focus-visible {
   transform: scaleX(-1);
 }
 
+.hero-palm {
+  color: var(--bg-deep);
+}
+
 .hero-palm svg {
   width: 100%;
   height: 100%;
@@ -487,7 +491,6 @@ button:focus-visible {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 2px 4px rgba(255,0,122,0.15));
 }
 
 .hero-subtitle {
