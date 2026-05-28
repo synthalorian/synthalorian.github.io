@@ -847,17 +847,6 @@ button:focus-visible {
   box-shadow: 0 0 20px var(--accent-purple-glow);
 }
 
-.project-icon.janus-icon { background: var(--accent-cyan-soft); color: var(--accent-cyan-bright); }
-.project-icon.janus-icon:hover { box-shadow: 0 0 20px var(--accent-cyan-glow); }
-.project-icon.ledger-icon { background: rgba(3, 237, 249, 0.06); color: var(--accent-cyan-bright); }
-.project-icon.mesh-icon { background: var(--accent-yellow-soft); color: var(--accent-yellow); }
-.project-icon.mesh-icon:hover { box-shadow: 0 0 20px var(--accent-yellow-glow); }
-.project-icon.retro-icon { background: rgba(255, 0, 127, 0.06); color: var(--accent-pink-bright); }
-.project-icon.rift-icon { background: rgba(143, 0, 255, 0.1); color: var(--accent-purple-bright); }
-.project-icon.rift-icon:hover { box-shadow: 0 0 20px var(--accent-purple-glow); }
-.project-icon.wave-icon { background: rgba(3, 237, 249, 0.06); color: var(--accent-cyan-bright); }
-.project-icon.life-icon { background: rgba(143, 0, 255, 0.08); color: var(--accent-purple-bright); }
-
 .project-meta {
   display: flex;
   gap: 8px;
