@@ -3,6 +3,102 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // =====================================================
+  // THEME TOGGLE — Synthwave '84 (default) ↔ Cyberlight
+  // =====================================================
+  const themeToggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const STORAGE_KEY = 'synth-theme';
+
+  const applyTheme = (theme) => {
+    html.setAttribute('data-theme', theme);
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) {
+      metaTheme.setAttribute('content', theme === 'cyberlight' ? '#f5f0ff' : '#0d0221');
+    }
+  };
+
+  // Initialize: prefer saved, else default synthwave84
+  const savedTheme = localStorage.getItem(STORAGE_KEY);
+  const initialTheme = savedTheme === 'cyberlight' ? 'cyberlight' : 'synthwave84';
+  applyTheme(initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme') || 'synthwave84';
+      const next = current === 'synthwave84' ? 'cyberlight' : 'synthwave84';
+      applyTheme(next);
+      localStorage.setItem(STORAGE_KEY, next);
+    });
+  }
+
+  // =====================================================
+  // PER-REPO GITHUB STATS
+  // =====================================================
+  const fetchRepoStats = async () => {
+    const repoCards = document.querySelectorAll('[data-repo-stats]');
+    if (!repoCards.length) return;
+
+    const repoNames = Array.from(new Set(
+      Array.from(repoCards).map(card => card.dataset.repoStats)
+    ));
+
+    try {
+      // Fetch all repos in one call
+      const resp = await fetch('https://api.github.com/users/synthalorian/repos?per_page=100', {
+        headers: { 'Accept': 'application/vnd.github.v3+json' }
+      });
+
+      if (!resp.ok) throw new Error('GitHub repos API error');
+
+      const repos = await resp.json();
+      const repoMap = new Map(repos.map(r => [r.name.toLowerCase(), r]));
+
+      repoCards.forEach(card => {
+        const repoName = card.dataset.repoStats;
+        const statsContainer = card.querySelector('.project-stats');
+        if (!statsContainer) return;
+
+        const repo = repoMap.get(repoName.toLowerCase());
+        if (!repo) return;
+
+        const stars = statsContainer.querySelector('[data-stat="stars"] .repo-stat-value');
+        const forks = statsContainer.querySelector('[data-stat="forks"] .repo-stat-value');
+        const lang = statsContainer.querySelector('[data-stat="lang"] .repo-stat-value');
+        const updated = statsContainer.querySelector('[data-stat="updated"] .repo-stat-value');
+
+        if (stars) stars.textContent = formatCount(repo.stargazers_count);
+        if (forks) forks.textContent = formatCount(repo.forks_count);
+        if (lang) lang.textContent = repo.language || '—';
+        if (updated) updated.textContent = timeAgo(repo.pushed_at);
+      });
+    } catch (err) {
+      console.warn('Repo stats fetch failed:', err);
+      // Leave fallback dashes in place
+    }
+  };
+
+  const formatCount = (n) => {
+    if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+    return String(n);
+  };
+
+  const timeAgo = (iso) => {
+    const date = new Date(iso);
+    const now = new Date();
+    const diffMs = now - date;
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    if (diffDays < 1) return 'today';
+    if (diffDays === 1) return '1d';
+    if (diffDays < 30) return diffDays + 'd';
+    if (diffDays < 365) return Math.floor(diffDays / 30) + 'mo';
+    return Math.floor(diffDays / 365) + 'y';
+  };
+
+  // Trigger repo stats fetch after a short delay (let page render first)
+  setTimeout(fetchRepoStats, 800);
+
+  // =====================================================
   // Mobile Navigation Toggle
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
