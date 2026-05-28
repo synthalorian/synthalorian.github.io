@@ -1,28 +1,34 @@
 /* =========================================================
-   SYNTH PORTFOLIO — True Synthwave '84 Theme
-   Neon-drenched retro-futurism: deep blacks, hot pink,
-   electric cyan, blazing yellow. Chrome text, OutRun sun,
-   laser grid, palm silhouettes, CRT scanlines.
+   SYNTH PORTFOLIO — Deep Purple Synthwave '84 Theme
+   Purple-drenched retro-futurism: deep violet blacks,
+   neon purple, hot pink sparks, electric cyan, blazing yellow.
+   Chrome text, OutRun sun, laser grid, palm silhouettes.
    ========================================================= */
 
 /* ---------------------------------------------------------
-   CSS Custom Properties (Synthwave '84 Palette)
+   CSS Custom Properties (Deep Purple Palette)
    --------------------------------------------------------- */
 :root {
-  /* Base — deep near-black with purple undertone */
-  --bg-deep: #0a0014;
-  --bg-dark: #07000f;
-  --bg-card: rgba(20, 0, 40, 0.65);
-  --bg-card-hover: rgba(35, 0, 60, 0.75);
-  --bg-glass: rgba(10, 0, 20, 0.55);
+  /* Base — deep purple-black */
+  --bg-deep: #140a26;
+  --bg-dark: #0f061f;
+  --bg-card: rgba(45, 20, 80, 0.65);
+  --bg-card-hover: rgba(65, 30, 100, 0.75);
+  --bg-glass: rgba(25, 12, 48, 0.55);
 
-  /* Text — chrome silver to white */
-  --text-bright: #f0e6ff;
-  --text-primary: #d8c4f0;
-  --text-secondary: #a88ec8;
-  --text-muted: #957db5;
+  /* Text — silver to lavender white */
+  --text-bright: #f2ebff;
+  --text-primary: #d4b8f0;
+  --text-secondary: #b08dd6;
+  --text-muted: #9a78b8;
 
-  /* Neon Accents */
+  /* Primary Purple Accent */
+  --accent-purple: #b84aff;
+  --accent-purple-bright: #d285ff;
+  --accent-purple-glow: rgba(184, 74, 255, 0.45);
+  --accent-purple-soft: rgba(184, 74, 255, 0.08);
+
+  /* Neon Accents — sparks */
   --accent-pink: #ff007a;
   --accent-pink-bright: #ff33a0;
   --accent-pink-glow: rgba(255, 0, 122, 0.45);
@@ -41,11 +47,12 @@
   --accent-magenta: #ff00ff;
 
   /* Borders */
-  --border-subtle: rgba(0, 240, 255, 0.06);
-  --border-hover: rgba(255, 0, 122, 0.25);
+  --border-subtle: rgba(184, 74, 255, 0.08);
+  --border-hover: rgba(184, 74, 255, 0.25);
   --border-cyan: rgba(0, 240, 255, 0.12);
 
   /* Shadows */
+  --shadow-glow-purple: 0 0 50px rgba(184, 74, 255, 0.2);
   --shadow-glow-pink: 0 0 50px rgba(255, 0, 122, 0.2);
   --shadow-glow-cyan: 0 0 50px rgba(0, 240, 255, 0.2);
   --shadow-card: 0 12px 48px rgba(0, 0, 0, 0.6);
@@ -94,7 +101,7 @@ a:hover {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--accent-pink);
+  outline: 2px solid var(--accent-purple);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -104,7 +111,7 @@ button:focus-visible {
   top: -100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--accent-pink);
+  background: var(--accent-purple);
   color: var(--bg-deep);
   padding: 10px 24px;
   border-radius: 0 0 12px 12px;
@@ -134,7 +141,7 @@ button:focus-visible {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(7, 0, 15, 0.85);
+  background: rgba(15, 6, 31, 0.85);
   backdrop-filter: blur(24px) saturate(1.2);
   -webkit-backdrop-filter: blur(24px) saturate(1.2);
   border-bottom: 1px solid var(--border-subtle);
@@ -142,8 +149,8 @@ button:focus-visible {
 }
 
 .navbar.scrolled {
-  background: rgba(7, 0, 15, 0.95);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 0, 122, 0.05);
+  background: rgba(15, 6, 31, 0.95);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(184, 74, 255, 0.05);
 }
 
 .nav-container {
@@ -162,11 +169,11 @@ button:focus-visible {
   font-weight: 700;
   color: var(--text-bright);
   letter-spacing: 2px;
-  text-shadow: 0 0 20px rgba(255, 0, 122, 0.3);
+  text-shadow: 0 0 20px rgba(184, 74, 255, 0.3);
 }
 
 .logo-bracket {
-  color: var(--accent-pink);
+  color: var(--accent-purple);
 }
 
 .nav-menu {
@@ -193,15 +200,15 @@ button:focus-visible {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
   transition: width 0.3s ease;
   border-radius: 1px;
-  box-shadow: 0 0 8px var(--accent-pink-glow);
+  box-shadow: 0 0 8px var(--accent-purple-glow);
 }
 
 .nav-link:hover {
   color: var(--text-bright);
-  text-shadow: 0 0 12px var(--accent-cyan-glow);
+  text-shadow: 0 0 12px var(--accent-purple-glow);
 }
 
 .nav-link:hover::after,
@@ -230,7 +237,7 @@ button:focus-visible {
 }
 
 /* ---------------------------------------------------------
-   HERO SECTION — Synthwave '84
+   HERO SECTION — Deep Purple Synthwave '84
    --------------------------------------------------------- */
 .hero {
   position: relative;
@@ -255,23 +262,23 @@ button:focus-visible {
   inset: 0;
   background-image:
     radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.95), transparent),
-    radial-gradient(1.5px 1.5px at 40px 70px, rgba(0,240,255,0.6), transparent),
+    radial-gradient(1.5px 1.5px at 40px 70px, rgba(184,74,255,0.5), transparent),
     radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.85), transparent),
-    radial-gradient(2px 2px at 160px 120px, rgba(255,0,122,0.35), transparent),
+    radial-gradient(2px 2px at 160px 120px, rgba(255,0,122,0.3), transparent),
     radial-gradient(1px 1px at 230px 180px, rgba(255,255,255,0.7), transparent),
-    radial-gradient(2px 2px at 300px 50px, rgba(252,238,10,0.4), transparent),
+    radial-gradient(2px 2px at 300px 50px, rgba(252,238,10,0.35), transparent),
     radial-gradient(1px 1px at 350px 150px, rgba(255,255,255,0.8), transparent),
-    radial-gradient(2px 2px at 450px 80px, rgba(0,240,255,0.3), transparent),
+    radial-gradient(2px 2px at 450px 80px, rgba(0,240,255,0.25), transparent),
     radial-gradient(1.5px 1.5px at 500px 200px, rgba(255,255,255,0.65), transparent),
-    radial-gradient(2px 2px at 600px 60px, rgba(255,0,122,0.3), transparent),
+    radial-gradient(2px 2px at 600px 60px, rgba(184,74,255,0.3), transparent),
     radial-gradient(1px 1px at 650px 140px, rgba(255,255,255,0.9), transparent),
-    radial-gradient(2px 2px at 750px 100px, rgba(0,240,255,0.25), transparent),
+    radial-gradient(2px 2px at 750px 100px, rgba(0,240,255,0.2), transparent),
     radial-gradient(1.5px 1.5px at 800px 190px, rgba(255,255,255,0.55), transparent),
     radial-gradient(2px 2px at 900px 40px, rgba(252,238,10,0.3), transparent),
     radial-gradient(1px 1px at 950px 170px, rgba(255,255,255,0.7), transparent),
-    radial-gradient(1.5px 1.5px at 1050px 90px, rgba(255,0,122,0.25), transparent),
+    radial-gradient(1.5px 1.5px at 1050px 90px, rgba(255,0,122,0.2), transparent),
     radial-gradient(2px 2px at 1100px 220px, rgba(255,255,255,0.5), transparent),
-    radial-gradient(1px 1px at 1200px 30px, rgba(0,240,255,0.35), transparent);
+    radial-gradient(1px 1px at 1200px 30px, rgba(184,74,255,0.3), transparent);
   background-repeat: repeat;
   background-size: 1200px 300px;
   animation: starTwinkle 6s ease-in-out infinite alternate;
@@ -282,7 +289,7 @@ button:focus-visible {
   100% { opacity: 0.7; }
 }
 
-/* OutRun Sun */
+/* OutRun Sun — now with purple */
 .hero-sun {
   position: absolute;
   bottom: 30%;
@@ -293,19 +300,19 @@ button:focus-visible {
   border-radius: 50%;
   background: linear-gradient(
     to bottom,
-    var(--accent-yellow) 0%,
-    var(--accent-orange) 40%,
-    var(--accent-pink) 80%,
+    var(--accent-purple) 0%,
+    var(--accent-pink) 40%,
+    var(--accent-orange) 70%,
     transparent 100%
   );
   box-shadow:
-    0 0 60px rgba(252, 238, 10, 0.25),
+    0 0 60px rgba(184, 74, 255, 0.25),
     0 0 120px rgba(255, 0, 122, 0.15);
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
-/* Hard sun stripes — classic OutRun */
+/* Hard sun stripes */
 .hero-sun::after {
   content: '';
   position: absolute;
@@ -315,14 +322,14 @@ button:focus-visible {
     0deg,
     transparent,
     transparent 12px,
-    rgba(10, 0, 20, 0.5) 12px,
-    rgba(10, 0, 20, 0.5) 20px
+    rgba(20, 10, 38, 0.5) 12px,
+    rgba(20, 10, 38, 0.5) 20px
   );
   mask-image: linear-gradient(to bottom, transparent 35%, black 100%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 35%, black 100%);
 }
 
-/* Laser horizon line */
+/* Laser horizon line — purple forward */
 .hero-scene::before {
   content: '';
   position: absolute;
@@ -332,16 +339,17 @@ button:focus-visible {
   height: 3px;
   background: linear-gradient(90deg,
     transparent 0%,
-    var(--accent-pink) 20%,
-    var(--accent-cyan) 50%,
-    var(--accent-pink) 80%,
+    var(--accent-purple) 20%,
+    var(--accent-pink) 45%,
+    var(--accent-cyan) 55%,
+    var(--accent-purple) 80%,
     transparent 100%
   );
-  box-shadow: 0 0 20px var(--accent-pink-glow), 0 0 40px var(--accent-cyan-glow);
+  box-shadow: 0 0 20px var(--accent-purple-glow), 0 0 40px var(--accent-pink-glow);
   z-index: 2;
 }
 
-/* Perspective Grid Floor */
+/* Perspective Grid Floor — purple-tinted cyan */
 .hero-grid-floor {
   position: absolute;
   bottom: 0;
@@ -349,8 +357,8 @@ button:focus-visible {
   width: 200%;
   height: 52%;
   background-image:
-    linear-gradient(rgba(0, 240, 255, 0.22) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 0, 122, 0.18) 1px, transparent 1px);
+    linear-gradient(rgba(184, 74, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.15) 1px, transparent 1px);
   background-size: 100% 40px, 70px 100%;
   transform: perspective(500px) rotateX(65deg);
   transform-origin: bottom center;
@@ -435,25 +443,25 @@ button:focus-visible {
   align-items: center;
   gap: 10px;
   padding: 7px 16px;
-  background: var(--accent-pink-soft);
-  border: 1px solid rgba(255, 0, 122, 0.2);
+  background: var(--accent-purple-soft);
+  border: 1px solid rgba(184, 74, 255, 0.2);
   border-radius: 100px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--accent-pink-bright);
+  color: var(--accent-purple-bright);
   margin-bottom: 28px;
   letter-spacing: 0.03em;
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 20px rgba(255, 0, 122, 0.08);
+  box-shadow: 0 0 20px rgba(184, 74, 255, 0.08);
 }
 
 .badge-pulse {
   width: 8px;
   height: 8px;
-  background: var(--accent-pink);
+  background: var(--accent-purple);
   border-radius: 50%;
   animation: pulse 2.5s ease-in-out infinite;
-  box-shadow: 0 0 10px var(--accent-pink-glow);
+  box-shadow: 0 0 10px var(--accent-purple-glow);
 }
 
 @keyframes pulse {
@@ -474,16 +482,16 @@ button:focus-visible {
   display: block;
 }
 
-/* Chrome gradient text for the tagline */
+/* Chrome gradient text — purple forward */
 .hero-title .line:last-child {
   background: linear-gradient(
     180deg,
     #ffffff 0%,
-    #e0e0e0 30%,
-    #ff9adc 45%,
-    #ff007a 55%,
-    #a00060 70%,
-    #4a0020 100%
+    #e0d4ff 25%,
+    #c285ff 45%,
+    #b84aff 55%,
+    #7a1fa0 75%,
+    #3a0a50 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -529,15 +537,15 @@ button:focus-visible {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-pink), var(--accent-magenta));
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
   color: #fff;
-  box-shadow: 0 4px 30px rgba(255, 0, 122, 0.35), 0 0 15px rgba(255, 0, 122, 0.2);
+  box-shadow: 0 4px 30px rgba(184, 74, 255, 0.35), 0 0 15px rgba(184, 74, 255, 0.2);
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 40px rgba(255, 0, 122, 0.45), 0 0 25px rgba(255, 0, 122, 0.3);
+  box-shadow: 0 8px 40px rgba(184, 74, 255, 0.45), 0 0 25px rgba(184, 74, 255, 0.3);
   filter: brightness(1.1);
   color: #fff;
 }
@@ -606,14 +614,14 @@ button:focus-visible {
 .wheel {
   width: 3px;
   height: 5px;
-  background: var(--accent-pink);
+  background: var(--accent-purple);
   border-radius: 2px;
   position: absolute;
   top: 6px;
   left: 50%;
   transform: translateX(-50%);
   animation: scrollWheel 1.8s ease-in-out infinite;
-  box-shadow: 0 0 6px var(--accent-pink-glow);
+  box-shadow: 0 0 6px var(--accent-purple-glow);
 }
 
 @keyframes scrollWheel {
@@ -639,11 +647,11 @@ button:focus-visible {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--accent-pink-bright);
+  color: var(--accent-purple-bright);
   margin-bottom: 14px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  text-shadow: 0 0 12px rgba(255, 0, 122, 0.25);
+  text-shadow: 0 0 12px rgba(184, 74, 255, 0.25);
 }
 
 .section-title {
@@ -660,7 +668,7 @@ button:focus-visible {
   line-height: 1.75;
 }
 
-/* Neon section dividers */
+/* Neon section dividers — purple forward */
 .section::before {
   content: '';
   position: absolute;
@@ -670,9 +678,9 @@ button:focus-visible {
   width: 70%;
   max-width: 900px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-pink), var(--accent-cyan), var(--accent-pink), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-purple), var(--accent-pink), var(--accent-cyan), var(--accent-purple), transparent);
   opacity: 0.25;
-  box-shadow: 0 0 12px rgba(255, 0, 122, 0.1);
+  box-shadow: 0 0 12px rgba(184, 74, 255, 0.1);
 }
 
 /* ---------------------------------------------------------
@@ -707,16 +715,16 @@ button:focus-visible {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
   opacity: 0;
   transition: opacity 0.3s ease;
-  box-shadow: 0 0 10px var(--accent-pink-glow);
+  box-shadow: 0 0 10px var(--accent-purple-glow);
 }
 
 .stat-card:hover {
   border-color: var(--border-hover);
   transform: translateY(-5px);
-  box-shadow: var(--shadow-glow-pink), var(--shadow-card);
+  box-shadow: var(--shadow-glow-purple), var(--shadow-card);
 }
 
 .stat-card:hover::before {
@@ -727,13 +735,12 @@ button:focus-visible {
   font-family: var(--font-mono);
   font-size: 2.6rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-pink));
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 10px;
   letter-spacing: -0.02em;
-  filter: drop-shadow(0 2px 4px rgba(255,0,122,0.15));
 }
 
 .stat-label {
@@ -770,16 +777,16 @@ button:focus-visible {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent-yellow), var(--accent-cyan));
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink), var(--accent-cyan));
   opacity: 0;
   transition: opacity 0.35s ease;
-  box-shadow: 0 0 10px rgba(255, 0, 122, 0.2);
+  box-shadow: 0 0 10px rgba(184, 74, 255, 0.2);
 }
 
 .project-card:hover {
   border-color: var(--border-hover);
   transform: translateY(-7px);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), var(--shadow-glow-pink);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4), var(--shadow-glow-purple);
 }
 
 .project-card:hover::before {
@@ -788,7 +795,7 @@ button:focus-visible {
 
 .project-card.featured {
   grid-column: span 2;
-  background: linear-gradient(135deg, var(--bg-glass) 0%, rgba(255, 0, 122, 0.04) 100%);
+  background: linear-gradient(135deg, var(--bg-glass) 0%, rgba(184, 74, 255, 0.04) 100%);
 }
 
 .project-header {
@@ -802,11 +809,11 @@ button:focus-visible {
   width: 50px;
   height: 50px;
   border-radius: 14px;
-  background: var(--accent-pink-soft);
+  background: var(--accent-purple-soft);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-pink-bright);
+  color: var(--accent-purple-bright);
   transition: var(--transition-fast);
 }
 
@@ -817,7 +824,7 @@ button:focus-visible {
 
 .project-card:hover .project-icon {
   transform: scale(1.08) rotate(-3deg);
-  box-shadow: 0 0 20px var(--accent-pink-glow);
+  box-shadow: 0 0 20px var(--accent-purple-glow);
 }
 
 .project-icon.janus-icon { background: var(--accent-cyan-soft); color: var(--accent-cyan-bright); }
@@ -826,10 +833,10 @@ button:focus-visible {
 .project-icon.mesh-icon { background: var(--accent-yellow-soft); color: var(--accent-yellow); }
 .project-icon.mesh-icon:hover { box-shadow: 0 0 20px var(--accent-yellow-glow); }
 .project-icon.retro-icon { background: rgba(255, 0, 122, 0.06); color: var(--accent-pink-bright); }
-.project-icon.rift-icon { background: rgba(139, 154, 255, 0.08); color: #a0a8ff; }
-.project-icon.rift-icon:hover { box-shadow: 0 0 20px rgba(139, 154, 255, 0.3); }
+.project-icon.rift-icon { background: rgba(184, 74, 255, 0.1); color: var(--accent-purple-bright); }
+.project-icon.rift-icon:hover { box-shadow: 0 0 20px var(--accent-purple-glow); }
 .project-icon.wave-icon { background: rgba(0, 240, 255, 0.06); color: var(--accent-cyan-bright); }
-.project-icon.life-icon { background: rgba(255, 0, 122, 0.06); color: var(--accent-pink-bright); }
+.project-icon.life-icon { background: rgba(184, 74, 255, 0.08); color: var(--accent-purple-bright); }
 
 .project-meta {
   display: flex;
@@ -898,17 +905,17 @@ button:focus-visible {
   font-weight: 500;
   padding: 5px 12px;
   border-radius: 8px;
-  background: rgba(10, 0, 20, 0.5);
+  background: rgba(20, 10, 38, 0.5);
   color: var(--text-secondary);
   border: 1px solid var(--border-subtle);
   transition: var(--transition-fast);
 }
 
 .project-card:hover .tech-tag {
-  border-color: rgba(255, 0, 122, 0.12);
+  border-color: rgba(184, 74, 255, 0.12);
 }
 
-.tech-tag.rust { color: #ff66b3; border-color: rgba(255, 0, 122, 0.15); }
+.tech-tag.rust { color: #d285ff; border-color: rgba(184, 74, 255, 0.15); }
 .tech-tag.ruby { color: var(--accent-pink-bright); border-color: rgba(255, 0, 122, 0.15); }
 .tech-tag.ts { color: var(--accent-cyan-bright); border-color: rgba(0, 240, 255, 0.15); }
 .tech-tag.dart { color: var(--accent-yellow); border-color: rgba(252, 238, 10, 0.15); }
@@ -938,8 +945,8 @@ button:focus-visible {
 }
 
 .project-links a:hover {
-  color: var(--accent-pink-bright);
-  text-shadow: 0 0 8px rgba(255, 0, 122, 0.2);
+  color: var(--accent-purple-bright);
+  text-shadow: 0 0 8px rgba(184, 74, 255, 0.2);
 }
 
 .projects-footer {
@@ -971,7 +978,7 @@ button:focus-visible {
 
 .skills-category:hover {
   border-color: var(--border-hover);
-  box-shadow: var(--shadow-glow-pink);
+  box-shadow: var(--shadow-glow-purple);
 }
 
 .skills-cat-title {
@@ -988,9 +995,9 @@ button:focus-visible {
   content: '';
   width: 4px;
   height: 22px;
-  background: linear-gradient(to bottom, var(--accent-pink), var(--accent-cyan));
+  background: linear-gradient(to bottom, var(--accent-purple), var(--accent-pink));
   border-radius: 2px;
-  box-shadow: 0 0 8px rgba(255, 0, 122, 0.25);
+  box-shadow: 0 0 8px rgba(184, 74, 255, 0.25);
 }
 
 .skill-item {
@@ -1011,7 +1018,7 @@ button:focus-visible {
 
 .skill-bar {
   height: 7px;
-  background: rgba(10, 0, 20, 0.6);
+  background: rgba(20, 10, 38, 0.6);
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border-subtle);
@@ -1019,11 +1026,11 @@ button:focus-visible {
 
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-pink), var(--accent-magenta), var(--accent-cyan));
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-magenta), var(--accent-cyan));
   border-radius: 4px;
   transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
   width: 0;
-  box-shadow: 0 0 14px var(--accent-pink-glow);
+  box-shadow: 0 0 14px var(--accent-purple-glow);
 }
 
 /* ---------------------------------------------------------
@@ -1034,7 +1041,7 @@ button:focus-visible {
 }
 
 .contact-card {
-  background: linear-gradient(135deg, var(--bg-glass) 0%, rgba(255, 0, 122, 0.04) 100%);
+  background: linear-gradient(135deg, var(--bg-glass) 0%, rgba(184, 74, 255, 0.04) 100%);
   border: 1px solid var(--border-subtle);
   border-radius: 28px;
   padding: 72px 56px;
@@ -1051,7 +1058,7 @@ button:focus-visible {
   left: -60%;
   width: 220%;
   height: 220%;
-  background: radial-gradient(circle, rgba(255, 0, 122, 0.05) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(184, 74, 255, 0.05) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -1102,11 +1109,11 @@ button:focus-visible {
 }
 
 .contact-btn:hover {
-  border-color: var(--accent-pink);
-  background: rgba(255, 0, 122, 0.08);
-  color: var(--accent-pink-bright);
+  border-color: var(--accent-purple);
+  background: rgba(184, 74, 255, 0.08);
+  color: var(--accent-purple-bright);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow-pink);
+  box-shadow: var(--shadow-glow-purple);
 }
 
 /* ---------------------------------------------------------
@@ -1128,9 +1135,9 @@ button:focus-visible {
   width: 50%;
   max-width: 600px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-pink), var(--accent-cyan), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-purple), var(--accent-pink), var(--accent-cyan), transparent);
   opacity: 0.35;
-  box-shadow: 0 0 10px rgba(255, 0, 122, 0.1);
+  box-shadow: 0 0 10px rgba(184, 74, 255, 0.1);
 }
 
 .footer-content {
@@ -1143,7 +1150,7 @@ button:focus-visible {
   font-weight: 700;
   margin-bottom: 14px;
   color: var(--text-bright);
-  text-shadow: 0 0 15px rgba(255, 0, 122, 0.2);
+  text-shadow: 0 0 15px rgba(184, 74, 255, 0.2);
 }
 
 .footer-text {
@@ -1154,7 +1161,7 @@ button:focus-visible {
 }
 
 .footer-text a {
-  color: var(--accent-pink-bright);
+  color: var(--accent-purple-bright);
   font-weight: 500;
 }
 
@@ -1241,7 +1248,7 @@ button:focus-visible {
     top: 68px;
     left: 0;
     right: 0;
-    background: rgba(7, 0, 15, 0.98);
+    background: rgba(15, 6, 31, 0.98);
     flex-direction: column;
     padding: 28px;
     gap: 18px;
