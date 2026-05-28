@@ -372,6 +372,7 @@ button:focus-visible {
   height: 120px;
   z-index: 1;
   opacity: 0.25;
+  color: var(--bg-deep);
 }
 
 .hero-palm-left {
@@ -381,10 +382,6 @@ button:focus-visible {
 .hero-palm-right {
   right: 8%;
   transform: scaleX(-1);
-}
-
-.hero-palm {
-  color: var(--bg-deep);
 }
 
 .hero-palm svg {
