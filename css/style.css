@@ -148,6 +148,7 @@ button:focus-visible {
    THEME TOGGLE
    --------------------------------------------------------- */
 .theme-toggle {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -535,7 +536,6 @@ html[data-theme="cyberlight"] .section::before {
 .hero-palm svg {
   width: 100%;
   height: 100%;
-  fill: var(--bg-deep);
   color: var(--bg-deep);
 }
 
@@ -956,12 +956,12 @@ html[data-theme="cyberlight"] .section::before {
   justify-content: center;
   color: var(--accent-purple-bright);
   transition: var(--transition-fast);
+  overflow: hidden;
 }
 
 .project-icon svg {
   width: 24px;
   height: 24px;
-  overflow: visible;
 }
 
 /* ===== Project Icon Animations ===== */
