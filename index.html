@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synth | Full-Stack & Systems Developer</title>
+  <meta name="description" content="Portfolio of Synth — Junior Developer specializing in Rust, TypeScript, Dart/Flutter, and Ruby on Rails. Building CLI tools, web platforms, mobile apps, and 3D experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic@7.1.0/picnic.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-bracket">[</span>SYNTH<span class="logo-bracket">]</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-title">
+          <span class="line">Building systems,</span>
+          <span class="line">ships & experiences.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Junior Developer crafting high-performance CLI tools, cross-platform mobile apps, 
+          full-stack web platforms, and 3D interactive experiences in <span class="highlight">Rust</span>, 
+          <span class="highlight">TypeScript</span>, <span class="highlight">Dart</span>, & <span class="highlight">Ruby</span>.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="https://github.com/synthalorian" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </header>
+
+  <!-- About / Stats Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">01 — About</span>
+        <h2 class="section-title">Code across the stack</h2>
+        <p class="section-desc">
+          I build software that spans from low-level systems to polished user interfaces. 
+          With 40+ public repositories and growing, my work covers CLI tooling, real-time web platforms, 
+          cross-platform mobile apps, 3D graphics, and mesh networking.
+        </p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">41+</div>
+          <div class="stat-label">Public Repositories</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Languages Used</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">350+</div>
+          <div class="stat-label">Tests Passing</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Platforms Supported</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">02 — Featured Work</span>
+        <h2 class="section-title">Projects that ship</h2>
+        <p class="section-desc">
+          A curated selection of the most complete and polished projects from my public repositories. 
+          Each one represents real engineering challenges solved across different domains.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Forge -->
+        <article class="project-card featured" data-reveal>
+          <div class="project-header">
+            <div class="project-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-version">v1.4.0</span>
+              <span class="project-status stable">Stable</span>
+            </div>
+          </div>
+          <h3 class="project-name">Forge</h3>
+          <p class="project-desc">
+            A digital workshop CLI + web GUI for backups, AI orchestration, system tools, and creative workflows. 
+            Features content-deduplicated backups, AES-256-GCM encrypted journaling, real-time Rails dashboard, 
+            and automated GitHub release management.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag ruby">Rails 8</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">Tailwind</span>
+          </div>
+          <div class="project-metrics">
+            <span>116 Rust tests</span>
+            <span>230+ Rails specs</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/forge" target="_blank" rel="noopener" class="link-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Janus -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon janus-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status beta">Active Dev</span>
+            </div>
+          </div>
+          <h3 class="project-name">Janus</h3>
+          <p class="project-desc">
+            AI-first communication platform with real-time WebSocket chat, multi-agent orchestration, 
+            knowledge graph extraction, and AI-to-AI governance. Features a Bot Forge for agent creation 
+            and a Swarm Engine for task DAG execution.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag ts">TypeScript</span>
+            <span class="tech-tag">React 19</span>
+            <span class="tech-tag">Express 5</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Socket.IO</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/Janus" target="_blank" rel="noopener" class="link-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Ledger -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon ledger-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status stable">Production</span>
+            </div>
+          </div>
+          <h3 class="project-name">Ledger</h3>
+          <p class="project-desc">
+            Terminal-native HTTP proxy for API traffic capture, inspection, and replay. 
+            Zero-config setup with SQLite persistence, regex search, HAR/curl export, 
+            and an interactive ratatui TUI for live request streaming.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">Hyper</span>
+            <span class="tech-tag">ratatui</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/ledger" target="_blank" rel="noopener" class="link-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Reticulum Forge -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon mesh-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="6" r="3"/><circle cx="19" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="5" y1="9" x2="12" y2="15"/><line x1="19" y1="9" x2="12" y2="15"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status stable">Functional</span>
+            </div>
+          </div>
+          <h3 class="project-name">Reticulum Forge</h3>
+          <p class="project-desc">
+            "Terraform for mesh networks." A CLI toolkit for building, testing, simulating, and deploying 
+            Reticulum mesh networks. Includes project scaffolding, hardware config generation, 
+            in-process simulation with Graphviz export, SSH deployment, and a real-time TUI monitor.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag">Tokio</span>
+            <span class="tech-tag">ratatui</span>
+            <span class="tech-tag">petgraph</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/reticulum-forge" target="_blank" rel="noopener" class="link-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Retro Spec -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon retro-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22h20"/><path d="M6 22V10l6-6 6 6v12"/><path d="M10 22v-6h4v6"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status beta">In Progress</span>
+            </div>
+          </div>
+          <h3 class="project-name">Retro Spec</h3>
+          <p class="project-desc">
+            3D city generator that renders Git repository history as an explorable neon metropolis. 
+            Each commit becomes a skyscraper, branches become boulevards, and merges become glowing plazas. 
+            Built with Bevy 0.15 ECS and procedural generation.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag">Bevy 0.15</span>
+            <span class="tech-tag">git2</span>
+            <span class="tech-tag">glTF</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/retro-spec" target="_blank" rel="noopener" class="link-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Rift -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon rift-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status beta">In Progress</span>
+            </div>
+          </div>
+          <h3 class="project-name">Rift</h3>
+          <p class="project-desc">
+            Cross-engine game asset pipeline manager. Define assets in a single source-of-truth directory, 
+            and Rift automatically converts, validates, and deploys to Unity, Godot, and Unreal projects. 
+            Includes filesystem watching, SQLite tracking, and a Rails 8 dashboard.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag ruby">Rails 8</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">Axum</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/rift" target="_blank" rel="noopener" class="link-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Reticulum Wave -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon wave-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status beta">Active Dev</span>
+            </div>
+          </div>
+          <h3 class="project-name">Reticulum Wave</h3>
+          <p class="project-desc">
+            Offline-first, cross-platform encrypted mesh messaging client for Reticulum/LXMF. 
+            Supports group channels, file transfers, RNode LoRa management, offline maps with signal heatmaps, 
+            and delivery receipts — all without traditional internet infrastructure.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag dart">Dart</span>
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Riverpod</span>
+            <span class="tech-tag">FFI</span>
+            <span class="tech-tag">LoRa</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/reticulum-wave" target="_blank" rel="noopener" class="link-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Open-Life -->
+        <article class="project-card" data-reveal>
+          <div class="project-header">
+            <div class="project-icon life-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-version">v1.0</span>
+              <span class="project-status stable">Released</span>
+            </div>
+          </div>
+          <h3 class="project-name">Open Life</h3>
+          <p class="project-desc">
+            AI-powered life management app with a distinctive synthwave aesthetic. Unifies fitness tracking, 
+            financial management, and health monitoring into one interface, with an AI assistant that 
+            delivers cross-domain insights using Clean Architecture and Riverpod state management.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag dart">Dart</span>
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Riverpod</span>
+            <span class="tech-tag">Hive</span>
+            <span class="tech-tag">OpenAI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/Open-Life" target="_blank" rel="noopener" class="link-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="projects-footer">
+        <a href="https://github.com/synthalorian?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Explore all 41 repositories on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">03 — Tech Stack</span>
+        <h2 class="section-title">Languages & Tools</h2>
+        <p class="section-desc">
+          I work across the entire stack — from systems programming and CLI tooling to 
+          real-time web platforms and cross-platform mobile applications.
+        </p>
+      </div>
+      <div class="skills-layout">
+        <div class="skills-category">
+          <h3 class="skills-cat-title">Systems & CLI</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">Rust</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Tokio / Async</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">CLI Design (Clap, ratatui)</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">SQLite / SQLx</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-cat-title">Web & Backend</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">TypeScript</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">React / Vite</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Node.js / Express</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Ruby on Rails</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">PostgreSQL / Drizzle ORM</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">WebSocket / Socket.IO</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-cat-title">Mobile & Cross-Platform</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">Dart / Flutter</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Riverpod / GoRouter</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Hive / Isar</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Native FFI</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-cat-title">Specialized</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <span class="skill-name">3D / Bevy Engine</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Elixir / BEAM</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 55%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Mesh Networking</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Game Dev Pipelines</span>
+              <div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="contact-card">
+        <h2 class="contact-title">Let's build something together.</h2>
+        <p class="contact-desc">
+          I'm currently open to junior developer roles, internships, and freelance projects. 
+          If you need someone who can ship across the stack — from Rust CLIs to Flutter apps to Rails dashboards — let's talk.
+        </p>
+        <div class="contact-links">
+          <a href="https://github.com/synthalorian" target="_blank" rel="noopener" class="contact-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:synthalorian@proton.me" class="contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-bracket">[</span>SYNTH<span class="logo-bracket">]</span>
+        </div>
+        <p class="footer-text">
+          Built with passion, Picnic CSS, and a lot of coffee. 
+          Source available on <a href="https://github.com/synthalorian/synthalorian.github.io" target="_blank" rel="noopener">GitHub</a>.
+        </p>
+        <p class="footer-copy">&copy; 2026 Synth. All systems nominal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
