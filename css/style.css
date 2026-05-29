@@ -510,8 +510,8 @@ html[data-theme="cyberlight"] .section::before {
 }
 
 @keyframes stripeScroll {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(18px); }
+  0% { background-position: 0 0; }
+  100% { background-position: 0 18px; }
 }
 
 /* Perspective Grid Floor — purple-tinted with cyan verticals */
