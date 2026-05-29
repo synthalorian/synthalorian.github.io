@@ -476,7 +476,8 @@ html[data-theme="cyberlight"] .section::before {
 
 @keyframes sunPulse {
   0% { transform: translateX(-50%) scale(1); }
-  100% { transform: translateX(-50%) scale(1.08); }
+  50% { transform: translateX(-50%) scale(1.12); }
+  100% { transform: translateX(-50%) scale(1); }
 }
 
 @keyframes sunGlow {
@@ -536,7 +537,7 @@ html[data-theme="cyberlight"] .section::before {
 
 @keyframes gridMove {
   0% { background-position: 0 0, 0 0; }
-  100% { background-position: 0 80px, 0 0; }
+  100% { background-position: 0 160px, 0 0; }
 }
 
 @keyframes gridPulse {
@@ -567,13 +568,15 @@ html[data-theme="cyberlight"] .section::before {
 }
 
 @keyframes palmSway {
-  0% { transform: rotate(-2deg); }
-  100% { transform: rotate(2deg); }
+  0% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+  100% { transform: rotate(-4deg); }
 }
 
 @keyframes palmSwayRight {
-  0% { transform: scaleX(-1) rotate(-2deg); }
-  100% { transform: scaleX(-1) rotate(2deg); }
+  0% { transform: scaleX(-1) rotate(-4deg); }
+  50% { transform: scaleX(-1) rotate(4deg); }
+  100% { transform: scaleX(-1) rotate(-4deg); }
 }
 
 .hero-palm svg {
@@ -606,7 +609,8 @@ html[data-theme="cyberlight"] .section::before {
 
 @keyframes scanlineFlicker {
   0% { opacity: 1; }
-  100% { opacity: 0.97; }
+  50% { opacity: 0.92; }
+  100% { opacity: 1; }
 }
 
 /* --- Hero Content --- */
@@ -1858,13 +1862,5 @@ html[data-theme="cyberlight"] .footer-wave {
 
   html {
     scroll-behavior: auto;
-  }
-
-  .hero-stars,
-  .hero-sun::after,
-  .hero-grid-floor,
-  .hero-scanlines,
-  .hero-palm {
-    display: none;
   }
 }
