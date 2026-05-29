@@ -1201,6 +1201,17 @@ html[data-theme="cyberlight"] .section::before {
   50% { opacity: 1; }
 }
 
+/* Habit trophy glow */
+.icon-habit svg {
+  animation: habitGlow 2.5s ease-in-out infinite alternate;
+  transform-origin: center bottom;
+}
+
+@keyframes habitGlow {
+  0%, 100% { filter: drop-shadow(0 0 0px var(--accent-yellow)); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 8px rgba(255, 255, 102, 0.6)); transform: scale(1.05); }
+}
+
 /* Hover boost */
 .project-card:hover .project-icon svg {
   animation-duration: 0.6s !important;
