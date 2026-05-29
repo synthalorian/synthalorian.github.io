@@ -495,23 +495,23 @@ html[data-theme="cyberlight"] .section::before {
 .hero-sun::after {
   content: '';
   position: absolute;
-  inset: -50%;
+  top: -50%;
+  left: -50%;
   width: 200%;
   height: 200%;
-  border-radius: 50%;
   background: repeating-linear-gradient(
     0deg,
-    transparent,
-    transparent 12px,
-    rgba(13, 2, 33, 0.5) 12px,
-    rgba(13, 2, 33, 0.5) 20px
+    transparent 0px,
+    transparent 10px,
+    rgba(13, 2, 33, 0.7) 10px,
+    rgba(13, 2, 33, 0.7) 18px
   );
-  animation: stripeScroll 3s linear infinite;
+  animation: stripeScroll 2s linear infinite;
 }
 
 @keyframes stripeScroll {
   0% { transform: translateY(0); }
-  100% { transform: translateY(20px); }
+  100% { transform: translateY(18px); }
 }
 
 /* Perspective Grid Floor — purple-tinted with cyan verticals */
