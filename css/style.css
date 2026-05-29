@@ -472,17 +472,19 @@ html[data-theme="cyberlight"] .section::before {
     0 0 120px rgba(255, 0, 127, 0.15);
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-  animation: sunScroll 8s ease-in-out infinite alternate;
+  animation: sunPulse 6s ease-in-out infinite alternate;
 }
 
-@keyframes sunScroll {
+@keyframes sunPulse {
   0% {
+    transform: translateX(-50%) scale(1);
     background-position: 0% 0%;
     box-shadow:
       0 0 60px rgba(143, 0, 255, 0.25),
       0 0 120px rgba(255, 0, 127, 0.15);
   }
   100% {
+    transform: translateX(-50%) scale(1.08);
     background-position: 0% 40%;
     box-shadow:
       0 0 80px rgba(143, 0, 255, 0.4),
