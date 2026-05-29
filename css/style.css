@@ -659,6 +659,7 @@ html[data-theme="cyberlight"] .section::before {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  margin-bottom: 80px;
 }
 
 /* Buttons */
@@ -731,7 +732,7 @@ html[data-theme="cyberlight"] .section::before {
   position: absolute;
   bottom: 36px;
   left: 50%;
-  transform: translateX(0);
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
