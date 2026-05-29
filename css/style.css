@@ -1093,6 +1093,46 @@ html[data-theme="cyberlight"] .section::before {
   50% { opacity: 0.7; }
 }
 
+/* Clock tick */
+.icon-clock svg {
+  animation: clockTick 3s ease-in-out infinite;
+  transform-origin: 12px 12px;
+}
+
+@keyframes clockTick {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(3deg); }
+  40% { transform: rotate(-2deg); }
+  60% { transform: rotate(1deg); }
+  80% { transform: rotate(-0.5deg); }
+}
+
+/* Psalm page reveal */
+.icon-psalm svg {
+  animation: psalmOpen 3.2s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+@keyframes psalmOpen {
+  0%, 100% { transform: scaleX(1); }
+  40% { transform: scaleX(0.78); }
+  70% { transform: scaleX(0.95); }
+}
+
+/* Amp sound waves pulse */
+.icon-amp svg path:nth-child(2),
+.icon-amp svg path:nth-child(3) {
+  animation: wavePulse 1.4s ease-in-out infinite;
+  transform-origin: right center;
+}
+.icon-amp svg path:nth-child(2) { animation-delay: 0s; }
+.icon-amp svg path:nth-child(3) { animation-delay: 0.25s; }
+
+@keyframes wavePulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
 /* Hover boost */
 .project-card:hover .project-icon svg {
   animation-duration: 0.6s !important;
