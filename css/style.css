@@ -565,6 +565,7 @@ html[data-theme="cyberlight"] .section::before {
   position: relative;
   z-index: 1;
   max-width: 680px;
+  padding-top: 60px;
   animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
