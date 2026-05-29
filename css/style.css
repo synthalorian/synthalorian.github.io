@@ -466,26 +466,24 @@ html[data-theme="cyberlight"] .section::before {
     var(--accent-red) 70%,
     transparent 100%
   );
-  background-size: 100% 200%;
   box-shadow:
     0 0 60px rgba(143, 0, 255, 0.25),
     0 0 120px rgba(255, 0, 127, 0.15);
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   animation: sunPulse 6s ease-in-out infinite alternate;
+  overflow: hidden;
 }
 
 @keyframes sunPulse {
   0% {
     transform: translateX(-50%) scale(1);
-    background-position: 0% 0%;
     box-shadow:
       0 0 60px rgba(143, 0, 255, 0.25),
       0 0 120px rgba(255, 0, 127, 0.15);
   }
   100% {
     transform: translateX(-50%) scale(1.08);
-    background-position: 0% 40%;
     box-shadow:
       0 0 80px rgba(143, 0, 255, 0.4),
       0 0 160px rgba(255, 0, 127, 0.25),
@@ -493,11 +491,13 @@ html[data-theme="cyberlight"] .section::before {
   }
 }
 
-/* Hard sun stripes */
+/* Hard sun stripes — fluid scrolling */
 .hero-sun::after {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
   border-radius: 50%;
   background: repeating-linear-gradient(
     0deg,
@@ -506,8 +506,12 @@ html[data-theme="cyberlight"] .section::before {
     rgba(13, 2, 33, 0.5) 12px,
     rgba(13, 2, 33, 0.5) 20px
   );
-  mask-image: linear-gradient(to bottom, transparent 35%, black 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 35%, black 100%);
+  animation: stripeScroll 3s linear infinite;
+}
+
+@keyframes stripeScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
 }
 
 /* Perspective Grid Floor — purple-tinted with cyan verticals */
