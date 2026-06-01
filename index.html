@@ -103,10 +103,10 @@
         <span class="section-label">01 — About</span>
         <h2 class="section-title">Code across the stack</h2>
         <p class="section-desc">
-          I build open-source software that spans from low-level systems to polished user interfaces. 
-          With dozens of public repositories and growing, my work covers CLI tooling, real-time web platforms, 
-          cross-platform mobile apps, 3D graphics, game engine architecture, terminal TUI applications, audio DSP, and mesh networking —
-          in Rust, Dart, TypeScript, C++, Ruby, and Elixir.
+          I build open-source software that spans from low-level systems to polished user interfaces.
+          With dozens of public repositories and growing, my work covers CLI tooling, real-time web platforms,
+          cross-platform mobile apps, 3D graphics, game engine architecture, terminal TUI applications, audio DSP,
+          mesh networking, and AI coding harnesses — in Rust, Dart, TypeScript, C++, Ruby, and Elixir.
         </p>
       </div>
       <div class="stats-grid">
@@ -122,8 +122,8 @@
           <div class="stat-number" data-live="true">0</div>
           <div class="stat-label">Following</div>
         </div>
-        <div class="stat-card" data-stat="projects" data-fallback="13">
-          <div class="stat-number" data-live="true">13</div>
+        <div class="stat-card" data-stat="projects" data-fallback="14">
+          <div class="stat-number" data-live="true">14</div>
           <div class="stat-label">Featured Projects</div>
         </div>
       </div>
@@ -147,8 +147,44 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Open Synth — Featured -->
-        <article class="project-card featured" data-reveal data-repo="open-synth">
+        <!-- OpenShark — Featured -->
+        <article class="project-card featured" data-reveal data-repo="openshark">
+          <div class="project-header">
+            <div class="project-icon icon-shark" style="background: rgba(3, 237, 249, 0.08); color: var(--accent-cyan-bright);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-3.5 0-6.5 2-8 5 2 1 4 2 6 2s4-1 6-2c-1.5-3-4.5-5-8-5z"/><path d="M4 7c-1 3-1 7 2 10 2 2 5 3 8 3"/><path d="M20 7c1 3 1 7-2 10-2 2-5 3-8 3"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M12 20v2"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-status beta">Active Dev</span>
+            </div>
+          </div>
+          <h3 class="project-name">OpenShark</h3>
+          <p class="project-desc">
+            AI coding harness that combines the best of Hermes Agent, Claude Code, and OpenAI Codex into a single
+            unified interface. Multi-provider LLM orchestration with native tool calling, autonomous agent loops,
+            project-wide context awareness, and a TUI dashboard for real-time session monitoring.
+          </p>
+          <div class="project-stats" data-repo-stats="openshark">
+            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag ts">TypeScript</span>
+            <span class="tech-tag">LLM Orchestration</span>
+            <span class="tech-tag">TUI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/synthalorian/openshark" target="_blank" rel="noopener" class="link-primary" aria-label="View OpenShark source code on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Open Synth -->
+        <article class="project-card" data-reveal data-repo="open-synth">
           <div class="project-header">
             <div class="project-icon icon-synth" style="background: rgba(143, 0, 255, 0.1); color: var(--accent-purple-bright);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v8"/><path d="M18 5v13"/><path d="M22 10v4"/></svg>
@@ -670,7 +706,7 @@
         <p class="section-desc">
           I work across the entire stack — from systems programming & CLI tooling, real-time web platforms,
           cross-platform mobile & desktop apps, game engines with integrated editor suites to audio DSP & synthesizers,
-          mesh networking infrastructure, and terminal TUI applications.
+          mesh networking infrastructure, AI coding harnesses, and terminal TUI applications.
         </p>
       </div>
       <div class="skills-layout">
@@ -780,9 +816,9 @@
       <div class="contact-card">
         <h2 class="contact-title">Let's build something together.</h2>
         <p class="contact-desc">
-          I'm currently open to junior developer roles, internships, and freelance projects. 
-          If you need someone who can ship across the stack — from Rust CLIs and C++ terminal tools to 
-          Flutter apps, Rails dashboards, Elixir mesh relays, game engines, and real-time audio DSP — let's talk.
+          I'm currently open to junior developer roles, internships, and freelance projects.
+          If you need someone who can ship across the stack — from Rust CLIs and C++ terminal tools to
+          Flutter apps, Rails dashboards, Elixir mesh relays, game engines, AI coding harnesses, and real-time audio DSP — let's talk.
         </p>
         <div class="contact-links">
           <a href="https://github.com/synthalorian" target="_blank" rel="noopener" class="contact-btn" aria-label="View GitHub profile">
