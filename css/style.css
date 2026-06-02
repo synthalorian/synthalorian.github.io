@@ -1279,9 +1279,9 @@ html[data-theme="cyberlight"] .section::before {
   transform-origin: center center;
 }
 
-.icon-shark svg path:nth-child(1) {
+.icon-shark svg path:nth-child(3) {
   animation: finSway 1.4s ease-in-out infinite;
-  transform-origin: 14px 4px;
+  transform-origin: 13px 5px;
 }
 
 .icon-shark svg circle {
