@@ -1167,12 +1167,50 @@ html[data-theme="cyberlight"] .section::before {
   transform-origin: 12px 12px;
 }
 
+.icon-clock svg circle {
+  animation: clockGlow 4s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+.icon-clock svg polyline {
+  animation: handSweep 2s ease-in-out infinite;
+  transform-origin: 12px 12px;
+}
+
+.icon-clock svg path:nth-child(3),
+.icon-clock svg path:nth-child(4),
+.icon-clock svg path:nth-child(5),
+.icon-clock svg path:nth-child(6) {
+  animation: tickMarkPulse 2.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+.icon-clock svg path:nth-child(3) { animation-delay: 0s; }
+.icon-clock svg path:nth-child(4) { animation-delay: 0.3s; }
+.icon-clock svg path:nth-child(5) { animation-delay: 0.6s; }
+.icon-clock svg path:nth-child(6) { animation-delay: 0.9s; }
+
 @keyframes clockTick {
   0%, 100% { transform: rotate(0deg); }
   20% { transform: rotate(3deg); }
   40% { transform: rotate(-2deg); }
   60% { transform: rotate(1deg); }
   80% { transform: rotate(-0.5deg); }
+}
+
+@keyframes clockGlow {
+  0%, 100% { filter: drop-shadow(0 0 0px var(--accent-cyan)); }
+  50% { filter: drop-shadow(0 0 6px rgba(3, 237, 249, 0.5)); }
+}
+
+@keyframes handSweep {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(8deg); }
+  75% { transform: rotate(-4deg); }
+}
+
+@keyframes tickMarkPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
 }
 
 /* Psalm page reveal */
@@ -1188,6 +1226,16 @@ html[data-theme="cyberlight"] .section::before {
 }
 
 /* Amp sound waves pulse */
+.icon-amp svg {
+  animation: ampVibrate 2.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.icon-amp svg polygon {
+  animation: speakerThump 1.2s ease-in-out infinite;
+  transform-origin: center center;
+}
+
 .icon-amp svg path:nth-child(2),
 .icon-amp svg path:nth-child(3) {
   animation: wavePulse 1.4s ease-in-out infinite;
@@ -1196,9 +1244,22 @@ html[data-theme="cyberlight"] .section::before {
 .icon-amp svg path:nth-child(2) { animation-delay: 0s; }
 .icon-amp svg path:nth-child(3) { animation-delay: 0.25s; }
 
+@keyframes ampVibrate {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-0.5px); }
+  40% { transform: translateX(0.5px); }
+  60% { transform: translateX(-0.3px); }
+  80% { transform: translateX(0.3px); }
+}
+
+@keyframes speakerThump {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
 @keyframes wavePulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+  0%, 100% { opacity: 0.5; transform: scaleX(1); }
+  50% { opacity: 1; transform: scaleX(1.15); }
 }
 
 /* Habit trophy glow */
