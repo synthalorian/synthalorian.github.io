@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
           case 'repos': value = data.public_repos; break;
           case 'followers': value = data.followers; break;
           case 'following': value = data.following; break;
-          case 'projects': value = 15; break;
+          case 'projects': value = 16; break;
           default: value = fallback || '—';
         }
 
