@@ -1077,6 +1077,27 @@ html[data-theme="cyberlight"] .section::before {
   66% { transform: rotate(-6deg); }
 }
 
+/* Mesh node pulse */
+.icon-mesh svg {
+  animation: meshPulse 2.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes meshPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.icon-mesh circle[fill="currentColor"] {
+  animation: meshNodePulse 2.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes meshNodePulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
 /* Forge spark + hammer */
 .icon-forge svg {
   animation: forgeStrike 2.8s ease-in-out infinite;
