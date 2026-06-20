@@ -851,6 +851,7 @@ html[data-theme="cyberlight"] .section::before {
 .section-header {
   max-width: 620px;
   margin-bottom: 72px;
+  text-align: left;
 }
 
 .section-label {
