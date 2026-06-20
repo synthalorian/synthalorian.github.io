@@ -1449,6 +1449,69 @@ html[data-theme="cyberlight"] .section::before {
   50% { filter: drop-shadow(0 0 6px rgba(0, 255, 136, 0.5)); }
 }
 
+/* ClawTrade — marketplace stack */
+.icon-clawtrade svg {
+  animation: stackFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes stackFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* ReticulumChat — mesh network */
+.icon-reticulum svg {
+  animation: meshBreathe 2.2s ease-in-out infinite;
+}
+
+@keyframes meshBreathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+}
+
+/* ReticulumLink — chain links */
+.icon-link svg {
+  animation: linkPulse 2s ease-in-out infinite;
+}
+
+@keyframes linkPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Chronos Engine — clock tick */
+.icon-chronos svg {
+  animation: clockTick 3s ease-in-out infinite;
+}
+
+@keyframes clockTick {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+
+/* OpenPsalm — book open */
+.icon-psalm svg {
+  animation: psalmOpen 3.2s ease-in-out infinite;
+}
+
+@keyframes psalmOpen {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.05); }
+}
+
+/* VHS-86 — tape static */
+.icon-vhs svg {
+  animation: tapeStatic 2.8s ease-in-out infinite;
+}
+
+@keyframes tapeStatic {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.85; }
+  50% { opacity: 1; }
+  75% { opacity: 0.9; }
+}
+
 /* Hover boost */
 .project-card:hover .project-icon svg {
   animation-duration: 0.6s !important;
