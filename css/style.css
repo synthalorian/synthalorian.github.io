@@ -1553,6 +1553,9 @@ html[data-theme="cyberlight"] .section::before {
 .tech-tag.python { color: var(--accent-yellow); border-color: rgba(255, 255, 102, 0.15); }
 .tech-tag.elixir { color: var(--accent-magenta); border-color: rgba(255, 0, 255, 0.15); }
 .tech-tag.flutter { color: var(--accent-cyan-bright); border-color: rgba(3, 237, 249, 0.15); }
+.tech-tag.shell { color: var(--accent-green-bright); border-color: rgba(0, 255, 136, 0.15); }
+.tech-tag.tauri { color: var(--accent-pink-bright); border-color: rgba(255, 0, 127, 0.15); }
+.tech-tag.axum { color: var(--accent-purple-bright); border-color: rgba(143, 0, 255, 0.15); }
 
 .project-stats {
   display: flex;
