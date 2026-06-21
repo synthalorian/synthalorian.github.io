@@ -1699,6 +1699,7 @@ html[data-theme="cyberlight"] .section::before {
   text-align: left;
   margin-left: 0;
   margin-right: auto;
+  max-width: none;
 }
 
 .skills-layout {
