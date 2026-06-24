@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T16:21:08-04:00",
+  "updated": "2026-06-24T16:22:29-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://show-prime-rays-conventional.trycloudflare.com",
+      "url": "https://highly-hollywood-exist-acid.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://3174be23772c31cd-149-88-18-235.serveousercontent.com",
+      "url": "https://11ebb945cede6c7a-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
