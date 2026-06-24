@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T16:28:33-04:00",
+  "updated": "2026-06-24T16:29:22-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://poultry-generation-belongs-medium.trycloudflare.com",
+      "url": "https://racing-livestock-homeless-tea.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://8288eeb9c4648498-149-88-18-235.serveousercontent.com",
+      "url": "https://9fc99495215359af-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
