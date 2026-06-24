@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T13:11:39-04:00",
+  "updated": "2026-06-24T13:13:00-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,14 +10,14 @@
     },
     {
       "name": "cf",
-      "url": "https://blink-alliance-die-breeding.trycloudflare.com",
+      "url": "https://procurement-emotional-moved-watches.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://c9ff9b1ea39c8e55-149-88-18-235.serveousercontent.com",
+      "url": "https://a07984fbaf304885-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
