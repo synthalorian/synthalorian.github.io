@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T11:35:25-04:00",
+  "updated": "2026-06-24T11:36:17-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,7 +10,7 @@
     },
     {
       "name": "cf",
-      "url": "https://worked-bloggers-logistics-memories.trycloudflare.com",
+      "url": "https://oklahoma-basement-skirt-recruiting.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
