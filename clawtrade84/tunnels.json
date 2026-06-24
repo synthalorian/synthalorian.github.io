@@ -1,38 +1,27 @@
 {
-  "updated": "2026-06-24T08:02:49-04:00",
+  "updated": "2026-06-24T08:45:00-04:00",
   "tunnels": [
+    {
+      "name": "lt_clawtrade84",
+      "url": "https://clawtrade84.loca.lt",
+      "type": "localtunnel",
+      "priority": 1,
+      "status": "online"
+    },
     {
       "name": "cf",
       "url": "https://hopkins-named-cardiff-suspected.trycloudflare.com",
       "type": "cloudflare",
-      "priority": 3,
-      "status": "online"
-    }
-,
-    {
-      "name": "lt_clawtrade84",
-      "url": "https://hot-lionfish-41.loca.lt",
-      "type": "localtunnel",
-      "priority": 1,
-      "status": "online"
-    }
-,
-    {
-      "name": "lt_clawtrade-backup",
-      "url": "https://bad-snail-5.loca.lt",
-      "type": "localtunnel",
       "priority": 2,
       "status": "online"
-    }
-,
+    },
     {
       "name": "ngrok",
       "url": "https://attribute-undying-linoleum.ngrok-free.dev",
       "type": "ngrok",
-      "priority": 4,
-      "status": "offline"
+      "priority": 3,
+      "status": "online"
     }
-
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "1.0.0"
