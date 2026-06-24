@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T13:14:59-04:00",
+  "updated": "2026-06-24T13:15:41-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -7,9 +7,23 @@
       "type": "ngrok",
       "priority": 1,
       "status": "online"
+    },
+    {
+      "name": "cf",
+      "url": "https://operator-depot-singh-overseas.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    },
+    {
+      "name": "serveo",
+      "url": "https://3255db0f2b015940-149-88-18-235.serveousercontent.com",
+      "type": "serveo",
+      "priority": 5,
+      "status": "online"
     }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "5.0.0",
-  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
+  "note": "Multi-tunnel active. 3 tunnels online."
 }
