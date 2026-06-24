@@ -1,8 +1,29 @@
 {
-  "updated": "2026-06-24T12:22:48-04:00",
+  "updated": "2026-06-24T12:22:58-04:00",
   "tunnels": [
+    {
+      "name": "ngrok",
+      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
+      "type": "ngrok",
+      "priority": 1,
+      "status": "online"
+    },
+    {
+      "name": "serveo",
+      "url": "https://667e1cf5e14b8c8c-149-88-18-235.serveousercontent.com",
+      "type": "serveo",
+      "priority": 5,
+      "status": "online"
+    },
+    {
+      "name": "serveo",
+      "url": "https://667e1cf5e14b8c8c-149-88-18-235.serveousercontent.com",
+      "type": "serveo",
+      "priority": 5,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "4.0.0",
-  "note": "CRITICAL: No tunnels online!"
+  "note": "Multi-tunnel active. 3 tunnels online."
 }
