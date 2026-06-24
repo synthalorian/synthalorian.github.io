@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T14:47:35-04:00",
+  "updated": "2026-06-24T14:48:58-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://televisions-pad-advocacy-discovery.trycloudflare.com",
+      "url": "https://affair-fantasy-draws-gmt.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://8e81da969dfe381a-149-88-18-235.serveousercontent.com",
+      "url": "https://729f0f5bca04e10a-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
