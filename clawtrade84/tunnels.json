@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T16:24:53-04:00",
+  "updated": "2026-06-24T16:25:42-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://varied-meters-pushed-arising.trycloudflare.com",
+      "url": "https://position-gulf-travelling-treasure.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://b42aef0373cd1482-149-88-18-235.serveousercontent.com",
+      "url": "https://334814c65f99cab3-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
