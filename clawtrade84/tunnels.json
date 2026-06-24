@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T12:55:40-04:00",
+  "updated": "2026-06-24T12:57:01-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,14 +10,14 @@
     },
     {
       "name": "cf",
-      "url": "https://restored-prison-children-names.trycloudflare.com",
+      "url": "https://administrators-vacation-humanitarian-ebooks.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://e93e8f62bc0b762d-149-88-18-235.serveousercontent.com",
+      "url": "https://5fda798aba923663-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
