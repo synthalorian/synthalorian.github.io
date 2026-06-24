@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T12:50:05-04:00",
+  "updated": "2026-06-24T12:50:56-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,7 +10,7 @@
     },
     {
       "name": "cf",
-      "url": "https://integrate-defence-rich-ntsc.trycloudflare.com",
+      "url": "https://launched-receipt-purchase-tells.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
