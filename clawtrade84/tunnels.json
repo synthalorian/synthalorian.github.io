@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-24T13:23:13-04:00",
+  "updated": "2026-06-24T13:24:13-04:00",
   "tunnels": [
+    {
+      "name": "cf",
+      "url": "https://limitations-noticed-hardcover-start.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    }
+
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "5.0.0",
-  "note": "CRITICAL: No tunnels online!"
+  "version": "1.0.0"
 }
