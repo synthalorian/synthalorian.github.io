@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T11:31:29-04:00",
+  "updated": "2026-06-24T11:32:23-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,7 +10,7 @@
     },
     {
       "name": "cf",
-      "url": "https://leg-path-eventually-reload.trycloudflare.com",
+      "url": "https://seems-levitra-berry-tigers.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
