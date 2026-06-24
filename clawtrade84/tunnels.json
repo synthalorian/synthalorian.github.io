@@ -1,8 +1,22 @@
 {
-  "updated": "2026-06-24T12:57:03-04:00",
+  "updated": "2026-06-24T12:58:22-04:00",
   "tunnels": [
+    {
+      "name": "cf",
+      "url": "https://calls-gale-chrome-length.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    },
+    {
+      "name": "serveo",
+      "url": "https://910bea1862268295-149-88-18-235.serveousercontent.com",
+      "type": "serveo",
+      "priority": 5,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "5.0.0",
-  "note": "CRITICAL: No tunnels online!"
+  "note": "Multi-tunnel active. 2 tunnels online."
 }
