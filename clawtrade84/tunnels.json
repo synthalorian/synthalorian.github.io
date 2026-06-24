@@ -1,29 +1,15 @@
 {
-  "updated": "2026-06-24T14:33:27-04:00",
+  "updated": "2026-06-24T14:34:31-04:00",
   "tunnels": [
     {
-      "name": "ngrok",
-      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
-      "type": "ngrok",
-      "priority": 1,
-      "status": "online"
-    },
-    {
       "name": "cf",
-      "url": "https://engage-bloom-spiritual-amp.trycloudflare.com",
+      "url": "https://act-improve-possible-trance.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
-    },
-    {
-      "name": "serveo",
-      "url": "https://a7a5f699167d0f9a-149-88-18-235.serveousercontent.com",
-      "type": "serveo",
-      "priority": 5,
-      "status": "online"
     }
+
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "5.0.0",
-  "note": "Multi-tunnel active. 3 tunnels online."
+  "version": "1.0.0"
 }
