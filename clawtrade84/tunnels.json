@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-24T12:45:18-04:00",
+  "updated": "2026-06-24T12:46:00-04:00",
   "tunnels": [
+    {
+      "name": "ngrok",
+      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
+      "type": "ngrok",
+      "priority": 1,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "5.0.0",
-  "note": "CRITICAL: No tunnels online!"
+  "note": "ngrok stable. Serveo works but needs manual SSH session (screen/tmux). Telebit needs email verification. Cloudflare rate-limited. LocalTunnel IP-blocked."
 }
