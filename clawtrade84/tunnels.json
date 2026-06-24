@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T13:07:42-04:00",
+  "updated": "2026-06-24T13:09:03-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,14 +10,14 @@
     },
     {
       "name": "cf",
-      "url": "https://scripts-maybe-expenditures-authority.trycloudflare.com",
+      "url": "https://scientist-modifications-routes-works.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://465f5a34fdcb2cf2-149-88-18-235.serveousercontent.com",
+      "url": "https://0d223f75df6d79a2-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
