@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-24T10:09:53-04:00",
+  "updated": "2026-06-24T10:10:40-04:00",
   "tunnels": [
+    {
+      "name": "cf",
+      "url": "https://wells-deborah-reads-missile.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "4.0.0",
-  "note": "CRITICAL: No tunnels online!"
+  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
 }
