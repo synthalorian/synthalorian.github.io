@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T14:00:38-04:00",
+  "updated": "2026-06-24T14:01:16-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -11,5 +11,5 @@
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "5.0.0",
-  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
+  "note": "1 tunnel(s) online"
 }
