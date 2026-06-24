@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T16:15:42-04:00",
+  "updated": "2026-06-24T16:17:04-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://released-tutorials-interracial-last.trycloudflare.com",
+      "url": "https://proceeds-gray-leaves-rely.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://d2ca5b0a303cea53-149-88-18-235.serveousercontent.com",
+      "url": "https://3149452649a9fdeb-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
