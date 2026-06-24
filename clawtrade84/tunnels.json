@@ -1,8 +1,22 @@
 {
-  "updated": "2026-06-24T16:14:50-04:00",
+  "updated": "2026-06-24T16:15:42-04:00",
   "tunnels": [
-
+    {
+      "name": "cf",
+      "url": "https://released-tutorials-interracial-last.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    },
+    {
+      "name": "serveo",
+      "url": "https://d2ca5b0a303cea53-149-88-18-235.serveousercontent.com",
+      "type": "serveo",
+      "priority": 5,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "1.0.0"
+  "version": "5.0.0",
+  "note": "Multi-tunnel active. 2 tunnels online."
 }
