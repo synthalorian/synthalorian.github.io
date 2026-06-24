@@ -1,15 +1,8 @@
 {
-  "updated": "2026-06-24T10:06:44-04:00",
+  "updated": "2026-06-24T10:06:47-04:00",
   "tunnels": [
-    {
-      "name": "cf",
-      "url": "https://leu-experience-mom-rebound.trycloudflare.com",
-      "type": "cloudflare",
-      "priority": 2,
-      "status": "online"
-    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "4.0.0",
-  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
+  "note": "CRITICAL: No tunnels online!"
 }
