@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T16:07:24-04:00",
+  "updated": "2026-06-24T16:08:47-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://recreation-incentive-ppm-generic.trycloudflare.com",
+      "url": "https://elephant-cognitive-discounted-resulted.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://1c55584ae788a9e4-149-88-18-235.serveousercontent.com",
+      "url": "https://220d7b350b65d817-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
