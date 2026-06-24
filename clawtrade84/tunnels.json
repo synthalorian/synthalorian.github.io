@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T14:27:56-04:00",
+  "updated": "2026-06-24T14:29:18-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://produces-leon-packages-marcus.trycloudflare.com",
+      "url": "https://tire-caution-true-peterson.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://1cf5f8b28e5513ce-149-88-18-235.serveousercontent.com",
+      "url": "https://5cead572d2e7c661-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
