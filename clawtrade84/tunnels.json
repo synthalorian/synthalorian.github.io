@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-24T16:29:51-04:00",
+  "updated": "2026-06-24T16:30:43-04:00",
   "tunnels": [
-
+    {
+      "name": "serveo",
+      "url": "https://cf8be8f6fd11b707-149-88-18-235.serveousercontent.com",
+      "type": "serveo",
+      "priority": 5,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "1.0.0"
+  "version": "5.0.0",
+  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
 }
