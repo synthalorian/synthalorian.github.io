@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T13:15:41-04:00",
+  "updated": "2026-06-24T13:16:59-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,14 +10,14 @@
     },
     {
       "name": "cf",
-      "url": "https://operator-depot-singh-overseas.trycloudflare.com",
+      "url": "https://everyday-troops-occurred-goes.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://3255db0f2b015940-149-88-18-235.serveousercontent.com",
+      "url": "https://22a05afd75524707-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
