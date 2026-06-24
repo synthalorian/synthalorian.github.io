@@ -1,7 +1,8 @@
 {
-  "updated": "2026-06-24T09:27:55-04:00",
+  "updated": "2026-06-24T09:28:28-04:00",
   "tunnels": [
+
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "2.0.0"
+  "version": "1.0.0"
 }
