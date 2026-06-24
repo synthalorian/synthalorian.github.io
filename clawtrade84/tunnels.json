@@ -1,22 +1,15 @@
 {
-  "updated": "2026-06-24T13:28:59-04:00",
+  "updated": "2026-06-24T13:29:13-04:00",
   "tunnels": [
     {
       "name": "ngrok",
       "url": "https://attribute-undying-linoleum.ngrok-free.dev",
       "type": "ngrok",
-      "priority": 1,
-      "status": "online"
-    },
-    {
-      "name": "serveo",
-      "url": "https://060674e0eb8bdf74-149-88-18-235.serveousercontent.com",
-      "type": "serveo",
-      "priority": 5,
+      "priority": 3,
       "status": "online"
     }
+
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "5.0.0",
-  "note": "Multi-tunnel active. 2 tunnels online."
+  "version": "1.0.0"
 }
