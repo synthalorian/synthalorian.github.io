@@ -536,20 +536,36 @@
     </div>
 
     <script>
-        // Fetch live tunnel configuration from JSON
+        // Fetch live tunnel configuration from JSON with aggressive cache-busting
         async function fetchTunnelConfig() {
-            try {
-                // Try to fetch from same origin (GitHub Pages) with cache-busting
-                const response = await fetch('tunnels.json?t=' + Date.now(), {
-                    cache: 'no-store'
-                });
-                if (!response.ok) throw new Error('Failed to fetch');
-                const config = await response.json();
-                return config.tunnels || [];
-            } catch (error) {
-                console.warn('Could not fetch tunnels.json:', error);
-                return [];
+            const cacheBuster = Date.now() + '_' + Math.random().toString(36).slice(2);
+            const urls = [
+                `tunnels.json?_=${cacheBuster}`,
+                `https://raw.githubusercontent.com/synthalorian/synthalorian.github.io/main/clawtrade84/tunnels.json?_=${cacheBuster}`
+            ];
+
+            for (const url of urls) {
+                try {
+                    const response = await fetch(url, {
+                        cache: 'no-store',
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (!response.ok) continue;
+                    const config = await response.json();
+                    return config;
+                } catch (e) {
+                    console.warn('Fetch failed for', url, e.message);
+                }
             }
+
+            // Absolute fallback: hardcoded ngrok (last known good)
+            return {
+                tunnels: [
+                    { name: 'ngrok', url: 'https://attribute-undying-linoleum.ngrok-free.dev', type: 'ngrok', priority: 1, status: 'online' }
+                ],
+                updated: new Date().toISOString(),
+                note: 'Fallback — JSON fetch failed'
+            };
         }
 
         // Create floating particles
@@ -567,69 +583,32 @@
             }
         }
 
-        // Check if a tunnel is alive using an image probe (avoids CORS)
-        async function checkTunnel(tunnel) {
-            if (!tunnel.url) return { ...tunnel, status: 'offline', latency: null };
-            
-            const start = performance.now();
-            try {
-                // Use Image() to probe - bypasses CORS, works for any reachable host
-                const img = new Image();
-                const probePromise = new Promise((resolve, reject) => {
-                    img.onload = () => resolve('ok');
-                    img.onerror = () => resolve('error'); // error still means host is up
-                    img.src = tunnel.url + '/favicon.ico?_t=' + Date.now();
-                });
-                
-                const timeoutPromise = new Promise((_, reject) => 
-                    setTimeout(() => reject(new Error('timeout')), 8000)
-                );
-                
-                await Promise.race([probePromise, timeoutPromise]);
-                const latency = Math.round(performance.now() - start);
-                
-                return {
-                    ...tunnel,
-                    status: 'online',
-                    latency: latency
-                };
-            } catch (error) {
-                return {
-                    ...tunnel,
-                    status: 'offline',
-                    latency: null
-                };
-            }
-        }
-
-        // Render tunnel cards
-        function renderTunnels(tunnelStatus) {
+        // Render tunnel cards from JSON status (trust the server-side health check)
+        function renderTunnels(tunnels, bestTunnel) {
             const grid = document.getElementById('tunnelGrid');
             grid.innerHTML = '';
-            
-            if (tunnelStatus.length === 0) {
-                grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 2rem; color: var(--neon-orange);">No tunnels configured. Check back soon.</div>';
-                return;
-            }
-            
-            tunnelStatus.forEach(tunnel => {
+
+            tunnels.forEach(tunnel => {
+                const isOnline = tunnel.status === 'online';
+                const isBest = bestTunnel && bestTunnel.url === tunnel.url;
+                const cardClass = isBest ? 'active' : isOnline ? 'online' : 'dead';
+
                 const card = document.createElement('div');
-                card.className = `tunnel-card ${tunnel.status}`;
-                
-                const statusClass = tunnel.status === 'online' ? 'online' : 
-                                   tunnel.status === 'checking' ? 'checking' : 'offline';
-                const statusText = tunnel.status === 'online' ? 'Online' : 
-                                  tunnel.status === 'checking' ? 'Checking...' : 'Offline';
-                
+                card.className = `tunnel-card ${cardClass}`;
+
+                const statusClass = isOnline ? 'online' : 'offline';
+                const statusText = isOnline ? 'Online' : 'Offline';
+                const lastUpdated = tunnel.updated ? `<div class="latency">Updated: ${tunnel.updated}</div>` : '';
+
                 card.innerHTML = `
-                    <div class="tunnel-name">${tunnel.name}</div>
+                    <div class="tunnel-name">${tunnel.name || tunnel.type}</div>
                     <div class="tunnel-url">${tunnel.url || 'Not configured'}</div>
                     <div class="tunnel-status">
                         <span class="status-badge ${statusClass}">${statusText}</span>
                     </div>
-                    ${tunnel.latency ? `<div class="latency">Latency: ${tunnel.latency}ms</div>` : ''}
+                    ${lastUpdated}
                 `;
-                
+
                 grid.appendChild(card);
             });
         }
@@ -640,54 +619,38 @@
             const btnText = document.getElementById('btnText');
             const currentUrl = document.getElementById('currentUrl');
             const mainIndicator = document.getElementById('mainIndicator');
-            
-            // Fetch live config first
-            const tunnels = await fetchTunnelConfig();
-            
-            if (tunnels.length === 0) {
-                renderTunnels([]);
-                entryBtn.disabled = true;
-                btnText.textContent = 'No Tunnels Available';
-                currentUrl.textContent = 'Configuration unavailable. The system may be updating.';
-                mainIndicator.className = 'status-indicator';
-                return null;
-            }
-            
-            // Mark all as checking
-            const checking = tunnels.map(t => ({ ...t, status: 'checking' }));
-            renderTunnels(checking);
-            
-            // Check all tunnels in parallel
-            const results = await Promise.all(tunnels.map(checkTunnel));
-            renderTunnels(results);
-            
-            // Find first online tunnel (sorted by priority)
-            const best = results
-                .filter(t => t.status === 'online')
-                .sort((a, b) => a.priority - b.priority)[0];
-            
+
+            btnText.textContent = 'Checking Tunnels...';
+            mainIndicator.className = 'status-indicator checking';
+
+            const config = await fetchTunnelConfig();
+            const tunnels = config.tunnels || [];
+
+            // Sort by priority, filter online
+            const online = tunnels
+                .filter(t => t.status === 'online' && t.url)
+                .sort((a, b) => (a.priority || 99) - (b.priority || 99));
+
+            const best = online[0];
+
+            renderTunnels(tunnels, best);
+
             if (best) {
                 entryBtn.disabled = false;
                 btnText.textContent = 'Enter Marketplace';
                 currentUrl.textContent = `Connected via: ${best.url}`;
                 mainIndicator.className = 'status-indicator online';
-                
+
                 entryBtn.onclick = () => {
                     window.open(best.url, '_blank');
                 };
-                
-                // Highlight active card
-                const cards = document.querySelectorAll('.tunnel-card');
-                cards.forEach((card, i) => {
-                    if (results[i] === best) card.classList.add('active');
-                });
             } else {
                 entryBtn.disabled = true;
                 btnText.textContent = 'All Tunnels Down';
-                currentUrl.textContent = 'No active tunnels found. Starting recovery...';
+                currentUrl.textContent = config.note || 'No active tunnels found.';
                 mainIndicator.className = 'status-indicator';
             }
-            
+
             return best;
         }
 
