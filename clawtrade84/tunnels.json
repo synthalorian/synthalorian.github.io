@@ -1,15 +1,15 @@
 {
-  "updated": "2026-06-24T14:23:41-04:00",
+  "updated": "2026-06-24T14:24:25-04:00",
   "tunnels": [
     {
-      "name": "serveo",
-      "url": "https://c6f1ccadf922850a-149-88-18-235.serveousercontent.com",
-      "type": "serveo",
-      "priority": 5,
+      "name": "ngrok",
+      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
+      "type": "ngrok",
+      "priority": 3,
       "status": "online"
     }
+
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "5.0.0",
-  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
+  "version": "1.0.0"
 }
