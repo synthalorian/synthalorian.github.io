@@ -1,29 +1,8 @@
 {
-  "updated": "2026-06-24T13:20:57-04:00",
+  "updated": "2026-06-24T13:20:59-04:00",
   "tunnels": [
-    {
-      "name": "ngrok",
-      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
-      "type": "ngrok",
-      "priority": 1,
-      "status": "online"
-    },
-    {
-      "name": "cf",
-      "url": "https://threatening-also-cathedral-trainers.trycloudflare.com",
-      "type": "cloudflare",
-      "priority": 2,
-      "status": "online"
-    },
-    {
-      "name": "serveo",
-      "url": "https://328afb84024abaa2-149-88-18-235.serveousercontent.com",
-      "type": "serveo",
-      "priority": 5,
-      "status": "online"
-    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "5.0.0",
-  "note": "Multi-tunnel active. 3 tunnels online."
+  "note": "CRITICAL: No tunnels online!"
 }
