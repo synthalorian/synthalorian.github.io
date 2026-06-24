@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-24T14:24:43-04:00",
+  "updated": "2026-06-24T14:25:20-04:00",
   "tunnels": [
+    {
+      "name": "ngrok",
+      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
+      "type": "ngrok",
+      "priority": 1,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "5.0.0",
-  "note": "CRITICAL: No tunnels online!"
+  "note": "1 tunnel(s) online"
 }
