@@ -1,9 +1,16 @@
 {
-  "updated": "2026-06-24T15:56:33-04:00",
+  "updated": "2026-06-24T15:57:54-04:00",
   "tunnels": [
     {
+      "name": "cf",
+      "url": "https://canyon-promotional-october-institutional.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    },
+    {
       "name": "serveo",
-      "url": "https://7c0eec439c015d69-149-88-18-235.serveousercontent.com",
+      "url": "https://78129cce163a3892-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
@@ -11,5 +18,5 @@
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "5.0.0",
-  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
+  "note": "Multi-tunnel active. 2 tunnels online."
 }
