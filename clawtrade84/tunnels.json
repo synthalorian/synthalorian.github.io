@@ -1,8 +1,22 @@
 {
-  "updated": "2026-06-24T14:29:27-04:00",
+  "updated": "2026-06-24T14:30:41-04:00",
   "tunnels": [
-
+    {
+      "name": "cf",
+      "url": "https://docs-relative-incredible-one.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    },
+    {
+      "name": "serveo",
+      "url": "https://5966c1f98b767b12-149-88-18-235.serveousercontent.com",
+      "type": "serveo",
+      "priority": 5,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "1.0.0"
+  "version": "5.0.0",
+  "note": "Multi-tunnel active. 2 tunnels online."
 }
