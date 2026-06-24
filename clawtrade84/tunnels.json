@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T12:31:45-04:00",
+  "updated": "2026-06-24T12:33:04-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,14 +10,14 @@
     },
     {
       "name": "serveo",
-      "url": "https://995d0a19c27825d8-149-88-18-235.serveousercontent.com",
+      "url": "https://0423e8a2a19e212e-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://995d0a19c27825d8-149-88-18-235.serveousercontent.com",
+      "url": "https://0423e8a2a19e212e-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
