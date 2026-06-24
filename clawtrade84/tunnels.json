@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T14:30:41-04:00",
+  "updated": "2026-06-24T14:32:04-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://docs-relative-incredible-one.trycloudflare.com",
+      "url": "https://albums-findlaw-fifty-gentleman.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://5966c1f98b767b12-149-88-18-235.serveousercontent.com",
+      "url": "https://fb97f6459ee10b01-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
