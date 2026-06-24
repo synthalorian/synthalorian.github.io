@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T14:11:14-04:00",
+  "updated": "2026-06-24T14:12:28-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,7 +10,7 @@
     },
     {
       "name": "serveo",
-      "url": "https://8a6485624918ade0-149-88-18-235.serveousercontent.com",
+      "url": "https://e76706d6980594bf-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
