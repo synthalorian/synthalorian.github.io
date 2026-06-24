@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T11:36:22-04:00",
+  "updated": "2026-06-24T11:37:14-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -10,7 +10,7 @@
     },
     {
       "name": "cf",
-      "url": "https://oklahoma-basement-skirt-recruiting.trycloudflare.com",
+      "url": "https://offers-cup-saw-finding.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
