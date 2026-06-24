@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-24T11:39:11-04:00",
+  "updated": "2026-06-24T11:39:58-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://elect-monica-guam-ampland.trycloudflare.com",
+      "url": "https://schemes-experienced-disk-facilities.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
