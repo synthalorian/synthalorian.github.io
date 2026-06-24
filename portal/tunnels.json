@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T16:26:43-04:00",
+  "updated": "2026-06-24T16:38:10-04:00",
   "tunnels": [
     {
-      "name": "cf",
-      "url": "https://hotels-working-pair-appreciated.trycloudflare.com",
-      "type": "cloudflare",
-      "priority": 2,
+      "name": "ngrok",
+      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
+      "type": "ngrok",
+      "priority": 1,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://3a691c5974741b6a-149-88-18-235.serveousercontent.com",
+      "url": "https://6dc117fa66d3221f-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
