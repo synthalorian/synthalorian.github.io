@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-24T14:57:33-04:00",
+  "updated": "2026-06-24T14:58:54-04:00",
   "tunnels": [
     {
       "name": "serveo",
-      "url": "https://7d0d8617afd1ad09-149-88-18-235.serveousercontent.com",
+      "url": "https://a81c195bcf84851f-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
