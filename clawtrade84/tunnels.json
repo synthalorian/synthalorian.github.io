@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-24T10:14:57-04:00",
+  "updated": "2026-06-24T10:15:45-04:00",
   "tunnels": [
+    {
+      "name": "cf",
+      "url": "https://sheets-multiple-engine-maintaining.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "4.0.0",
-  "note": "CRITICAL: No tunnels online!"
+  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
 }
