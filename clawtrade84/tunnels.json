@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T13:25:42-04:00",
+  "updated": "2026-06-24T13:26:58-04:00",
   "tunnels": [
     {
       "name": "ngrok",
@@ -9,15 +9,8 @@
       "status": "online"
     },
     {
-      "name": "cf",
-      "url": "https://million-stage-soundtrack-warren.trycloudflare.com",
-      "type": "cloudflare",
-      "priority": 2,
-      "status": "online"
-    },
-    {
       "name": "serveo",
-      "url": "https://0070883659feedf3-149-88-18-235.serveousercontent.com",
+      "url": "https://fa7a408e229a90ad-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
@@ -25,5 +18,5 @@
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "5.0.0",
-  "note": "Multi-tunnel active. 3 tunnels online."
+  "note": "Multi-tunnel active. 2 tunnels online."
 }
