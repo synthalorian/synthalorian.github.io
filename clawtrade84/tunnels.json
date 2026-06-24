@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-24T10:12:56-04:00",
+  "updated": "2026-06-24T10:13:34-04:00",
   "tunnels": [
+    {
+      "name": "cf",
+      "url": "https://much-lows-trucks-opposite.trycloudflare.com",
+      "type": "cloudflare",
+      "priority": 2,
+      "status": "online"
+    }
+
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "4.0.0",
-  "note": "CRITICAL: No tunnels online!"
+  "version": "1.0.0"
 }
