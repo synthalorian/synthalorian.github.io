@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-24T14:18:17-04:00",
+  "updated": "2026-06-24T14:18:40-04:00",
   "tunnels": [
     {
-      "name": "serveo",
-      "url": "https://7f4fccbae5bf9540-149-88-18-235.serveousercontent.com",
-      "type": "serveo",
-      "priority": 5,
+      "name": "ngrok",
+      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
+      "type": "ngrok",
+      "priority": 1,
       "status": "online"
     }
   ],
