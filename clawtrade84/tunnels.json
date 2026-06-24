@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T16:17:04-04:00",
+  "updated": "2026-06-24T16:18:25-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://proceeds-gray-leaves-rely.trycloudflare.com",
+      "url": "https://montana-adjustment-spirit-referral.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://3149452649a9fdeb-149-88-18-235.serveousercontent.com",
+      "url": "https://89933d7fbe32d801-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
