@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-24T11:45:56-04:00",
+  "updated": "2026-06-24T11:46:51-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://characterized-link-ceo-february.trycloudflare.com",
+      "url": "https://contributed-roommates-metals-atlantic.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
