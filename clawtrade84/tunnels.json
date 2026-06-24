@@ -1,8 +1,8 @@
 {
-  "updated": "2026-06-24T09:43:30-04:00",
+  "updated": "2026-06-24T09:43:54-04:00",
   "tunnels": [
-
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "1.0.0"
+  "version": "3.0.0",
+  "note": "Cloudflare rate-limited. LocalTunnel 403. ngrok is primary fallback."
 }
