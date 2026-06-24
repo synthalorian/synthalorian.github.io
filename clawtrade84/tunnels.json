@@ -1,22 +1,8 @@
 {
-  "updated": "2026-06-24T10:14:52-04:00",
+  "updated": "2026-06-24T10:14:56-04:00",
   "tunnels": [
-    {
-      "name": "ngrok",
-      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
-      "type": "ngrok",
-      "priority": 1,
-      "status": "online"
-    },
-    {
-      "name": "cf",
-      "url": "https://inform-investigation-attempted-whale.trycloudflare.com",
-      "type": "cloudflare",
-      "priority": 2,
-      "status": "online"
-    }
   ],
   "dashboard_url": "http://localhost:8746",
   "version": "4.0.0",
-  "note": "Multi-tunnel active. 2 tunnels online."
+  "note": "CRITICAL: No tunnels online!"
 }
