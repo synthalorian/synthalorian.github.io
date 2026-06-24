@@ -1,8 +1,15 @@
 {
-  "updated": "2026-06-24T09:43:59-04:00",
+  "updated": "2026-06-24T09:47:51-04:00",
   "tunnels": [
+    {
+      "name": "ngrok",
+      "url": "https://attribute-undying-linoleum.ngrok-free.dev",
+      "type": "ngrok",
+      "priority": 1,
+      "status": "online"
+    }
   ],
   "dashboard_url": "http://localhost:8746",
-  "version": "3.0.0",
-  "note": "Cloudflare rate-limited. LocalTunnel 403. ngrok is primary fallback."
+  "version": "4.0.0",
+  "note": "ngrok fallback active. Cloudflare rate-limited. LocalTunnel 403."
 }
