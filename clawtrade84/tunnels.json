@@ -1,16 +1,16 @@
 {
-  "updated": "2026-06-24T14:34:49-04:00",
+  "updated": "2026-06-24T14:36:11-04:00",
   "tunnels": [
     {
       "name": "cf",
-      "url": "https://act-improve-possible-trance.trycloudflare.com",
+      "url": "https://rare-automobiles-oscar-studying.trycloudflare.com",
       "type": "cloudflare",
       "priority": 2,
       "status": "online"
     },
     {
       "name": "serveo",
-      "url": "https://f8c39e72492077f5-149-88-18-235.serveousercontent.com",
+      "url": "https://8a0145a0b1c566b6-149-88-18-235.serveousercontent.com",
       "type": "serveo",
       "priority": 5,
       "status": "online"
