@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       repoCards.forEach(card => {
         const repoName = card.dataset.repoStats;
-        const statsContainer = card.querySelector('.project-stats');
+        const statsContainer = card.classList.contains('project-stats') ? card : card.querySelector('.project-stats');
         if (!statsContainer) return;
 
         const repo = repoMap.get(repoName.toLowerCase());
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
           case 'repos': value = data.public_repos; break;
           case 'followers': value = data.followers; break;
           case 'following': value = data.following; break;
-          case 'projects': value = 18; break;
+          case 'projects': value = 12; break;
           default: value = fallback || '—';
         }
 

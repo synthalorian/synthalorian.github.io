@@ -122,8 +122,8 @@
           <div class="stat-number" data-live="true">0</div>
           <div class="stat-label">Following</div>
         </div>
-        <div class="stat-card" data-stat="projects" data-fallback="18">
-          <div class="stat-number" data-live="true">18</div>
+        <div class="stat-card" data-stat="projects" data-fallback="12">
+          <div class="stat-number" data-live="true">12</div>
           <div class="stat-label">Featured Projects</div>
         </div>
       </div>
@@ -202,10 +202,10 @@
           </div>
           <h3 class="project-name"><a href="https://github.com/synthalorian/open-synth" target="_blank" rel="noopener">Open Synth</a></h3>
           <p class="project-desc">
-            Professional software synthesizer built with JUCE — standalone app and VST3 plugin.
-            64-voice polyphony, dual oscillators, resonant filters, arpeggiator, 21 FX processors,
-            MIDI learn, and 1,459 factory presets across 24 categories. Low-latency native audio
-            with a synthwave-themed UI. Real C++ DSP, not FFI wrappers.
+            Professional software synthesizer built with JUCE 8 &amp; C++20 — sample ROMpler engine
+            with 5,600 factory presets. Standalone app, VST3 &amp; CLAP plugins. 64-voice polyphony,
+            resonant filters, 21 FX processors, MIDI learn, low-latency native audio with a
+            synthwave-themed UI. Real C++ DSP, not FFI wrappers. This is the wave.
           </p>
           <div class="project-stats" data-repo-stats="open-synth">
             <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
@@ -222,7 +222,7 @@
         </article>
 
         <!-- Hermes Wingman -->
-        <article class="project-card" data-reveal data-repo="hermes_wingman">
+        <article class="project-card" data-reveal data-repo="hermes-wingman">
           <div class="project-header">
             <div class="project-icon icon-wing" style="background: var(--accent-cyan-soft); color: var(--accent-cyan-bright);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 12l3 3 2-2 3 3-2 2 3 3 3-3-2-2 3-3 2 2 3-3-10-10z"/><path d="M15 6l3 3"/></svg>
@@ -238,7 +238,7 @@
             spanning desktop, mobile, and a Rails web dashboard. 29 hand-crafted themes with a synthwave '84 flagship.
             <strong>Shipped v1.0.0 — production ready.</strong>
           </p>
-          <div class="project-stats" data-repo-stats="hermes_wingman">
+          <div class="project-stats" data-repo-stats="hermes-wingman">
             <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
             <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
             <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
@@ -253,36 +253,104 @@
           </div>
         </article>
 
-        <!-- Janus -->
-        <article class="project-card" data-reveal data-repo="janus">
+        <!-- OpenClaw Pincers -->
+        <article class="project-card" data-reveal data-repo="openclaw-pincers">
           <div class="project-header">
-            <div class="project-icon icon-janus" style="background: var(--accent-purple-soft); color: var(--accent-purple-bright);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 2v20"/><path d="M12 12l5-3"/><path d="M12 12l-5 3"/><path d="M8 8c0 2.2 1.8 4 4 4s4-1.8 4-4"/><path d="M16 16c0-2.2-1.8-4-4-4s-4 1.8-4 4"/></svg>
+            <div class="project-icon icon-pincers" style="background: rgba(255, 0, 127, 0.08); color: var(--accent-pink-bright);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3C6 6 6 9 8 12"/><path d="M15 3c3 3 3 6 1 9"/><path d="M8 12l-2 4c0 3 2 5 4 5"/><path d="M16 12l2 4c0 3-2 5-4 5"/><path d="M12 12v4"/></svg>
             </div>
             <div class="project-meta">
-              <span class="project-version">v1.0.0</span>
-              <span class="project-status stable">Stable</span>
+              <span class="project-version">v0.1</span>
+              <span class="project-status beta">Active Dev</span>
             </div>
           </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/janus" target="_blank" rel="noopener">Janus</a></h3>
+          <h3 class="project-name"><a href="https://github.com/synthalorian/openclaw-pincers" target="_blank" rel="noopener">OpenClaw Pincers</a></h3>
           <p class="project-desc">
-            AI-first communication platform with real-time WebSocket chat, multi-agent orchestration,
-            knowledge graph extraction, and AI-to-AI governance. Features a Bot Forge for agent creation
-            and a Swarm Engine for autonomous task execution. <strong>Tri-stack: Desktop, Mobile, Web.</strong>
+            Cross-platform desktop control center for OpenClaw. Configure gateways, providers,
+            channels, and sessions from one native app — Tauri 2 shell, Svelte 5 frontend, Rust core.
+            Get a grip on your gateway.
           </p>
-          <div class="project-stats" data-repo-stats="janus">
+          <div class="project-stats" data-repo-stats="openclaw-pincers">
             <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
             <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
             <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
             <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
           </div>
           <div class="project-tech">
-            <span class="tech-tag ts">TypeScript</span>
-            <span class="tech-tag">React 19</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Express</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Socket.IO</span>
+            <span class="tech-tag tauri">Tauri 2</span>
+            <span class="tech-tag ts">Svelte 5</span>
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag">Desktop</span>
+          </div>
+        </article>
+
+        <!-- WireClaw -->
+        <article class="project-card" data-reveal data-repo="wireclaw">
+          <div class="project-header">
+            <div class="project-icon icon-wire" style="background: rgba(255, 255, 102, 0.08); color: var(--accent-yellow);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4l16 16"/>
+                <path d="M20 4l-16 16" opacity="0.4"/>
+                <rect x="2" y="2" width="20" height="20" rx="2"/>
+                <path d="M8 8h.01"/>
+                <path d="M16 16h.01"/>
+                <circle cx="8" cy="8" r="1.5" fill="currentColor" stroke="none" opacity="0.5"/>
+                <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-version">v0.x</span>
+              <span class="project-status beta">Active Dev</span>
+            </div>
+          </div>
+          <h3 class="project-name"><a href="https://github.com/synthalorian/wireclaw" target="_blank" rel="noopener">WireClaw</a></h3>
+          <p class="project-desc">
+            HTTPS MITM proxy + OpenAPI auto-generator. Rust CLI intercepts traffic on port 8080,
+            web dashboard on port 8746 (Axum) visualizes requests and generates OpenAPI specs automatically.
+            Perfect for reverse-engineering undocumented APIs and testing microservices.
+            <strong>Capture traffic, generate specs, zero config.</strong>
+          </p>
+          <div class="project-stats" data-repo-stats="wireclaw">
+            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag rust">Rust</span>
+            <span class="tech-tag">Axum</span>
+            <span class="tech-tag">MITM Proxy</span>
+            <span class="tech-tag">OpenAPI</span>
+          </div>
+        </article>
+
+        <!-- VoidEngine -->
+        <article class="project-card" data-reveal data-repo="voidengine">
+          <div class="project-header">
+            <div class="project-icon icon-void" style="background: var(--accent-purple-soft); color: var(--accent-purple-bright);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/></svg>
+            </div>
+            <div class="project-meta">
+              <span class="project-version">v0.1</span>
+              <span class="project-status beta">Active Dev</span>
+            </div>
+          </div>
+          <h3 class="project-name"><a href="https://github.com/synthalorian/voidengine" target="_blank" rel="noopener">VoidEngine</a></h3>
+          <p class="project-desc">
+            Data-driven game engine in Odin + SDL2 with hot-reload for code &amp; assets.
+            Built for fast iteration — tweak the game while it runs, no restarts, no recompiles.
+          </p>
+          <div class="project-stats" data-repo-stats="voidengine">
+            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
+            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag">Odin</span>
+            <span class="tech-tag">SDL2</span>
+            <span class="tech-tag">Hot Reload</span>
+            <span class="tech-tag">Data-Driven</span>
           </div>
         </article>
 
@@ -419,50 +487,6 @@
           </div>
         </article>
 
-        <!-- Complete Omarchy Synthwave '84 -->
-        <article class="project-card" data-reveal data-repo="complete-omarchy-synthwave-84">
-          <div class="project-header">
-            <div class="project-icon icon-omarchy" style="background: rgba(255, 0, 127, 0.08); color: var(--accent-pink-bright);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                <path d="M8 21h8"/>
-                <path d="M12 17v4"/>
-                <path d="M6 8h.01"/>
-                <path d="M10 8h.01"/>
-                <path d="M14 8h.01"/>
-                <path d="M18 8h.01"/>
-                <path d="M6 12h.01"/>
-                <path d="M10 12h.01"/>
-                <path d="M14 12h.01"/>
-                <path d="M18 12h.01"/>
-              </svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-version">v1.0</span>
-              <span class="project-status stable">Stable</span>
-            </div>
-          </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/complete-omarchy-synthwave-84" target="_blank" rel="noopener">Omarchy Synthwave '84</a></h3>
-          <p class="project-desc">
-            Complete Omarchy Linux synthwave '84 theme. Deep purple, electric magenta, hot pink.
-            One-command install that transforms your entire desktop environment — from terminal colors
-            to window borders to system sounds. Shell scripting at its finest.
-            <strong>One command, total transformation.</strong>
-          </p>
-          <div class="project-stats" data-repo-stats="complete-omarchy-synthwave-84">
-            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">Shell</span>
-            <span class="tech-tag">Linux</span>
-            <span class="tech-tag">Theming</span>
-            <span class="tech-tag">Omarchy</span>
-          </div>
-        </article>
-
         <!-- SentryClaw -->
         <article class="project-card" data-reveal data-repo="sentryclaw">
           <div class="project-header">
@@ -535,277 +559,6 @@
             <span class="tech-tag">TUI</span>
             <span class="tech-tag">SQLite</span>
             <span class="tech-tag">Pomodoro</span>
-          </div>
-        </article>
-
-        <!-- WireClaw -->
-        <article class="project-card" data-reveal data-repo="wireclaw">
-          <div class="project-header">
-            <div class="project-icon icon-wire" style="background: rgba(255, 255, 102, 0.08); color: var(--accent-yellow);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4l16 16"/>
-                <path d="M20 4l-16 16" opacity="0.4"/>
-                <rect x="2" y="2" width="20" height="20" rx="2"/>
-                <path d="M8 8h.01"/>
-                <path d="M16 16h.01"/>
-                <circle cx="8" cy="8" r="1.5" fill="currentColor" stroke="none" opacity="0.5"/>
-                <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none" opacity="0.5"/>
-              </svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-version">v0.x</span>
-              <span class="project-status beta">Active Dev</span>
-            </div>
-          </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/wireclaw" target="_blank" rel="noopener">WireClaw</a></h3>
-          <p class="project-desc">
-            HTTPS MITM proxy + OpenAPI auto-generator. Rust CLI intercepts traffic on port 8080,
-            web dashboard on port 8746 (Axum) visualizes requests and generates OpenAPI specs automatically.
-            Perfect for reverse-engineering undocumented APIs and testing microservices.
-            <strong>Capture traffic, generate specs, zero config.</strong>
-          </p>
-          <div class="project-stats" data-repo-stats="wireclaw">
-            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag rust">Rust</span>
-            <span class="tech-tag">Axum</span>
-            <span class="tech-tag">MITM Proxy</span>
-            <span class="tech-tag">OpenAPI</span>
-          </div>
-        </article>
-
-        <!-- ClawTrade -->
-        <article class="project-card" data-reveal data-repo="clawtrade">
-          <div class="project-header">
-            <div class="project-icon icon-clawtrade" style="background: rgba(255, 0, 127, 0.08); color: var(--accent-pink-bright);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5"/>
-                <path d="M2 12l10 5 10-5"/>
-                <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
-              </svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-version">v2.1</span>
-              <span class="project-status beta">Active Dev</span>
-            </div>
-          </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/clawtrade" target="_blank" rel="noopener">ClawTrade</a></h3>
-          <p class="project-desc">
-            AI Agent Marketplace — a micro-SaaS where Hermes agents autonomously create, sell, and buy services.
-            Powered by NVIDIA Nemotron 3 Ultra. Stripe Connect integration, escrow system, pricing intelligence,
-            WebSocket dashboard, and agent hosting API. <strong>Hermes Hackathon project — 8 features shipped.</strong>
-          </p>
-          <div class="project-stats" data-repo-stats="clawtrade">
-            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag rust">Rust</span>
-            <span class="tech-tag">Stripe</span>
-            <span class="tech-tag">WebSocket</span>
-            <span class="tech-tag">NVIDIA</span>
-          </div>
-        </article>
-
-        <!-- ReticulumChat -->
-        <article class="project-card" data-reveal data-repo="reticulumchat">
-          <div class="project-header">
-            <div class="project-icon icon-reticulum" style="background: rgba(3, 237, 249, 0.08); color: var(--accent-cyan-bright);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"/>
-                <circle cx="5" cy="5" r="2"/>
-                <circle cx="19" cy="5" r="2"/>
-                <circle cx="5" cy="19" r="2"/>
-                <circle cx="19" cy="19" r="2"/>
-                <path d="M12 9V6.5M9 12H6.5M15 12h2.5M12 15v2.5"/>
-                <path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/>
-              </svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-version">v0.9.0</span>
-              <span class="project-status beta">RC</span>
-            </div>
-          </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/reticulumchat" target="_blank" rel="noopener">ReticulumChat</a></h3>
-          <p class="project-desc">
-            Cross-platform chat client for the Reticulum mesh network. Dual interface — TUI (ratatui) and GUI (egui).
-            End-to-end encryption, message editing, reply threads, @mentions, full-text search, offline message queue,
-            and desktop notifications. <strong>Mesh networking made human.</strong>
-          </p>
-          <div class="project-stats" data-repo-stats="reticulumchat">
-            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag rust">Rust</span>
-            <span class="tech-tag">TUI</span>
-            <span class="tech-tag">Egui</span>
-            <span class="tech-tag">Mesh</span>
-          </div>
-        </article>
-
-        <!-- ReticulumLink -->
-        <article class="project-card" data-reveal data-repo="reticulum-link">
-          <div class="project-header">
-            <div class="project-icon icon-link" style="background: rgba(255, 0, 255, 0.08); color: var(--accent-magenta);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-              </svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-version">v1.0.0</span>
-              <span class="project-status stable">Stable</span>
-            </div>
-          </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/reticulum-link" target="_blank" rel="noopener">ReticulumLink</a></h3>
-          <p class="project-desc">
-            High-performance Reticulum transport node and LXMF relay built on the BEAM (Erlang VM).
-            Elixir/OTP architecture with Phoenix WebSocket bridge, Prometheus metrics, hardened crypto,
-            and RNS interoperability. <strong>The backbone of decentralized messaging.</strong>
-          </p>
-          <div class="project-stats" data-repo-stats="reticulum-link">
-            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag elixir">Elixir</span>
-            <span class="tech-tag">Phoenix</span>
-            <span class="tech-tag">OTP</span>
-            <span class="tech-tag">BEAM</span>
-          </div>
-        </article>
-
-        <!-- Chronos Engine -->
-        <article class="project-card" data-reveal data-repo="chronos-engine">
-          <div class="project-header">
-            <div class="project-icon icon-chronos" style="background: rgba(143, 0, 255, 0.08); color: var(--accent-purple-bright);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-                <path d="M12 2v2"/>
-                <path d="M12 20v2"/>
-                <path d="M2 12h2"/>
-                <path d="M20 12h2"/>
-                <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/>
-              </svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-version">v1.0.0</span>
-              <span class="project-status stable">Stable</span>
-            </div>
-          </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/chronos-engine" target="_blank" rel="noopener">Chronos Engine</a></h3>
-          <p class="project-desc">
-            Open-source alternative to Unity and Unreal — a general-purpose game engine in Rust.
-            Zero-dependency ECS core (pure std), 53,000+ lines, 971 tests, zero unsafe.
-            Feature-gated subsystems: 2D/3D rendering, physics, audio, asset pipeline, editor suite.
-            <strong>Hand-wired. No shortcuts.</strong>
-          </p>
-          <div class="project-stats" data-repo-stats="chronos-engine">
-            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag rust">Rust</span>
-            <span class="tech-tag">ECS</span>
-            <span class="tech-tag">Game Engine</span>
-            <span class="tech-tag">Zero Deps</span>
-          </div>
-        </article>
-
-        <!-- OpenPsalm -->
-        <article class="project-card" data-reveal data-repo="open-psalm">
-          <div class="project-header">
-            <div class="project-icon icon-psalm" style="background: rgba(255, 255, 102, 0.08); color: var(--accent-yellow);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 6s1.5-2 5-2 5 2 5 2v14s-1.5-2-5-2-5 2-5 2V6z"/>
-                <path d="M12 6s1.5-2 5-2 5 2 5 2v14s-1.5-2-5-2-5 2-5 2V6z"/>
-                <path d="M12 6v14"/>
-                <path d="M7 12l5-5 5 5"/>
-              </svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-version">v1.0.0</span>
-              <span class="project-status stable">Stable</span>
-            </div>
-          </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/open-psalm" target="_blank" rel="noopener">OpenPsalm</a></h3>
-          <p class="project-desc">
-            Fast, keyboard-driven Bible reader for the terminal. C++ TUI with FTXUI — vim-style navigation,
-            10 translations, parallel view, Strong's Concordance, FTS5 full-text search, cross-references,
-            reading plans, bookmarks, and 11 color themes. <strong>Scripture in the shell.</strong>
-          </p>
-          <div class="project-stats" data-repo-stats="open-psalm">
-            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag cpp">C++</span>
-            <span class="tech-tag">FTXUI</span>
-            <span class="tech-tag">FTS5</span>
-            <span class="tech-tag">TUI</span>
-          </div>
-        </article>
-
-        <!-- VHS-86 -->
-        <article class="project-card" data-reveal data-repo="vhs-86">
-          <div class="project-header">
-            <div class="project-icon icon-vhs" style="background: rgba(255, 0, 255, 0.08); color: var(--accent-magenta);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                <path d="M6 8h.01"/>
-                <path d="M10 8h.01"/>
-                <path d="M14 8h.01"/>
-                <path d="M18 8h.01"/>
-                <path d="M6 12h.01"/>
-                <path d="M10 12h.01"/>
-                <path d="M14 12h.01"/>
-                <path d="M18 12h.01"/>
-                <path d="M6 16h.01"/>
-                <path d="M10 16h.01"/>
-                <path d="M14 16h.01"/>
-                <path d="M18 16h.01"/>
-                <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" opacity="0.3"/>
-              </svg>
-            </div>
-            <div class="project-meta">
-              <span class="project-version">v1.0.0</span>
-              <span class="project-status stable">Stable</span>
-            </div>
-          </div>
-          <h3 class="project-name"><a href="https://github.com/synthalorian/vhs-86" target="_blank" rel="noopener">VHS-86</a></h3>
-          <p class="project-desc">
-            Retro terminal file manager with synthwave aesthetics. Vim-key navigation, dual-pane layout,
-            image previews, mouse support, smart sorting, file filtering, batch operations, fuzzy find,
-            and 3 built-in themes. Navigate your filesystem like it's 1986. <strong>Terminal nostalgia.</strong>
-          </p>
-          <div class="project-stats" data-repo-stats="vhs-86">
-            <span class="repo-stat" data-stat="stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="forks"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="24" height="24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.387-1 1.732V7h3a3 3 0 0 1 3 3v3.27a2 2 0 1 1-2 0V10a1 1 0 0 0-1-1h-3v9.27a2 2 0 1 1-2 0V9H8a1 1 0 0 0-1 1v3.27a2 2 0 1 1-2 0V10a3 3 0 0 1 3-3h3V5.732A2.001 2.001 0 0 1 12 2z"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="lang"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <span class="repo-stat-value">—</span></span>
-            <span class="repo-stat" data-stat="updated"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span class="repo-stat-value">—</span></span>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag rust">Rust</span>
-            <span class="tech-tag">TUI</span>
-            <span class="tech-tag">Vim</span>
-            <span class="tech-tag">File Manager</span>
           </div>
         </article>
       </div>
