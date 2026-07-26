@@ -517,36 +517,12 @@
     </div>
 
     <script>
-        // Fetch live tunnel configuration from JSON with aggressive cache-busting
+        // Tunnel auto-update system retired — no live tunnels configured.
         async function fetchTunnelConfig() {
-            const cacheBuster = Date.now() + '_' + Math.random().toString(36).slice(2);
-            // Raw GitHub URL first — bypasses Pages CDN cache entirely
-            const urls = [
-                `https://raw.githubusercontent.com/synthalorian/synthalorian.github.io/main/portal/tunnels.json?_=${cacheBuster}`,
-                `tunnels.json?_=${cacheBuster}`
-            ];
-
-            for (const url of urls) {
-                try {
-                    const response = await fetch(url, {
-                        cache: 'no-store',
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    if (!response.ok) continue;
-                    const config = await response.json();
-                    return config;
-                } catch (e) {
-                    console.warn('Fetch failed for', url, e.message);
-                }
-            }
-
-            // Absolute fallback: hardcoded ngrok (last known good)
             return {
-                tunnels: [
-                    { name: 'ngrok', url: 'https://attribute-undying-linoleum.ngrok-free.dev', type: 'ngrok', priority: 1, status: 'online' }
-                ],
+                tunnels: [],
                 updated: new Date().toISOString(),
-                note: 'Fallback — JSON fetch failed'
+                note: 'Marketplace is currently offline.'
             };
         }
 
@@ -636,16 +612,9 @@
             return best;
         }
 
-        // Auto-refresh every 30 seconds
-        async function healthCheckLoop() {
-            await findBestTunnel();
-            setTimeout(healthCheckLoop, 30000);
-        }
-
-        // Initialize
+        // Initialize — single status check, no polling
         createParticles();
-        healthCheckLoop();
+        findBestTunnel();
     </script>
 </body>
 </html>
-<!-- force rebuild 1782332390 -->
