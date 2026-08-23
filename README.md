@@ -1,6 +1,6 @@
 # synthalorian.github.io
 
-Personal website and portfolio — synthwave '84 aesthetic.
+Personal website and portfolio — Blackshield mercenary theme on black steel.
 
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-GitHub%20Pages%20%7C%20Web-blue)
@@ -11,7 +11,7 @@ Personal website and portfolio — synthwave '84 aesthetic.
 
 ## Overview
 
-Static personal site hosted on GitHub Pages.
+Static personal site hosted on GitHub Pages. Single-page portfolio with live GitHub stats, featured project board, arsenal/skills section, and a blood-red Blackshield visual system.
 
 ## Build
 
@@ -25,4 +25,3 @@ npx serve .
 ## Usage
 
 Open `http://localhost:8000` in your browser.
-
