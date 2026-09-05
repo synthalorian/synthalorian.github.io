@@ -1170,24 +1170,17 @@ html[data-theme="ironlight"] .hero-vignette {
   50% { transform: scaleY(1.12); opacity: 1; }
 }
 
-.icon-shark svg { animation: sharkSwim 2.2s ease-in-out infinite; }
-.icon-shark svg path:nth-child(3) { animation: finSway 1.4s ease-in-out infinite; transform-origin: 60% 20%; }
-.icon-shark svg circle { animation: eyeBlink 3s ease-in-out infinite; }
+.icon-shield svg { animation: shieldGuard 3s ease-in-out infinite; transform-origin: 50% 50%; }
+.icon-shield svg path:nth-child(2) { animation: shieldGleam 2.6s ease-in-out infinite; }
 
-@keyframes sharkSwim {
-  0%, 100% { transform: translateX(0) rotate(0deg); }
-  25% { transform: translateX(1.5px) rotate(1.5deg); }
-  75% { transform: translateX(-1px) rotate(-1deg); }
+@keyframes shieldGuard {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
 }
 
-@keyframes finSway {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(8deg); }
-}
-
-@keyframes eyeBlink {
-  0%, 90%, 100% { transform: scaleY(1); }
-  95% { transform: scaleY(0.2); }
+@keyframes shieldGleam {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
 }
 
 .icon-pincers svg { animation: pincerSnap 2.4s ease-in-out infinite; }
