@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let value;
         switch (stat) {
-          case 'platforms':
-            value = 6; // Linux, Android, iOS, macOS, Windows, Web
+          case 'repos':
+            value = user.public_repos;
             break;
           case 'stars':
             value = totalStars;
