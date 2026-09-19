@@ -784,9 +784,9 @@ html[data-theme="ironlight"] .hero-vignette {
 /* ---------------------------------------------------------
    Blackshield Knight — field companion
    Fixed sentinel in the bottom-left corner. Idles while you
-   scroll; waves on hover or click. Decorative (aria-hidden).
+   scroll; waves on hover, jumps on click (decorative).
    Atlas: 8 cols x 9 rows of 192x208 frames (img/blackshield-knight.webp)
-   Idle = row 0, Wave = row 3. Six frames per row.
+   Idle = row 0, Wave = row 3, Jump = row 4. Six frames per row.
    --------------------------------------------------------- */
 .companion-knight {
   position: fixed;
@@ -826,6 +826,10 @@ html[data-theme="ironlight"] .hero-vignette {
   animation: knightWave 1.15s steps(6) 2;
 }
 
+.companion-knight.jumping .knight-sprite {
+  animation: knightJump 0.8s steps(6) 1;
+}
+
 @keyframes knightIn {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
@@ -841,8 +845,15 @@ html[data-theme="ironlight"] .hero-vignette {
   to { background-position: -1152px -624px; }
 }
 
+@keyframes knightJump {
+  from { background-position: 0 -832px; }
+  to { background-position: -1152px -832px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .knight-sprite {
+  .companion-knight .knight-sprite,
+  .companion-knight.waving .knight-sprite,
+  .companion-knight.jumping .knight-sprite {
     animation: none;
     background-position: -192px 0;
   }

@@ -335,21 +335,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =====================================================
-  // BLACKSHIELD KNIGHT — companion wave on click
-  // The sentinel waves twice, then falls back to idle.
+  // BLACKSHIELD KNIGHT — companion jump on click
+  // Click: one little leap (row 4), then back to idle.
+  // Hover still waves (handled in CSS).
   // =====================================================
   const companionKnight = document.querySelector('.companion-knight');
   if (companionKnight) {
     companionKnight.addEventListener('click', () => {
-      companionKnight.classList.remove('waving');
+      companionKnight.classList.remove('jumping');
       void companionKnight.offsetWidth; // restart the animation
-      companionKnight.classList.add('waving');
+      companionKnight.classList.add('jumping');
     });
 
-    // Once the waving loop finishes, hand the shield back to idle.
+    // Once the jump lands, hand the shield back to idle.
     companionKnight.addEventListener('animationend', (event) => {
-      if (event.animationName === 'knightWave') {
-        companionKnight.classList.remove('waving');
+      if (event.animationName === 'knightJump') {
+        companionKnight.classList.remove('jumping');
       }
     });
   }
