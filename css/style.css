@@ -801,7 +801,7 @@ html[data-theme="ironlight"] .hero-vignette {
 .knight-sprite {
   width: 192px;
   height: 208px;
-  background-image: url('../img/blackshield-knight.webp');
+  background-image: url('../img/blackshield-knight.webp?v=2');
   background-repeat: no-repeat;
   image-rendering: pixelated;
   animation:
