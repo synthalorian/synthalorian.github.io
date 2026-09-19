@@ -823,7 +823,7 @@ html[data-theme="ironlight"] .hero-vignette {
 }
 
 .companion-knight.waving .knight-sprite {
-  animation: knightWave 1.15s steps(6) 2;
+  animation: knightWave 1.15s steps(6) infinite;
 }
 
 .companion-knight.jumping .knight-sprite {
@@ -859,7 +859,8 @@ html[data-theme="ironlight"] .hero-vignette {
     animation: knightIdle 1.4s 0.5s steps(6) infinite !important;
   }
 
-  .companion-knight:hover .knight-sprite {
+  .companion-knight:hover .knight-sprite,
+  .companion-knight.waving .knight-sprite {
     animation: knightWave 1.15s steps(6) infinite !important;
   }
 

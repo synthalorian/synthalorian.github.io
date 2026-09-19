@@ -335,12 +335,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =====================================================
-  // BLACKSHIELD KNIGHT — companion jump on click
-  // Click: one little leap (row 4), then back to idle.
-  // Hover still waves (handled in CSS).
+  // BLACKSHIELD KNIGHT — companion wave + jump
+  // Wave: pointerenter/leave toggle .waving (class-driven —
+  //       Firefox's :hover can be unreliable on scaled
+  //       fixed elements, so we do not depend on it).
+  // Jump: one little leap (row 4), then back to idle.
   // =====================================================
   const companionKnight = document.querySelector('.companion-knight');
   if (companionKnight) {
+    companionKnight.addEventListener('pointerenter', () => {
+      companionKnight.classList.add('waving');
+    });
+
+    companionKnight.addEventListener('pointerleave', () => {
+      companionKnight.classList.remove('waving');
+    });
+
     companionKnight.addEventListener('click', () => {
       companionKnight.classList.remove('jumping');
       void companionKnight.offsetWidth; // restart the animation
