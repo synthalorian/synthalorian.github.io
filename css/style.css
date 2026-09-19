@@ -723,6 +723,7 @@ html[data-theme="ironlight"] .hero-vignette {
 }
 
 .sigil-frame {
+  position: relative;
   display: grid;
   place-items: center;
   min-height: 390px;
@@ -779,6 +780,75 @@ html[data-theme="ironlight"] .hero-vignette {
   line-height: 1.45;
   letter-spacing: 0.08em;
   text-align: right;
+}
+
+/* ---------------------------------------------------------
+   Blackshield Knight — sprite sentinel
+   Standing guard at the shield's base; waves on hover.
+   Atlas: 8 cols x 9 rows of 192x208 frames (img/blackshield-knight.webp)
+   Idle = row 0, Wave = row 3. Six frames per row.
+   --------------------------------------------------------- */
+.sigil-knight {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  z-index: 2;
+  transform: scale(0.78);
+  transform-origin: bottom right;
+}
+
+.knight-sprite {
+  width: 192px;
+  height: 208px;
+  background-image: url('../img/blackshield-knight.webp');
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation:
+    knightIn 0.8s ease 0.32s both,
+    knightIdle 0.9s 0.32s steps(6) infinite;
+}
+
+.knight-shadow {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: -4px;
+  height: 16px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.52), transparent 72%);
+}
+
+.hero-sigil-card:hover .knight-sprite {
+  animation: knightWave 1.15s steps(6) infinite;
+}
+
+@keyframes knightIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes knightIdle {
+  from { background-position: 0 0; }
+  to { background-position: -1152px 0; }
+}
+
+@keyframes knightWave {
+  from { background-position: 0 -624px; }
+  to { background-position: -1152px -624px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knight-sprite {
+    animation: none;
+    background-position: -192px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .sigil-knight {
+    transform: scale(0.6);
+    right: 8px;
+    bottom: 8px;
+  }
 }
 
 /* ---------------------------------------------------------
