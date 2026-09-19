@@ -851,11 +851,20 @@ html[data-theme="ironlight"] .hero-vignette {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .companion-knight .knight-sprite,
-  .companion-knight.waving .knight-sprite,
+  /* The theme's global reduced-motion block forces 0.01ms durations on
+     everything (via * !important). Re-arm the knight here with higher
+     specificity so he stays alive: slower idle, and the wave/jump only
+     fire on explicit user interaction. */
+  .companion-knight .knight-sprite {
+    animation: knightIdle 1.4s 0.5s steps(6) infinite !important;
+  }
+
+  .companion-knight:hover .knight-sprite {
+    animation: knightWave 1.15s steps(6) infinite !important;
+  }
+
   .companion-knight.jumping .knight-sprite {
-    animation: none;
-    background-position: -192px 0;
+    animation: knightJump 0.8s steps(6) 1 !important;
   }
 }
 
@@ -1009,6 +1018,98 @@ html[data-theme="ironlight"] .hero-vignette {
 
 .github-live-note a:hover {
   color: var(--blood-bright);
+}
+
+/* ---------------------------------------------------------
+   Blackshield Company — contract house strip
+   --------------------------------------------------------- */
+.company-strip {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 26px;
+  margin-top: 34px;
+  padding: 24px 28px;
+  background:
+    linear-gradient(145deg, rgba(193, 18, 31, 0.07), transparent 42%),
+    var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-steel);
+}
+
+.company-flag {
+  font-size: 2.1rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 14px rgba(193, 18, 31, 0.35));
+}
+
+.company-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blood-bright);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.company-label em {
+  color: var(--text-muted);
+  font-style: normal;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+}
+
+.company-desc {
+  margin: 0 0 10px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.company-link {
+  color: var(--steel-bright);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-blood);
+  transition: color 0.2s ease;
+}
+
+.company-link:hover {
+  color: var(--blood-bright);
+}
+
+.company-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 250px;
+  justify-content: flex-end;
+}
+
+.company-lines span {
+  padding: 5px 10px;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 820px) {
+  .company-strip {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .company-lines {
+    max-width: none;
+    justify-content: flex-start;
+  }
 }
 
 .live-dot {
