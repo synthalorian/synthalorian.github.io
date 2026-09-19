@@ -333,4 +333,24 @@ document.addEventListener('DOMContentLoaded', () => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // =====================================================
+  // BLACKSHIELD KNIGHT — companion wave on click
+  // The sentinel waves twice, then falls back to idle.
+  // =====================================================
+  const companionKnight = document.querySelector('.companion-knight');
+  if (companionKnight) {
+    companionKnight.addEventListener('click', () => {
+      companionKnight.classList.remove('waving');
+      void companionKnight.offsetWidth; // restart the animation
+      companionKnight.classList.add('waving');
+    });
+
+    // Once the waving loop finishes, hand the shield back to idle.
+    companionKnight.addEventListener('animationend', (event) => {
+      if (event.animationName === 'knightWave') {
+        companionKnight.classList.remove('waving');
+      }
+    });
+  }
 });
