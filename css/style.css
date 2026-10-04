@@ -628,21 +628,63 @@ html[data-theme="daybreak"] .hero-vignette {
 .contact-btn--primary:hover { color: #1a0128; }
 
 .footer {
-  padding: 42px 0 130px;
-  border-top: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  padding: 28px 0 108px;
   text-align: center;
 }
-.footer-brand {
-  font-family: var(--font-display);
-  letter-spacing: 0.14em;
+.footer-horizon {
+  width: min(640px, 72%);
+  height: 2px;
+  margin: 0 auto 36px;
+  background: linear-gradient(90deg, transparent, #ff00ff 20%, #03edf9 50%, #f3e70f 80%, transparent);
+  box-shadow: 0 0 16px rgba(255, 126, 219, 0.7), 0 0 32px rgba(3, 237, 249, 0.35);
+}
+.footer-grid {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: -20px;
+  height: 160px;
+  background-image:
+    linear-gradient(rgba(143, 0, 255, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 126, 219, 0.32) 1px, transparent 1px);
+  background-size: 72px 28px, 72px 28px;
+  transform: perspective(380px) rotateX(62deg);
+  transform-origin: center bottom;
+  mask-image: linear-gradient(180deg, transparent, #000 45%);
+  animation: gridDrift 14s linear infinite;
+  pointer-events: none;
+}
+.footer-content { position: relative; z-index: 1; }
+.footer-kicker {
+  margin: 0 0 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
   color: var(--accent);
 }
-.footer-copy { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.78rem; }
 .footer-wave {
-  color: var(--accent-4);
+  margin: 0;
   font-family: var(--font-display);
-  letter-spacing: 0.12em;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  color: var(--accent-4);
+  text-shadow: 0 0 18px var(--glow-yellow), 0 0 42px rgba(255, 0, 255, 0.28);
 }
+.footer-meta {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 18px 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.footer-meta a { color: var(--accent-3); }
 
 .companion-knight {
   position: fixed;
