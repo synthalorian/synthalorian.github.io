@@ -1,27 +1,22 @@
 # synthalorian.github.io
 
-Personal website and portfolio — Blackshield mercenary theme on black steel.
+Personal site — synthwave '84. Dusk purple, neon grid, the Wave Knight on the field.
 
 ![License](https://img.shields.io/badge/license-Apache--2.0-green)
 ![Platform](https://img.shields.io/badge/platform-GitHub%20Pages%20%7C%20Web-blue)
 ![Engine](https://img.shields.io/badge/engine-HTML%2FCSS%2FJS-blue)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 
----
-
 ## Overview
 
-Static personal site hosted on GitHub Pages. Single-page portfolio with live GitHub stats, featured project board, arsenal/skills section, and a blood-red Blackshield visual system.
+Static portfolio on GitHub Pages. Single page, live GitHub stats, featured projects, and a synthwave '84 visual system. The Wave Knight idles in the hero and walks the corner — hover to wave, click to jump.
 
-## Build
+Regenerate the atlas with `python3 scripts/gen_wave_knight.py`.
+
+## Local
 
 ```bash
-# Serve locally with any static server
 python3 -m http.server 8000
-# or
-npx serve .
 ```
 
-## Usage
-
-Open `http://localhost:8000` in your browser.
+Open `http://localhost:8000`.

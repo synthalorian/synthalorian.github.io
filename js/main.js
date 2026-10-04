@@ -4,15 +4,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // =====================================================
-  // THEME TOGGLE — Blackshield (default) ↔ Ironlight
+  // THEME TOGGLE — synthwave '84 (default) ↔ daybreak
   // =====================================================
   const themeToggle = document.getElementById('theme-toggle');
   const html = document.documentElement;
   const STORAGE_KEY = 'synth-theme';
 
   const normalizeTheme = (theme) => {
-    if (theme === 'ironlight' || theme === 'cyberlight') return 'ironlight';
-    return 'blackshield';
+    if (theme === 'daybreak' || theme === 'ironlight' || theme === 'cyberlight') return 'daybreak';
+    return 'synthwave84';
   };
 
   const applyTheme = (theme) => {
@@ -20,18 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
     html.setAttribute('data-theme', normalized);
     const metaTheme = document.querySelector('meta[name="theme-color"]');
     if (metaTheme) {
-      metaTheme.setAttribute('content', normalized === 'ironlight' ? '#eeebe3' : '#07080a');
+      metaTheme.setAttribute('content', normalized === 'daybreak' ? '#f7eeff' : '#240037');
     }
   };
 
   const savedTheme = localStorage.getItem(STORAGE_KEY);
-  applyTheme(savedTheme || 'blackshield');
+  applyTheme(savedTheme || 'synthwave84');
   html.classList.add('reveal-ready');
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       const current = normalizeTheme(html.getAttribute('data-theme'));
-      const next = current === 'blackshield' ? 'ironlight' : 'blackshield';
+      const next = current === 'synthwave84' ? 'daybreak' : 'synthwave84';
       applyTheme(next);
       localStorage.setItem(STORAGE_KEY, next);
     });
