@@ -1,36 +1,35 @@
 /* =========================================================
-   SYNTH — Synthwave '84
-   Dusk purple, electric violet, hot pink, cyan, neon yellow.
-   Not blackshield. Not amber CRT.
+   SYNTH — Blackshield Mercenary
+   Iron, bone, blood. The shield holds.
    ========================================================= */
 
 :root,
-html[data-theme="synthwave84"] {
-  --bg-abyss: #0d0221;
-  --bg-deep: #1a0128;
-  --bg-dark: #240037;
-  --bg-card: rgba(36, 0, 55, 0.72);
-  --bg-card-hover: rgba(74, 16, 110, 0.88);
-  --bg-glass: rgba(13, 2, 33, 0.72);
-  --text-bright: #ffffff;
-  --text-primary: #f4e9ff;
-  --text-secondary: #d8c4f0;
-  --text-muted: #a88ec8;
-  --accent: #ff7edb;
-  --accent-2: #8f00ff;
-  --accent-3: #03edf9;
-  --accent-4: #f3e70f;
-  --accent-5: #ff00ff;
-  --glow-pink: rgba(255, 126, 219, 0.45);
-  --glow-purple: rgba(143, 0, 255, 0.4);
-  --glow-cyan: rgba(3, 237, 249, 0.4);
-  --glow-yellow: rgba(243, 231, 15, 0.35);
-  --border: rgba(143, 0, 255, 0.35);
-  --border-hot: rgba(255, 126, 219, 0.55);
-  --ok: #72f1b8;
-  --warn: #f3e70f;
-  --font-display: "Audiowide", "Orbitron", sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+html[data-theme="blackshield"] {
+  --bg-abyss: #070709;
+  --bg-deep: #0d0d11;
+  --bg-dark: #101014;
+  --bg-card: rgba(16, 16, 20, 0.78);
+  --bg-card-hover: rgba(38, 38, 46, 0.92);
+  --bg-glass: rgba(7, 7, 9, 0.82);
+  --text-bright: #f5f1e8;
+  --text-primary: #d8d3c8;
+  --text-secondary: #8f959c;
+  --text-muted: #8a8f98;
+  --accent: #c1121f;
+  --accent-2: #e5383b;
+  --accent-3: #74b8b4;
+  --accent-4: #c9a227;
+  --accent-5: #c1121f;
+  --glow-pink: rgba(193, 18, 31, 0.4);
+  --glow-purple: rgba(193, 18, 31, 0.28);
+  --glow-cyan: rgba(116, 184, 180, 0.28);
+  --glow-yellow: rgba(201, 162, 39, 0.32);
+  --border: rgba(143, 149, 156, 0.28);
+  --border-hot: rgba(193, 18, 31, 0.55);
+  --ok: #6a994e;
+  --warn: #c9a227;
+  --font-display: "Pirata One", "EB Garamond", serif;
+  --font-body: "EB Garamond", "Liberation Serif", serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --nav-h: 72px;
   --shadow-card: 0 18px 50px rgba(0, 0, 0, 0.45);
@@ -44,11 +43,11 @@ html[data-theme="daybreak"] {
   --bg-card: rgba(255, 255, 255, 0.82);
   --bg-card-hover: rgba(255, 255, 255, 0.96);
   --bg-glass: rgba(247, 238, 255, 0.86);
-  --text-bright: #240037;
-  --text-primary: #240037;
+  --text-bright: #101014;
+  --text-primary: #101014;
   --text-secondary: #4a2068;
   --text-muted: #6b5088;
-  --border: rgba(143, 0, 255, 0.28);
+  --border: rgba(193, 18, 31, 0.28);
   --border-hot: rgba(196, 0, 106, 0.4);
   --shadow-card: 0 16px 40px rgba(36, 0, 55, 0.08);
   color-scheme: light;
@@ -61,7 +60,7 @@ body {
   min-height: 100vh;
   background:
     radial-gradient(900px 420px at 78% -8%, rgba(255, 80, 40, 0.18), transparent 60%),
-    linear-gradient(180deg, var(--bg-deep), var(--bg-abyss) 42%, #070014);
+    linear-gradient(180deg, var(--bg-deep), var(--bg-abyss) 42%, #070709);
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -93,14 +92,14 @@ button { font: inherit; }
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  background: rgba(13, 2, 33, 0.55);
+  background: rgba(16, 16, 20, 0.55);
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(14px);
 }
 .navbar.scrolled {
-  background: rgba(13, 2, 33, 0.9);
+  background: rgba(16, 16, 20, 0.9);
   border-bottom-color: var(--border);
-  box-shadow: 0 8px 30px rgba(143, 0, 255, 0.16);
+  box-shadow: 0 8px 30px rgba(193, 18, 31, 0.16);
 }
 html[data-theme="daybreak"] .navbar,
 html[data-theme="daybreak"] .navbar.scrolled {
@@ -159,7 +158,7 @@ html[data-theme="daybreak"] .navbar.scrolled {
   place-items: center;
 }
 .theme-toggle svg { width: 18px; height: 18px; }
-html[data-theme="synthwave84"] .theme-icon-moon,
+html[data-theme="blackshield"] .theme-icon-moon,
 html[data-theme="daybreak"] .theme-icon-sun { display: none; }
 .nav-toggle {
   display: none;
@@ -207,12 +206,12 @@ html[data-theme="daybreak"] .theme-icon-sun { display: none; }
   border-radius: 50%;
   background: repeating-linear-gradient(
     180deg,
-    #ff7edb 0 8px,
-    #ff4d6d 8px 14px,
-    #f3e70f 14px 20px,
-    #ff9a3c 20px 28px
+    #3a1216 0 10px,
+    #c1121f 10px 16px,
+    #1a1a20 16px 26px,
+    #e5383b 26px 32px
   );
-  box-shadow: 0 0 80px rgba(255, 90, 40, 0.55), 0 0 160px rgba(255, 0, 255, 0.25);
+  box-shadow: 0 0 80px rgba(193, 18, 31, 0.55), 0 0 160px rgba(193, 18, 31, 0.25);
   animation: sunStripe 8s linear infinite;
 }
 .hero-sun::after {
@@ -227,8 +226,8 @@ html[data-theme="daybreak"] .theme-icon-sun { display: none; }
   top: 54%;
   bottom: -20%;
   background-image:
-    linear-gradient(rgba(143, 0, 255, 0.45) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 126, 219, 0.28) 1px, transparent 1px);
+    linear-gradient(rgba(193, 18, 31, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(193, 18, 31, 0.28) 1px, transparent 1px);
   background-size: 80px 40px, 80px 40px;
   transform: perspective(420px) rotateX(62deg);
   transform-origin: center top;
@@ -243,14 +242,14 @@ html[data-theme="daybreak"] .theme-icon-sun { display: none; }
 }
 .hero-vignette {
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 36%, rgba(7, 0, 20, 0.75) 100%);
+  background: radial-gradient(ellipse at center, transparent 36%, rgba(7, 7, 9, 0.75) 100%);
 }
 html[data-theme="daybreak"] .hero-vignette {
   background: radial-gradient(ellipse at center, transparent 42%, rgba(247, 238, 255, 0.62) 100%);
 }
 .hero-glow { width: 320px; height: 320px; filter: blur(42px); opacity: 0.4; }
-.hero-glow-left { left: -80px; top: 18%; background: #8f00ff; }
-.hero-glow-right { right: -40px; bottom: 8%; background: #03edf9; }
+.hero-glow-left { left: -80px; top: 18%; background: #e5383b; }
+.hero-glow-right { right: -40px; bottom: 8%; background: #74b8b4; }
 
 .hero-layout {
   position: relative;
@@ -319,7 +318,7 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 .btn .icon { width: 18px; height: 18px; }
 .btn-primary {
-  background: linear-gradient(90deg, #ff00ff, #ff7edb);
+  background: linear-gradient(90deg, #c1121f, #c1121f);
   color: #1a0128;
   box-shadow: 0 0 24px var(--glow-pink);
 }
@@ -327,9 +326,9 @@ html[data-theme="daybreak"] .hero-vignette {
 .btn-secondary {
   border-color: var(--accent-3);
   color: var(--accent-3);
-  background: rgba(3, 237, 249, 0.06);
+  background: rgba(116, 184, 180, 0.06);
 }
-.btn-secondary:hover { color: var(--text-bright); background: rgba(3, 237, 249, 0.14); }
+.btn-secondary:hover { color: var(--text-bright); background: rgba(116, 184, 180, 0.14); }
 .hero-readout {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -339,7 +338,7 @@ html[data-theme="daybreak"] .hero-vignette {
 .hero-readout div {
   padding: 10px 12px;
   border-left: 2px solid var(--accent-2);
-  background: rgba(13, 2, 33, 0.38);
+  background: rgba(16, 16, 20, 0.38);
 }
 .hero-readout span {
   display: block;
@@ -360,13 +359,13 @@ html[data-theme="daybreak"] .hero-vignette {
   width: 192px;
   height: 208px;
   margin: 0 auto;
-  background-image: url("../img/wave-knight.webp?v=1");
+  background-image: url("../img/blackshield-knight.webp?v=2");
   background-repeat: no-repeat;
   image-rendering: pixelated;
   transform: scale(1.35);
   transform-origin: center bottom;
   animation: knightIdle 0.9s steps(6) infinite;
-  filter: drop-shadow(0 16px 10px rgba(255, 0, 255, 0.28));
+  filter: drop-shadow(0 16px 10px rgba(193, 18, 31, 0.28));
 }
 .knight-caption {
   margin-top: 28px;
@@ -497,7 +496,7 @@ html[data-theme="daybreak"] .hero-vignette {
   transform: translateY(-4px);
   border-color: var(--border-hot);
   background: var(--bg-card-hover);
-  box-shadow: 0 0 28px rgba(255, 0, 255, 0.16);
+  box-shadow: 0 0 28px rgba(193, 18, 31, 0.16);
 }
 .project-card--flagship { grid-column: 1 / -1; }
 .project-header, .project-meta, .project-tech, .project-stats, .contact-links {
@@ -514,14 +513,14 @@ html[data-theme="daybreak"] .hero-vignette {
   flex-shrink: 0;
   border-radius: 10px;
   color: var(--accent-3);
-  background: rgba(3, 237, 249, 0.08);
-  border: 1px solid rgba(3, 237, 249, 0.28);
+  background: rgba(116, 184, 180, 0.08);
+  border: 1px solid rgba(116, 184, 180, 0.28);
 }
 .project-icon svg { width: 22px; height: 22px; }
 .project-card:nth-child(3n) .project-icon {
   color: var(--accent);
-  background: rgba(255, 126, 219, 0.08);
-  border-color: rgba(255, 126, 219, 0.32);
+  background: rgba(193, 18, 31, 0.08);
+  border-color: rgba(193, 18, 31, 0.32);
 }
 .project-card:nth-child(3n+2) .project-icon {
   color: var(--accent-4);
@@ -568,9 +567,9 @@ html[data-theme="daybreak"] .hero-vignette {
 .tech-tag.ts { color: #c9a6ff; border-color: rgba(201, 166, 255, 0.45); }
 .tech-tag.ruby { color: #ff6b8a; border-color: rgba(255, 107, 138, 0.45); }
 .tech-tag.cpp { color: #9db7ff; border-color: rgba(157, 183, 255, 0.45); }
-.tech-tag.python { color: #f3e70f; border-color: rgba(243, 231, 15, 0.45); }
-.tech-tag.elixir { color: #ff7edb; border-color: rgba(255, 126, 219, 0.45); }
-.tech-tag.tauri { color: #03edf9; border-color: rgba(3, 237, 249, 0.45); }
+.tech-tag.python { color: #c9a227; border-color: rgba(243, 231, 15, 0.45); }
+.tech-tag.elixir { color: #c1121f; border-color: rgba(193, 18, 31, 0.45); }
+.tech-tag.tauri { color: #74b8b4; border-color: rgba(116, 184, 180, 0.45); }
 
 .skills-category, .doctrine-card { padding: 20px; }
 .skills-cat-title, .doctrine-card h3 {
@@ -584,13 +583,13 @@ html[data-theme="daybreak"] .hero-vignette {
 .skill-bar {
   height: 6px;
   border-radius: 99px;
-  background: rgba(143, 0, 255, 0.18);
+  background: rgba(193, 18, 31, 0.18);
   overflow: hidden;
 }
 .skill-fill {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #8f00ff, #ff7edb 62%, #03edf9);
+  background: linear-gradient(90deg, #e5383b, #c1121f 62%, #74b8b4);
   box-shadow: 0 0 10px var(--glow-pink);
   transition: width 0.9s ease;
 }
@@ -621,7 +620,7 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 .contact-btn svg { width: 18px; height: 18px; }
 .contact-btn--primary {
-  background: linear-gradient(90deg, #ff00ff, #ff7edb);
+  background: linear-gradient(90deg, #c1121f, #c1121f);
   color: #1a0128;
   border-color: transparent;
 }
@@ -637,8 +636,8 @@ html[data-theme="daybreak"] .hero-vignette {
   width: min(640px, 72%);
   height: 2px;
   margin: 0 auto 36px;
-  background: linear-gradient(90deg, transparent, #ff00ff 20%, #03edf9 50%, #f3e70f 80%, transparent);
-  box-shadow: 0 0 16px rgba(255, 126, 219, 0.7), 0 0 32px rgba(3, 237, 249, 0.35);
+  background: linear-gradient(90deg, transparent, #c1121f 20%, #74b8b4 50%, #c9a227 80%, transparent);
+  box-shadow: 0 0 16px rgba(193, 18, 31, 0.7), 0 0 32px rgba(116, 184, 180, 0.35);
 }
 .footer-grid {
   position: absolute;
@@ -647,8 +646,8 @@ html[data-theme="daybreak"] .hero-vignette {
   bottom: -20px;
   height: 160px;
   background-image:
-    linear-gradient(rgba(143, 0, 255, 0.55) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 126, 219, 0.32) 1px, transparent 1px);
+    linear-gradient(rgba(193, 18, 31, 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(193, 18, 31, 0.32) 1px, transparent 1px);
   background-size: 72px 28px, 72px 28px;
   transform: perspective(380px) rotateX(62deg);
   transform-origin: center bottom;
@@ -671,7 +670,7 @@ html[data-theme="daybreak"] .hero-vignette {
   letter-spacing: 0.04em;
   line-height: 1.05;
   color: var(--accent-4);
-  text-shadow: 0 0 18px var(--glow-yellow), 0 0 42px rgba(255, 0, 255, 0.28);
+  text-shadow: 0 0 18px var(--glow-yellow), 0 0 42px rgba(193, 18, 31, 0.28);
 }
 .footer-meta {
   display: flex;
@@ -700,11 +699,11 @@ html[data-theme="daybreak"] .hero-vignette {
   height: 208px;
   transform: scale(0.62);
   transform-origin: top left;
-  background-image: url("../img/wave-knight.webp?v=1");
+  background-image: url("../img/blackshield-knight.webp?v=2");
   background-repeat: no-repeat;
   image-rendering: pixelated;
   animation: knightIdle 0.9s steps(6) infinite;
-  filter: drop-shadow(0 10px 8px rgba(255, 0, 255, 0.3));
+  filter: drop-shadow(0 10px 8px rgba(193, 18, 31, 0.3));
 }
 .knight-shadow {
   position: absolute;
@@ -713,7 +712,7 @@ html[data-theme="daybreak"] .hero-vignette {
   width: 74px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 0, 255, 0.32);
+  background: rgba(193, 18, 31, 0.32);
   filter: blur(2px);
 }
 .companion-knight.waving .knight-sprite,
@@ -810,7 +809,7 @@ html[data-theme="daybreak"] .hero-vignette {
     gap: 0;
     margin: 0;
     padding: 8px 0 14px;
-    background: rgba(13, 2, 33, 0.97);
+    background: rgba(16, 16, 20, 0.97);
     border-bottom: 1px solid var(--border);
   }
   html[data-theme="daybreak"] .nav-menu { background: rgba(247, 238, 255, 0.98); }
