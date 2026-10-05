@@ -4,36 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Synth | The Shield Holds</title>
-  <meta name="description" content="Portfolio of Synth — Blackshield mercenary open-source systems in Rust, Dart, TypeScript, C++, Python, Ruby, and Elixir. CLI tools, apps, games, audio DSP, mesh networking, and AI harnesses.">
+  <meta name="description" content="Portfolio of Synth — Blackshield mercenary. Open-source contracts in Rust, Dart, TypeScript, C++, Python, Ruby, and Elixir. CLI tools, apps, games, audio DSP, mesh networking, and AI harnesses.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=EB+Garamond:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=88">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=89">
   <meta name="theme-color" content="#101014">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101014'/%3E%3Crect x='28' y='8' width='8' height='48' fill='%23C1121F'/%3E%3Crect x='12' y='22' width='40' height='8' fill='%23C1121F'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23101014'/%3E%3Crect x='28' y='8' width='8' height='48' fill='%23C1121F'/%3E%3Crect x='12' y='22' width='40' height='8' fill='%23C1121F'/%3E%3C/svg%3E">
   <meta property="og:title" content="Synth | The Shield Holds">
-  <meta property="og:description" content="Open-source systems, apps, games, audio DSP, mesh tools, and AI harnesses. Iron, bone, blood. The shield holds.">
+  <meta property="og:description" content="Open contracts in systems, apps, games, audio, and mesh. Iron, bone, blood. The shield holds.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://synthalorian.github.io">
   <meta property="og:image" content="https://synthalorian.github.io/img/og-blackshield-knight.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Synth | The Shield Holds">
-  <meta name="twitter:description" content="Open-source systems, apps, games, audio DSP, mesh tools, and AI harnesses. Iron, bone, blood. The shield holds.">
+  <meta name="twitter:description" content="Open contracts in systems, apps, games, audio, and mesh. Iron, bone, blood. The shield holds.">
   <meta name="twitter:image" content="https://synthalorian.github.io/img/og-blackshield-knight.png">
 </head>
 <body>
-  <a href="#projects" class="skip-link">Skip to work</a>
+  <a href="#projects" class="skip-link">Skip to contracts</a>
 
   <nav class="navbar" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#" class="nav-logo" aria-label="Synth home">
         <span class="nav-sigil" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="7" width="18" height="5" rx="1" fill="#C1121F"/>
-            <rect x="9.5" y="7" width="5" height="13" rx="1" fill="#D8D3C8"/>
+            <path d="M4 5h16v9.2c0 4.2-3.4 6.6-8 8.8-4.6-2.2-8-4.6-8-8.8V5z" fill="#101014" stroke="#8F959C" stroke-width="1.2"/>
+            <rect x="10.6" y="7.2" width="2.8" height="10.2" fill="#C1121F"/>
+            <rect x="6.6" y="10.2" width="10.8" height="2.8" fill="#C1121F"/>
           </svg>
         </span>
-        <span class="logo-text">SYNTH <span>// SHIELD</span></span>
+        <span class="logo-text">SYNTH <span>BLACKSHIELD</span></span>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
@@ -41,10 +42,10 @@
         <span></span>
       </button>
       <ul class="nav-menu">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Work</a></li>
-        <li><a href="#skills" class="nav-link">Stack</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#about" class="nav-link">Record</a></li>
+        <li><a href="#projects" class="nav-link">Contracts</a></li>
+        <li><a href="#skills" class="nav-link">Armory</a></li>
+        <li><a href="#contact" class="nav-link">Hire</a></li>
       </ul>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
         <span class="theme-icon-sun" aria-hidden="true">
@@ -60,53 +61,68 @@
   <header class="hero">
     <div class="hero-scene" aria-hidden="true">
       <div class="hero-noise"></div>
-      <div class="hero-grid"></div>
-      <div class="hero-sun"></div>
       <div class="hero-glow hero-glow-left"></div>
-      <div class="hero-glow hero-glow-right"></div>
-      <div class="hero-scanlines"></div>
       <div class="hero-vignette"></div>
     </div>
 
     <div class="container hero-layout">
+      <div class="hero-shield" aria-hidden="true">
+        <svg class="shield-svg" viewBox="0 0 200 268" fill="none">
+          <circle class="shield-ring" cx="100" cy="10" r="6" stroke="#8F959C" stroke-width="2.5"/>
+          <path class="shield-strap" d="M100 16v10" stroke="#8F959C" stroke-width="2.5"/>
+          <path class="shield-plate" d="M28 28h144c6 0 12 6 12 12v96c0 46-36 74-84 112C52 210 16 182 16 136V40c0-6 6-12 12-12z" fill="#101014" stroke="#8F959C" stroke-width="7"/>
+          <path class="shield-inner" d="M40 42h120c4 0 8 4 8 8v84c0 36-28 58-68 88-40-30-68-52-68-88V50c0-4 4-8 8-8z" stroke="#3a3e44" stroke-width="2"/>
+          <g class="shield-cross">
+            <rect x="88" y="52" width="24" height="118" fill="#C1121F"/>
+            <rect x="52" y="86" width="96" height="24" fill="#C1121F"/>
+          </g>
+          <g class="shield-rivets" fill="#8F959C">
+            <circle cx="46" cy="50" r="4.2"/>
+            <circle cx="154" cy="50" r="4.2"/>
+            <circle cx="46" cy="124" r="4.2"/>
+            <circle cx="154" cy="124" r="4.2"/>
+            <circle cx="100" cy="186" r="3.6"/>
+          </g>
+          <g class="shield-rivet-cores" fill="#101014">
+            <circle cx="46" cy="50" r="1.6"/>
+            <circle cx="154" cy="50" r="1.6"/>
+            <circle cx="46" cy="124" r="1.6"/>
+            <circle cx="154" cy="124" r="1.6"/>
+            <circle cx="100" cy="186" r="1.3"/>
+          </g>
+        </svg>
+      </div>
+
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-pulse" aria-hidden="true"></span>
-          STATUS: ON THE GRID
+          ON CONTRACT
         </div>
-        <p class="hero-kicker">blackshield // open source // the shield holds</p>
+        <p class="hero-kicker">Blackshield Company</p>
         <h1 class="hero-title">
-          <span class="line">Code on the grid.</span>
+          <span class="line">Hold the line.</span>
           <span class="line line-accent">The shield holds.</span>
         </h1>
         <p class="hero-subtitle">
-          I forge open-source systems across CLI tools, cross-platform apps, game engines, audio DSP,
-          mesh networks, AI coding harnesses, and terminal software — in
+          Open contracts in CLI tools, cross-platform apps, game engines, audio DSP,
+          mesh networks, AI harnesses, terminal software — forged in
           <span class="highlight">Rust</span>, <span class="highlight">Dart</span>,
           <span class="highlight">TypeScript</span>, <span class="highlight">C++</span>,
           <span class="highlight">Python</span>, <span class="highlight">Ruby</span>, &amp; <span class="highlight">Elixir</span>.
         </p>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">See the work</a>
+          <a href="#projects" class="btn btn-primary">Read the contracts</a>
           <a href="https://github.com/synthalorian" target="_blank" rel="noopener" class="btn btn-secondary">
             <svg class="icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             GitHub
           </a>
         </div>
         <div class="hero-readout" aria-label="Portfolio quick facts">
-          <div><span>PLATFORMS DEPLOYED</span><strong>6</strong></div>
-          <div><span>PRIMARY STACK</span><strong>Rust / Flutter / C++</strong></div>
-          <div><span>DOCTRINE</span><strong>Open source. Local-first. Ship it.</strong></div>
+          <div><span>FIELDS HELD</span><strong>6</strong></div>
+          <div><span>PRIMARY STEEL</span><strong>Rust / Flutter / C++</strong></div>
+          <div><span>STANDING ORDER</span><strong>Open source. Local-first. Ship it.</strong></div>
         </div>
       </div>
-
-      <aside class="hero-knight" aria-label="Blackshield Knight">
-        <div class="knight-stage" role="img" aria-label="Blackshield Knight, idle"></div>
-        <div class="knight-caption">
-          <span>BLACKSHIELD</span>
-          <strong>CROSS POTENT</strong>
-        </div>
-      </aside>
     </div>
   </header>
 
@@ -114,12 +130,12 @@
     <section id="about" class="section about">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">01 — About</span>
-          <h2 class="section-title">Built across the stack</h2>
+          <span class="section-label">01 — Record</span>
+          <h2 class="section-title">Service record</h2>
           <p class="section-desc">
-            I build open-source software from low-level systems to polished interfaces. The record spans CLI tooling,
-            real-time web platforms, cross-platform mobile &amp; desktop apps, audio DSP, mesh networking,
-            AI coding harnesses, game engines, and terminal TUI applications.
+            Open-source work from the iron up. CLI tooling, real-time web, mobile &amp; desktop apps,
+            audio DSP, mesh networking, AI harnesses, game engines, terminal software.
+            The record is public. The steel is the delivery.
           </p>
         </div>
         <div class="stats-grid">
@@ -138,19 +154,25 @@
         </div>
         <div class="github-live-note" id="github-live-note">
           <span class="live-dot" aria-hidden="true"></span>
-          <span>Stats sync live from <a href="https://github.com/synthalorian" target="_blank" rel="noopener">GitHub API</a></span>
+          <span>Ledger syncs live from the <a href="https://github.com/synthalorian" target="_blank" rel="noopener">GitHub API</a></span>
         </div>
 
         <div class="company-strip">
-          <div class="company-flag" aria-hidden="true">⚫🛡</div>
+          <div class="company-flag" aria-hidden="true">
+            <svg viewBox="0 0 48 60" width="42" height="52">
+              <path d="M6 4h36v30c0 10-8 16-18 22C14 50 6 44 6 34V4z" fill="#101014" stroke="#8F959C" stroke-width="2"/>
+              <rect x="21" y="12" width="6" height="26" fill="#C1121F"/>
+              <rect x="13" y="20" width="22" height="6" fill="#C1121F"/>
+            </svg>
+          </div>
           <div class="company-copy">
             <span class="company-label">Blackshield Company <em>// Blackshield Co. LLC</em></span>
             <p class="company-desc">
               Steel over spectacle. Digital forensics, security tooling, an open-source AI coding platform,
-              and the Blackshield theme family — the contract house that stands between your data and the dark.
+              and the Blackshield theme family. The house that stands between your data and the dark.
             </p>
             <a class="company-link" href="https://github.com/Blackshield-Company" target="_blank" rel="noopener">
-              github.com/Blackshield-Company →
+              github.com/Blackshield-Company
             </a>
           </div>
           <div class="company-lines" aria-hidden="true">
@@ -166,11 +188,11 @@
     <section id="projects" class="section projects">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">02 — Work</span>
-          <h2 class="section-title">Featured projects</h2>
+          <span class="section-label">02 — Contracts</span>
+          <h2 class="section-title">Open contracts</h2>
           <p class="section-desc">
-            GitHub pins lead. Behind them are the strongest shipped apps,
-            infrastructure, creative tools, game tech, and Blackshield system work. Every project listed here is open source.
+            The pins lead. Behind them: shipped apps, infrastructure, creative tools, game tech,
+            and Blackshield systems work. Every contract on this board is open source.
           </p>
         </div>
 
@@ -183,7 +205,7 @@
               <div class="project-meta"><span class="project-version">v1.1.0</span><span class="project-status beta">Active Contract</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/openshield" target="_blank" rel="noopener">OpenShield</a></h3>
-            <p class="project-desc">Open-source AI coding harness in Rust. Multi-provider orchestration, native tool calling, autonomous agent loops, project-wide context, and a TUI dashboard. The harness that learns. The agent that decides.</p>
+            <p class="project-desc">Open-source AI coding harness in Rust. Multi-provider orchestration, native tool calling, autonomous agent loops, project-wide context, and a TUI dashboard.</p>
             <div class="project-stats" data-repo-stats="openshield"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag rust">Rust</span><span class="tech-tag ts">TypeScript</span><span class="tech-tag">LLM Orchestration</span><span class="tech-tag">TUI</span></div>
           </article>
@@ -196,7 +218,7 @@
               <div class="project-meta"><span class="project-version">v1.0</span><span class="project-status stable">Stable</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/open-synth" target="_blank" rel="noopener">Open Synth</a></h3>
-            <p class="project-desc">Open-source synthesizer with a JUCE 8 / C++20 engine, sample ROMpler, 5,600 presets, 64-voice polyphony, 21 FX processors, standalone app, VST3, and CLAP. Real instrument sounds, real DSP.</p>
+            <p class="project-desc">Open-source synthesizer. JUCE 8 / C++20 engine, sample ROMpler, 5,600 presets, 64-voice polyphony, 21 FX processors, standalone app, VST3, and CLAP. Instrument sounds, not approximations.</p>
             <div class="project-stats" data-repo-stats="open-synth"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag cpp">C++</span><span class="tech-tag">JUCE</span><span class="tech-tag">DSP</span><span class="tech-tag">VST3</span></div>
           </article>
@@ -209,7 +231,7 @@
               <div class="project-meta"><span class="project-version">v0.1</span><span class="project-status beta">Active Contract</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/openclaw-pincers" target="_blank" rel="noopener">OpenClaw Pincers</a></h3>
-            <p class="project-desc">Cross-platform desktop control center for OpenClaw. Configure gateways, providers, channels, sessions, and tools from one native Tauri 2 app with a Svelte 5 frontend and Rust core.</p>
+            <p class="project-desc">Cross-platform desktop control center for OpenClaw. Gateways, providers, channels, sessions, and tools from one native Tauri 2 app, Svelte 5 frontend, Rust core.</p>
             <div class="project-stats" data-repo-stats="openclaw-pincers"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag tauri">Tauri 2</span><span class="tech-tag ts">Svelte 5</span><span class="tech-tag rust">Rust</span><span class="tech-tag">Desktop</span></div>
           </article>
@@ -222,7 +244,7 @@
               <div class="project-meta"><span class="project-version">v1.0.0</span><span class="project-status stable">Stable</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/hermes-wingman" target="_blank" rel="noopener">Hermes Wingman</a></h3>
-            <p class="project-desc">The definitive Hermes Agent GUI — Flutter desktop, mobile app, Rails 8 dashboard, Rust backend, QR pairing, live sessions, and 29 hand-crafted themes. Replaces the entire Hermes CLI.</p>
+            <p class="project-desc">Hermes Agent GUI. Flutter desktop, mobile app, Rails 8 dashboard, Rust backend, QR pairing, live sessions, 29 hand-built themes. Stands in for the Hermes CLI.</p>
             <div class="project-stats" data-repo-stats="hermes-wingman"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag dart">Flutter</span><span class="tech-tag dart">Dart</span><span class="tech-tag rust">Rust</span><span class="tech-tag ruby">Rails 8</span><span class="tech-tag ts">TypeScript</span></div>
           </article>
@@ -235,7 +257,7 @@
               <div class="project-meta"><span class="project-version">v0.x</span><span class="project-status beta">Active Contract</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/wireclaw" target="_blank" rel="noopener">WireClaw</a></h3>
-            <p class="project-desc">Local HTTP proxy for API traffic capture, replay, and inspection. Rust CLI + TUI with an Axum dashboard that turns intercepted requests into OpenAPI specs.</p>
+            <p class="project-desc">Local HTTP proxy for API traffic capture, replay, and inspection. Rust CLI and TUI, Axum dashboard, intercepted requests turned into OpenAPI specs.</p>
             <div class="project-stats" data-repo-stats="wireclaw"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag rust">Rust</span><span class="tech-tag">Axum</span><span class="tech-tag">MITM Proxy</span><span class="tech-tag">OpenAPI</span></div>
           </article>
@@ -248,7 +270,7 @@
               <div class="project-meta"><span class="project-version">v0.6.0</span><span class="project-status beta">Active Contract</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/voidengine" target="_blank" rel="noopener">VoidEngine</a></h3>
-            <p class="project-desc">Data-driven Odin + SDL2 game engine with hot-reload for code and assets. Built for fast iteration, live tweaking, and powering the Void Mercs line.</p>
+            <p class="project-desc">Data-driven Odin + SDL2 game engine. Hot-reload for code and assets. Built for fast iteration, live tweaking, and the Void Mercs line.</p>
             <div class="project-stats" data-repo-stats="voidengine"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag">Odin</span><span class="tech-tag">SDL2</span><span class="tech-tag">Hot Reload</span><span class="tech-tag">Data-Driven</span></div>
           </article>
@@ -261,7 +283,7 @@
               <div class="project-meta"><span class="project-version">v1.4.0</span><span class="project-status stable">Stable</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/forge" target="_blank" rel="noopener">Forge</a></h3>
-            <p class="project-desc">Digital workshop CLI + Rails Hub for backups, AI orchestration, scripture, system tools, themes, and creative workflows. Six pillars, one command center.</p>
+            <p class="project-desc">Digital workshop. Rust CLI and Rails Hub for backups, AI orchestration, scripture, system tools, themes, and creative workflows. Six pillars, one command.</p>
             <div class="project-stats" data-repo-stats="forge"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag rust">Rust</span><span class="tech-tag ruby">Rails 8</span><span class="tech-tag">SQLite</span><span class="tech-tag">Tailwind</span></div>
           </article>
@@ -274,7 +296,7 @@
               <div class="project-meta"><span class="project-version">v1.0.0</span><span class="project-status stable">Stable</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/sentryclaw" target="_blank" rel="noopener">SentryClaw</a></h3>
-            <p class="project-desc">Self-hosted AI code review for GitHub and GitLab PRs. Rust backend, local LLM inference, diff analysis, bug detection, and style enforcement without sending code to third-party APIs.</p>
+            <p class="project-desc">Self-hosted AI code review for GitHub and GitLab pull requests. Rust backend, local model inference, diff analysis, bug detection, style enforcement. Code stays on the machine.</p>
             <div class="project-stats" data-repo-stats="sentryclaw"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag rust">Rust</span><span class="tech-tag">llama.cpp</span><span class="tech-tag">GitHub API</span><span class="tech-tag">GitLab API</span></div>
           </article>
@@ -287,7 +309,7 @@
               <div class="project-meta"><span class="project-version">v0.x</span><span class="project-status beta">Active Contract</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/AlbionOnline-Translator" target="_blank" rel="noopener">Albion Online Translator</a></h3>
-            <p class="project-desc">Cross-platform Albion Online chat translator overlay. Passive packet sniffer, no game modification, instant language detection, privacy-first local processing, Apache-2.0.</p>
+            <p class="project-desc">Albion Online chat translator overlay. Passive packet sniffer, no game modification, instant language detection, local processing, Apache-2.0.</p>
             <div class="project-stats" data-repo-stats="AlbionOnline-Translator"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag rust">Rust</span><span class="tech-tag tauri">Tauri 2</span><span class="tech-tag">Photon</span><span class="tech-tag">Overlay</span></div>
           </article>
@@ -300,7 +322,7 @@
               <div class="project-meta"><span class="project-version">v0.x</span><span class="project-status beta">Active Contract</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/open-psalm" target="_blank" rel="noopener">Open Psalm</a></h3>
-            <p class="project-desc">Terminal Bible reader built with C++20 and FTXUI. Ten translations, Strong's Concordance, cross-references, 11 themes, and keyboard-first scripture navigation in the shell.</p>
+            <p class="project-desc">Terminal Bible reader. C++20 and FTXUI. Ten translations, Strong's Concordance, cross-references, 11 themes, keyboard-first scripture in the shell.</p>
             <div class="project-stats" data-repo-stats="open-psalm"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag cpp">C++</span><span class="tech-tag">FTXUI</span><span class="tech-tag">TUI</span><span class="tech-tag">Scripture</span></div>
           </article>
@@ -313,7 +335,7 @@
               <div class="project-meta"><span class="project-version">v0.x</span><span class="project-status beta">Active Contract</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/reticulum-link" target="_blank" rel="noopener">Reticulum Link</a></h3>
-            <p class="project-desc">High-performance Reticulum transport node and LXMF relay built on the BEAM. Mesh infrastructure for resilient, encrypted, off-grid communication.</p>
+            <p class="project-desc">Reticulum transport node and LXMF relay on the BEAM. Mesh infrastructure for resilient, encrypted, off-grid communication.</p>
             <div class="project-stats" data-repo-stats="reticulum-link"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag elixir">Elixir</span><span class="tech-tag">BEAM</span><span class="tech-tag">Reticulum</span><span class="tech-tag">LXMF</span></div>
           </article>
@@ -326,7 +348,7 @@
               <div class="project-meta"><span class="project-version">v1.3.0</span><span class="project-status stable">Stable</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/Open-Bible" target="_blank" rel="noopener">Open Bible</a></h3>
-            <p class="project-desc">Offline Bible study app for Android &amp; iOS with 20+ translations, Strong's Concordance, translation comparison, TTS, reading plans, and Christian History encyclopedia.</p>
+            <p class="project-desc">Offline Bible study for Android and iOS. 20+ translations, Strong's Concordance, translation comparison, spoken scripture, reading plans, Christian History encyclopedia.</p>
             <div class="project-stats" data-repo-stats="Open-Bible"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag dart">Flutter</span><span class="tech-tag dart">Dart</span><span class="tech-tag">Riverpod</span><span class="tech-tag">Hive</span></div>
           </article>
@@ -339,7 +361,7 @@
               <div class="project-meta"><span class="project-status beta">Beta</span></div>
             </div>
             <h3 class="project-name"><a href="https://github.com/synthalorian/clawtrade" target="_blank" rel="noopener">ClawTrade</a></h3>
-            <p class="project-desc">Marketplace where agents list, buy, and sell micro-services. Rust API on Axum and SQLite, Stripe checkout, local model routing, and an HTMX dashboard.</p>
+            <p class="project-desc">Marketplace where agents list, buy, and sell micro-services. Rust API on Axum and SQLite, Stripe checkout, local model routing, HTMX dashboard.</p>
             <div class="project-stats" data-repo-stats="clawtrade"><span>Stars <strong data-stat="stars">—</strong></span><span>Forks <strong data-stat="forks">—</strong></span><span>Lang <strong data-stat="lang">—</strong></span><span>Updated <strong data-stat="updated">—</strong></span></div>
             <div class="project-tech"><span class="tech-tag rust">Rust</span><span class="tech-tag">Axum</span><span class="tech-tag">SQLite</span><span class="tech-tag">Stripe</span><span class="tech-tag">HTMX</span></div>
           </article>
@@ -350,11 +372,11 @@
     <section id="skills" class="section skills">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">03 — Stack</span>
-          <h2 class="section-title">What the work is made of</h2>
+          <span class="section-label">03 — Armory</span>
+          <h2 class="section-title">The armory</h2>
           <p class="section-desc">
-            The loadout is broad, but the doctrine is consistent: native performance where it matters,
-            local-first privacy where possible, and interfaces that feel forged instead of assembled.
+            Broad loadout. One doctrine: native steel where it matters, local-first where it can be,
+            interfaces that feel forged instead of assembled.
           </p>
         </div>
         <div class="skills-layout">
@@ -390,7 +412,7 @@
             </div>
           </div>
           <div class="skills-category">
-            <h3 class="skills-cat-title">Special Operations</h3>
+            <h3 class="skills-cat-title">Field craft</h3>
             <div class="skills-list">
               <div class="skill-item"><span class="skill-name">Game Engines &amp; Editor Suites</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div></div>
               <div class="skill-item"><span class="skill-name">Audio DSP / Synthesizers</span><div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div></div>
@@ -407,24 +429,24 @@
     <section class="section doctrine">
       <div class="container">
         <div class="section-header">
-          <span class="section-label">04 — Doctrine</span>
-          <h2 class="section-title">How the work ships</h2>
+          <span class="section-label">04 — Standing orders</span>
+          <h2 class="section-title">How a contract ships</h2>
         </div>
         <div class="doctrine-grid">
           <article class="doctrine-card" data-reveal>
             <span class="doctrine-number">I</span>
             <h3>Open source by default</h3>
-            <p>Tools should be forkable, inspectable, and free to improve. No black boxes unless the mission demands it.</p>
+            <p>Tools are forkable and inspectable. No black box unless the contract demands it.</p>
           </article>
           <article class="doctrine-card" data-reveal>
             <span class="doctrine-number">II</span>
-            <h3>Local-first privacy</h3>
-            <p>Your machine is the fortress. Data stays local unless the user explicitly opens the gate.</p>
+            <h3>Local-first</h3>
+            <p>The machine is the keep. Data stays inside the walls unless you open the gate.</p>
           </article>
           <article class="doctrine-card" data-reveal>
             <span class="doctrine-number">III</span>
             <h3>Ship working steel</h3>
-            <p>Demos are nice. Builds are better. Every project should leave behind something real, runnable, and hardened.</p>
+            <p>A demo is not a delivery. Leave something real, runnable, and hardened.</p>
           </article>
         </div>
       </div>
@@ -433,11 +455,11 @@
     <section id="contact" class="section contact">
       <div class="container">
         <div class="contact-card">
-          <span class="section-label">05 — Contact</span>
-          <h2 class="contact-title">Send a signal.</h2>
+          <span class="section-label">05 — Dispatch</span>
+          <h2 class="contact-title">Send word.</h2>
           <p class="contact-desc">
-            Open to developer roles, freelance builds, collaborations, and interesting problems. If the work involves
-            systems, apps, audio, games, AI tooling, mesh infrastructure, or a Linux desktop that needs a soul — send word.
+            Open to retainers, freelance contracts, and hard problems. Systems, apps, audio, games,
+            AI tooling, mesh, or a Linux desktop that needs a soul — send word.
           </p>
           <div class="contact-links">
             <a href="https://github.com/synthalorian" target="_blank" rel="noopener" class="contact-btn" aria-label="View GitHub profile">
@@ -446,7 +468,7 @@
             </a>
             <a href="mailto:synthalorian@gmail.com" class="contact-btn contact-btn--primary" aria-label="Send email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Send email
+              Send word
             </a>
           </div>
         </div>
@@ -456,9 +478,8 @@
 
   <footer class="footer">
     <div class="footer-horizon" aria-hidden="true"></div>
-    <div class="footer-grid" aria-hidden="true"></div>
     <div class="container footer-content">
-      <p class="footer-kicker">SYNTH // SHIELD</p>
+      <p class="footer-kicker">BLACKSHIELD</p>
       <p class="footer-wave">The shield holds.</p>
       <p class="footer-meta">
         <span>&copy; 2026 synthalorian</span>
@@ -472,6 +493,6 @@
     <div class="knight-shadow"></div>
   </div>
 
-  <script src="js/main.js?v=88"></script>
+  <script src="js/main.js?v=89"></script>
 </body>
 </html>

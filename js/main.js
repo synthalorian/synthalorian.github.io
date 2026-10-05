@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     html.setAttribute('data-theme', normalized);
     const metaTheme = document.querySelector('meta[name="theme-color"]');
     if (metaTheme) {
-      metaTheme.setAttribute('content', normalized === 'daybreak' ? '#f7eeff' : '#101014');
+      metaTheme.setAttribute('content', normalized === 'daybreak' ? '#f4efe6' : '#101014');
     }
   };
 

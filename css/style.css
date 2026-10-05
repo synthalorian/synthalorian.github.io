@@ -17,39 +17,39 @@ html[data-theme="blackshield"] {
   --text-muted: #8a8f98;
   --accent: #c1121f;
   --accent-2: #e5383b;
-  --accent-3: #74b8b4;
+  --accent-3: #d8d3c8;
   --accent-4: #c9a227;
   --accent-5: #c1121f;
-  --glow-pink: rgba(193, 18, 31, 0.4);
-  --glow-purple: rgba(193, 18, 31, 0.28);
-  --glow-cyan: rgba(116, 184, 180, 0.28);
-  --glow-yellow: rgba(201, 162, 39, 0.32);
+  --glow-pink: rgba(193, 18, 31, 0.35);
+  --glow-purple: rgba(193, 18, 31, 0.22);
+  --glow-cyan: rgba(216, 211, 200, 0.16);
+  --glow-yellow: rgba(201, 162, 39, 0.28);
   --border: rgba(143, 149, 156, 0.28);
   --border-hot: rgba(193, 18, 31, 0.55);
   --ok: #6a994e;
   --warn: #c9a227;
-  --font-display: "Pirata One", "EB Garamond", serif;
-  --font-body: "EB Garamond", "Liberation Serif", serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Cinzel", "Cormorant Garamond", serif;
+  --font-body: "Cormorant Garamond", "Liberation Serif", serif;
+  --font-mono: "Cinzel", "Cormorant Garamond", serif;
   --nav-h: 72px;
   --shadow-card: 0 18px 50px rgba(0, 0, 0, 0.45);
   color-scheme: dark;
 }
 
 html[data-theme="daybreak"] {
-  --bg-abyss: #f7eeff;
-  --bg-deep: #efe2ff;
-  --bg-dark: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.82);
-  --bg-card-hover: rgba(255, 255, 255, 0.96);
-  --bg-glass: rgba(247, 238, 255, 0.86);
+  --bg-abyss: #e7e0d4;
+  --bg-deep: #efe8dc;
+  --bg-dark: #f4efe6;
+  --bg-card: rgba(244, 239, 230, 0.9);
+  --bg-card-hover: rgba(255, 250, 242, 0.96);
+  --bg-glass: rgba(244, 239, 230, 0.9);
   --text-bright: #101014;
-  --text-primary: #101014;
-  --text-secondary: #4a2068;
-  --text-muted: #6b5088;
-  --border: rgba(193, 18, 31, 0.28);
-  --border-hot: rgba(196, 0, 106, 0.4);
-  --shadow-card: 0 16px 40px rgba(36, 0, 55, 0.08);
+  --text-primary: #1c1a17;
+  --text-secondary: #3e3a34;
+  --text-muted: #6a655c;
+  --border: rgba(16, 16, 20, 0.16);
+  --border-hot: rgba(155, 21, 32, 0.45);
+  --shadow-card: 0 16px 40px rgba(16, 16, 20, 0.08);
   color-scheme: light;
 }
 
@@ -59,11 +59,12 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(900px 420px at 78% -8%, rgba(255, 80, 40, 0.18), transparent 60%),
+    radial-gradient(720px 360px at 82% 8%, rgba(193, 18, 31, 0.16), transparent 62%),
     linear-gradient(180deg, var(--bg-deep), var(--bg-abyss) 42%, #070709);
   color: var(--text-primary);
   font-family: var(--font-body);
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.55;
 }
 a { color: var(--accent-3); text-decoration: none; }
 a:hover { color: var(--accent); }
@@ -103,7 +104,7 @@ button { font: inherit; }
 }
 html[data-theme="daybreak"] .navbar,
 html[data-theme="daybreak"] .navbar.scrolled {
-  background: rgba(247, 238, 255, 0.92);
+  background: rgba(244, 239, 230, 0.94);
 }
 .nav-container {
   width: min(1120px, calc(100% - 40px));
@@ -121,8 +122,7 @@ html[data-theme="daybreak"] .navbar.scrolled {
 .nav-sigil {
   width: 28px;
   height: 28px;
-  color: var(--accent-3);
-  filter: drop-shadow(0 0 6px var(--glow-cyan));
+  color: var(--accent);
 }
 .nav-sigil svg { width: 100%; height: 100%; display: block; }
 .logo-text {
@@ -189,75 +189,49 @@ html[data-theme="daybreak"] .theme-icon-sun { display: none; }
 }
 .hero-scene,
 .hero-noise,
-.hero-grid,
-.hero-sun,
-.hero-scanlines,
 .hero-vignette,
 .hero-glow {
   position: absolute;
   pointer-events: none;
 }
 .hero-scene { inset: 0; }
-.hero-sun {
-  width: 280px;
-  height: 280px;
-  right: 9%;
-  top: 11%;
-  border-radius: 50%;
-  background: repeating-linear-gradient(
-    180deg,
-    #3a1216 0 10px,
-    #c1121f 10px 16px,
-    #1a1a20 16px 26px,
-    #e5383b 26px 32px
-  );
-  box-shadow: 0 0 80px rgba(193, 18, 31, 0.55), 0 0 160px rgba(193, 18, 31, 0.25);
-  animation: sunStripe 8s linear infinite;
-}
-.hero-sun::after {
-  content: "";
-  position: absolute;
-  inset: -46%;
-  background: radial-gradient(circle, transparent 40%, var(--bg-abyss) 68%);
-}
-.hero-grid {
-  left: -10%;
-  right: -10%;
-  top: 54%;
-  bottom: -20%;
-  background-image:
-    linear-gradient(rgba(193, 18, 31, 0.45) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(193, 18, 31, 0.28) 1px, transparent 1px);
-  background-size: 80px 40px, 80px 40px;
-  transform: perspective(420px) rotateX(62deg);
-  transform-origin: center top;
-  animation: gridDrift 12s linear infinite;
-  mask-image: linear-gradient(180deg, #000, transparent 88%);
-}
-.hero-scanlines {
-  inset: 0;
-  background: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 4px);
-  opacity: 0.32;
-  animation: scanDrift 9s linear infinite;
-}
 .hero-vignette {
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 36%, rgba(7, 7, 9, 0.75) 100%);
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(7, 7, 9, 0.72) 100%);
 }
 html[data-theme="daybreak"] .hero-vignette {
-  background: radial-gradient(ellipse at center, transparent 42%, rgba(247, 238, 255, 0.62) 100%);
+  background: radial-gradient(ellipse at center, transparent 46%, rgba(231, 224, 212, 0.55) 100%);
 }
-.hero-glow { width: 320px; height: 320px; filter: blur(42px); opacity: 0.4; }
-.hero-glow-left { left: -80px; top: 18%; background: #e5383b; }
-.hero-glow-right { right: -40px; bottom: 8%; background: #74b8b4; }
+.hero-shield {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: min(280px, 32vw);
+  transform-origin: 50% 0;
+  animation: shieldSway 6.5s ease-in-out infinite;
+  filter: drop-shadow(0 22px 18px rgba(0, 0, 0, 0.55));
+  pointer-events: none;
+}
+.shield-svg { width: 100%; height: auto; display: block; }
+.shield-cross {
+  transform-origin: 100px 110px;
+  animation: crossEmber 3.6s ease-in-out infinite;
+}
+.hero-glow { width: 320px; height: 320px; filter: blur(42px); opacity: 0.28; }
+.hero-glow-left {
+  right: 2%;
+  left: auto;
+  top: 6%;
+  background: #c1121f;
+}
 
 .hero-layout {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 28px;
-  align-items: center;
+  display: block;
+}
+@media (min-width: 901px) {
+  .hero-content { max-width: min(680px, calc(100% - 310px)); }
 }
 .hero-badge {
   display: inline-flex;
@@ -291,17 +265,14 @@ html[data-theme="daybreak"] .hero-vignette {
 .hero-title {
   margin: 0 0 14px;
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 5vw, 4rem);
-  line-height: 1.05;
-  letter-spacing: 0.02em;
-  text-shadow: 0 0 24px var(--glow-pink);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: 0.04em;
 }
 .hero-title .line { display: block; }
-.hero-title .line-accent {
-  color: var(--accent-4);
-  text-shadow: 0 0 18px var(--glow-yellow);
-}
-.hero-subtitle { max-width: 62ch; color: var(--text-secondary); font-size: 1.05rem; }
+.hero-title .line-accent { color: var(--accent); }
+.hero-subtitle { max-width: none; color: var(--text-secondary); font-size: 1.28rem; }
 .highlight { color: var(--accent); font-weight: 650; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 22px; }
 .btn {
@@ -318,17 +289,16 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 .btn .icon { width: 18px; height: 18px; }
 .btn-primary {
-  background: linear-gradient(90deg, #c1121f, #c1121f);
-  color: #1a0128;
-  box-shadow: 0 0 24px var(--glow-pink);
+  background: #c1121f;
+  color: #f5f1e8;
 }
-.btn-primary:hover { color: #1a0128; filter: brightness(1.08); }
+.btn-primary:hover { color: #f5f1e8; filter: brightness(1.08); }
 .btn-secondary {
-  border-color: var(--accent-3);
-  color: var(--accent-3);
-  background: rgba(116, 184, 180, 0.06);
+  border-color: var(--border);
+  color: var(--text-primary);
+  background: rgba(16, 16, 20, 0.35);
 }
-.btn-secondary:hover { color: var(--text-bright); background: rgba(116, 184, 180, 0.14); }
+.btn-secondary:hover { color: var(--text-bright); border-color: var(--accent); }
 .hero-readout {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -352,35 +322,6 @@ html[data-theme="daybreak"] .hero-vignette {
   margin-top: 4px;
   color: var(--accent-4);
   font-size: 0.92rem;
-}
-
-.hero-knight { justify-self: end; text-align: center; }
-.knight-stage {
-  width: 192px;
-  height: 208px;
-  margin: 0 auto;
-  background-image: url("../img/blackshield-knight.webp?v=2");
-  background-repeat: no-repeat;
-  image-rendering: pixelated;
-  transform: scale(1.35);
-  transform-origin: center bottom;
-  animation: knightIdle 0.9s steps(6) infinite;
-  filter: drop-shadow(0 16px 10px rgba(193, 18, 31, 0.28));
-}
-.knight-caption {
-  margin-top: 28px;
-  font-family: var(--font-mono);
-  letter-spacing: 0.16em;
-  font-size: 0.72rem;
-  color: var(--accent-3);
-}
-.knight-caption strong {
-  display: block;
-  margin-top: 4px;
-  color: var(--accent-4);
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
 }
 
 .section { padding: 88px 0; scroll-margin-top: 88px; }
@@ -426,7 +367,6 @@ html[data-theme="daybreak"] .hero-vignette {
   font-family: var(--font-display);
   font-size: 2.4rem;
   color: var(--accent-4);
-  text-shadow: 0 0 16px var(--glow-yellow);
 }
 .stat-label {
   color: var(--text-muted);
@@ -524,8 +464,8 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 .project-card:nth-child(3n+2) .project-icon {
   color: var(--accent-4);
-  background: rgba(243, 231, 15, 0.08);
-  border-color: rgba(243, 231, 15, 0.28);
+  background: rgba(201, 162, 39, 0.08);
+  border-color: rgba(201, 162, 39, 0.28);
 }
 .project-meta { flex-wrap: wrap; justify-content: flex-end; }
 .project-version, .project-status {
@@ -538,7 +478,7 @@ html[data-theme="daybreak"] .hero-vignette {
   border-radius: 999px;
 }
 .project-status.stable { color: var(--ok); border-color: rgba(114, 241, 184, 0.4); }
-.project-status.beta { color: var(--warn); border-color: rgba(243, 231, 15, 0.4); }
+.project-status.beta { color: var(--warn); border-color: rgba(201, 162, 39, 0.45); }
 .project-name { margin: 14px 0 8px; font-size: 1.25rem; font-family: var(--font-display); }
 .project-name a { color: var(--text-bright); }
 .project-name a:hover { color: var(--accent); }
@@ -567,7 +507,7 @@ html[data-theme="daybreak"] .hero-vignette {
 .tech-tag.ts { color: #c9a6ff; border-color: rgba(201, 166, 255, 0.45); }
 .tech-tag.ruby { color: #ff6b8a; border-color: rgba(255, 107, 138, 0.45); }
 .tech-tag.cpp { color: #9db7ff; border-color: rgba(157, 183, 255, 0.45); }
-.tech-tag.python { color: #c9a227; border-color: rgba(243, 231, 15, 0.45); }
+.tech-tag.python { color: #c9a227; border-color: rgba(201, 162, 39, 0.45); }
 .tech-tag.elixir { color: #c1121f; border-color: rgba(193, 18, 31, 0.45); }
 .tech-tag.tauri { color: #74b8b4; border-color: rgba(116, 184, 180, 0.45); }
 
@@ -589,7 +529,7 @@ html[data-theme="daybreak"] .hero-vignette {
 .skill-fill {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #e5383b, #c1121f 62%, #74b8b4);
+  background: linear-gradient(90deg, #c1121f, #8a1c24);
   box-shadow: 0 0 10px var(--glow-pink);
   transition: width 0.9s ease;
 }
@@ -610,21 +550,21 @@ html[data-theme="daybreak"] .hero-vignette {
   align-items: center;
   gap: 8px;
   padding: 12px 16px;
-  border: 1px solid var(--accent-3);
-  border-radius: 6px;
-  color: var(--accent-3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-primary);
   font-family: var(--font-mono);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.78rem;
 }
 .contact-btn svg { width: 18px; height: 18px; }
 .contact-btn--primary {
-  background: linear-gradient(90deg, #c1121f, #c1121f);
-  color: #1a0128;
+  background: #c1121f;
+  color: #f5f1e8;
   border-color: transparent;
 }
-.contact-btn--primary:hover { color: #1a0128; }
+.contact-btn--primary:hover { color: #f5f1e8; }
 
 .footer {
   position: relative;
@@ -633,27 +573,10 @@ html[data-theme="daybreak"] .hero-vignette {
   text-align: center;
 }
 .footer-horizon {
-  width: min(640px, 72%);
-  height: 2px;
+  width: min(420px, 56%);
+  height: 1px;
   margin: 0 auto 36px;
-  background: linear-gradient(90deg, transparent, #c1121f 20%, #74b8b4 50%, #c9a227 80%, transparent);
-  box-shadow: 0 0 16px rgba(193, 18, 31, 0.7), 0 0 32px rgba(116, 184, 180, 0.35);
-}
-.footer-grid {
-  position: absolute;
-  left: -8%;
-  right: -8%;
-  bottom: -20px;
-  height: 160px;
-  background-image:
-    linear-gradient(rgba(193, 18, 31, 0.55) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(193, 18, 31, 0.32) 1px, transparent 1px);
-  background-size: 72px 28px, 72px 28px;
-  transform: perspective(380px) rotateX(62deg);
-  transform-origin: center bottom;
-  mask-image: linear-gradient(180deg, transparent, #000 45%);
-  animation: gridDrift 14s linear infinite;
-  pointer-events: none;
+  background: linear-gradient(90deg, transparent, #8f959c 18%, #c1121f 50%, #8f959c 82%, transparent);
 }
 .footer-content { position: relative; z-index: 1; }
 .footer-kicker {
@@ -669,8 +592,7 @@ html[data-theme="daybreak"] .hero-vignette {
   font-size: clamp(2rem, 5vw, 3.4rem);
   letter-spacing: 0.04em;
   line-height: 1.05;
-  color: var(--accent-4);
-  text-shadow: 0 0 18px var(--glow-yellow), 0 0 42px rgba(193, 18, 31, 0.28);
+  color: var(--accent);
 }
 .footer-meta {
   display: flex;
@@ -730,17 +652,13 @@ html[data-theme="daybreak"] .hero-vignette {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(0.72); opacity: 0.55; }
 }
-@keyframes sunStripe {
-  from { background-position: 0 0; }
-  to { background-position: 0 56px; }
+@keyframes shieldSway {
+  0%, 100% { transform: rotate(-1.8deg); }
+  50% { transform: rotate(1.8deg); }
 }
-@keyframes gridDrift {
-  from { background-position: 0 0, 0 0; }
-  to { background-position: 0 40px, 0 0; }
-}
-@keyframes scanDrift {
-  from { background-position: 0 0; }
-  to { background-position: 0 8px; }
+@keyframes crossEmber {
+  0%, 100% { opacity: 0.78; }
+  50% { opacity: 1; }
 }
 @keyframes knightIdle {
   from { background-position: 0 0; }
@@ -790,11 +708,16 @@ html[data-theme="daybreak"] .hero-vignette {
 .project-card:hover .project-icon svg path { animation-duration: 0.6s !important; }
 
 @media (max-width: 900px) {
-  .hero-layout, .projects-grid, .skills-layout, .stats-grid, .company-strip { grid-template-columns: 1fr; }
+  .projects-grid, .skills-layout, .stats-grid, .company-strip { grid-template-columns: 1fr; }
   .doctrine-grid { grid-template-columns: 1fr; }
   .project-card--flagship { grid-column: auto; }
-  .hero-knight { justify-self: center; }
-  .hero-sun { width: 180px; height: 180px; right: -30px; }
+  .hero-shield {
+    position: relative;
+    width: 148px;
+    margin: 0 0 18px;
+    right: auto;
+    top: auto;
+  }
   .company-lines { max-width: none; justify-content: flex-start; }
 }
 @media (max-width: 720px) {
@@ -812,7 +735,7 @@ html[data-theme="daybreak"] .hero-vignette {
     background: rgba(16, 16, 20, 0.97);
     border-bottom: 1px solid var(--border);
   }
-  html[data-theme="daybreak"] .nav-menu { background: rgba(247, 238, 255, 0.98); }
+  html[data-theme="daybreak"] .nav-menu { background: rgba(244, 239, 230, 0.98); }
   .nav-menu.open { display: flex; }
   .nav-link { display: block; padding: 12px 22px; }
   .hero-readout { grid-template-columns: 1fr; }
@@ -821,13 +744,12 @@ html[data-theme="daybreak"] .hero-vignette {
   .contact-card { padding: 28px 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-sun, .hero-grid, .hero-scanlines, .badge-pulse,
+  .hero-shield, .shield-cross, .badge-pulse,
   .project-icon svg, .project-icon svg path {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
-  .companion-knight .knight-sprite,
-  .knight-stage { animation: knightIdle 1.6s steps(6) infinite !important; }
+  .companion-knight .knight-sprite { animation: knightIdle 1.6s steps(6) infinite !important; }
   .companion-knight.waving .knight-sprite,
   .companion-knight:hover .knight-sprite { animation: knightWave 0.9s steps(6) infinite !important; }
   .companion-knight.jumping .knight-sprite { animation: knightJump 0.72s steps(6) 1 !important; }
