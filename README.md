@@ -1,3 +1,5 @@
+![synthalorian.github.io](.github/preview.png)
+
 # synthalorian.github.io
 
 Personal site — Blackshield mercenary. Iron ground, bone text, blood-red cross. The knight holds the field.
