@@ -612,34 +612,33 @@ html[data-theme="daybreak"] .hero-vignette {
   left: 16px;
   bottom: 8px;
   z-index: 50;
-  width: 124px;
-  height: 136px;
+  width: 128px;
+  height: 120px;
   cursor: pointer;
 }
+/* Knight A, the Blackshield Company mascot: rows are idle, shield raised, sword strike. */
 .knight-sprite {
-  width: 192px;
-  height: 208px;
-  transform: scale(0.62);
-  transform-origin: top left;
-  background-image: url("../img/blackshield-knight.webp?v=2");
+  width: 128px;
+  height: 112px;
+  background-image: url("../img/knight-a-companion.png?v=1");
   background-repeat: no-repeat;
   image-rendering: pixelated;
-  animation: knightIdle 0.9s steps(6) infinite;
+  animation: knightIdle 1.28s steps(4) infinite;
   filter: drop-shadow(0 10px 8px rgba(193, 18, 31, 0.3));
 }
 .knight-shadow {
   position: absolute;
-  left: 18px;
-  bottom: 8px;
-  width: 74px;
+  left: 30px;
+  bottom: 4px;
+  width: 70px;
   height: 10px;
   border-radius: 50%;
   background: rgba(193, 18, 31, 0.32);
   filter: blur(2px);
 }
 .companion-knight.waving .knight-sprite,
-.companion-knight:hover .knight-sprite { animation: knightWave 0.7s steps(6) infinite; }
-.companion-knight.jumping .knight-sprite { animation: knightJump 0.72s steps(6) 1; }
+.companion-knight:hover .knight-sprite { animation: knightWave 0.72s steps(3) infinite; }
+.companion-knight.jumping .knight-sprite { animation: knightJump 0.68s steps(4) 1; }
 
 .reveal-ready [data-reveal] {
   opacity: 0;
@@ -662,15 +661,15 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 @keyframes knightIdle {
   from { background-position: 0 0; }
-  to { background-position: -1152px 0; }
+  to { background-position: -512px 0; }
 }
 @keyframes knightWave {
-  from { background-position: 0 -624px; }
-  to { background-position: -1152px -624px; }
+  from { background-position: 0 -112px; }
+  to { background-position: -384px -112px; }
 }
 @keyframes knightJump {
-  from { background-position: 0 -832px; }
-  to { background-position: -1152px -832px; }
+  from { background-position: 0 -224px; }
+  to { background-position: -512px -224px; }
 }
 
 .icon-synth svg path { transform-origin: center bottom; animation: barBounce 1.6s ease-in-out infinite; }
@@ -749,9 +748,9 @@ html[data-theme="daybreak"] .hero-vignette {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
-  .companion-knight .knight-sprite { animation: knightIdle 1.6s steps(6) infinite !important; }
+  .companion-knight .knight-sprite,
   .companion-knight.waving .knight-sprite,
-  .companion-knight:hover .knight-sprite { animation: knightWave 0.9s steps(6) infinite !important; }
-  .companion-knight.jumping .knight-sprite { animation: knightJump 0.72s steps(6) 1 !important; }
+  .companion-knight:hover .knight-sprite,
+  .companion-knight.jumping .knight-sprite { animation: none !important; background-position: 0 0; }
   .reveal-ready [data-reveal] { opacity: 1; transform: none; }
 }
