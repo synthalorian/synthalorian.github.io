@@ -8,11 +8,11 @@ Personal site — Blackshield mercenary. Iron ground, bone text, blood-red cross
 
 ## What it is
 
-Static portfolio on GitHub Pages. Single page, live GitHub stats, featured projects, and the Blackshield visual system. The knight idles in the hero and walks the corner — hover to wave, click to jump.
+Static portfolio on GitHub Pages. Single page, live GitHub stats, featured projects, and the Blackshield visual system. Knight A, the Blackshield Company mascot, stands in the corner — hover to raise the shield, click to strike.
 
 ## Layout
 
 - `index.html` — the page
 - `css/style.css` — the only stylesheet
 - `js/main.js` — stats, theme toggle, knight
-- `img/blackshield-knight.webp` — 8×9 atlas, 192×208 frames
+- `img/knight-a-companion.png` — Knight A sheet, 128×112 frames (idle, shield raised, sword strike)
