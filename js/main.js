@@ -334,34 +334,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =====================================================
-  // BLACKSHIELD KNIGHT — companion wave + jump
-  // Wave: pointerenter/leave toggle .waving (class-driven —
-  //       Firefox's :hover can be unreliable on scaled
-  //       fixed elements, so we do not depend on it).
-  // Jump: one little leap (row 4), then back to idle.
-  // =====================================================
-  const companionKnight = document.querySelector('.companion-knight');
-  if (companionKnight) {
-    companionKnight.addEventListener('pointerenter', () => {
-      companionKnight.classList.add('waving');
-    });
-
-    companionKnight.addEventListener('pointerleave', () => {
-      companionKnight.classList.remove('waving');
-    });
-
-    companionKnight.addEventListener('click', () => {
-      companionKnight.classList.remove('jumping');
-      void companionKnight.offsetWidth; // restart the animation
-      companionKnight.classList.add('jumping');
-    });
-
-    // Once the jump lands, hand the shield back to idle.
-    companionKnight.addEventListener('animationend', (event) => {
-      if (event.animationName === 'knightJump') {
-        companionKnight.classList.remove('jumping');
-      }
-    });
-  }
 });
