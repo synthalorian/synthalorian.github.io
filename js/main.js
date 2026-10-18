@@ -249,6 +249,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // =====================================================
   // SKILL BARS
   // =====================================================
+  // Under prefers-reduced-motion the bars and counters show their final values
+  // immediately: no width sweep, no count-up.
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const skillBars = document.querySelectorAll('.skill-fill');
   const skillsObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -265,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.45 });
 
-  skillBars.forEach((bar) => skillsObserver.observe(bar));
+  if (!reduceMotion) skillBars.forEach((bar) => skillsObserver.observe(bar));
 
   // =====================================================
   // STAT COUNTERS
@@ -318,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.5 });
 
-  statNumbers.forEach((stat) => statsObserver.observe(stat));
+  if (!reduceMotion) statNumbers.forEach((stat) => statsObserver.observe(stat));
 
   // =====================================================
   // SMOOTH ANCHOR FALLBACK

@@ -870,6 +870,7 @@ html[data-theme="daybreak"] .hero-title .line-accent { text-shadow: none; }
 @media (max-width: 860px) { .corner-sprite { width: 64px; height: 64px; } }
 @media (prefers-reduced-motion: reduce) {
   .hero-grid-floor::before, .hero-avatar::before { animation: none !important; }
+  .skill-fill { transition: none; }
 }
 @media print { .hero-sky, .corner-sprite { display: none; } }
 
