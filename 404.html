@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="blackshield">
+<html lang="en" data-theme="synthwave">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>This road leads nowhere | Synth</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=91">
-  <meta name="theme-color" content="#101014">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23101014'/%3E%3Crect x='28' y='8' width='8' height='48' fill='%23C1121F'/%3E%3Crect x='12' y='22' width='40' height='8' fill='%23C1121F'/%3E%3C/svg%3E">
+  <title>Lost signal | Synth</title>
+  <link rel="preload" href="/fonts/3270-nerd-font.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css?v=sw84">
+  <meta name="theme-color" content="#140a26">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
   <main style="min-height:100vh;display:flex;align-items:center;padding:2rem">
     <div class="container" style="display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem">
-      <img src="/img/knight-error.svg" width="192" height="168" alt="Knight A, the Blackshield Company mascot, staggering" style="image-rendering:pixelated;width:192px;height:168px">
+      <picture><source media="(prefers-reduced-motion: reduce)" srcset="/img/sprite/synthalorian-64.png"><img src="/img/sprite/synthalorian-idle-64.gif" width="192" height="192" alt="The pixel synthalorian, idling in place" class="pixel" style="width:192px;height:192px"></picture>
       <span class="section-label">Error 404</span>
-      <h1 style="font-size:clamp(2.2rem,6vw,4rem);margin:0">This road leads nowhere, traveler.</h1>
-      <p style="max-width:46ch;margin:0;opacity:.85">The page you sought was never built, or it has moved on. Turn back; the shield still holds.</p>
-      <p style="margin:.5rem 0 0"><a class="btn btn-primary" href="/">Return to the keep</a></p>
+      <h1 style="font-size:clamp(2.2rem,6vw,4rem);margin:0">Lost signal, pilot.</h1>
+      <p style="max-width:46ch;margin:0;color:var(--text-secondary)">This sector of the grid is empty. The page was never built, or it has moved on. Plot a course home.</p>
+      <p style="margin:.5rem 0 0"><a class="btn btn-primary" href="/">Back to home base</a></p>
     </div>
   </main>
-  <button type="button" class="corner-knight" data-knight-base="/img/knight/" aria-label="Knight A, the Blackshield Company mascot. Press for a sword swing."><img src="/img/knight/knight-idle.svg" width="80" height="70" alt="" decoding="async"></button>
-  <script src="/js/knight.js?v=91" defer></script>
+  <button type="button" class="corner-sprite" data-sprite-base="/img/sprite/" aria-label="The pixel synthalorian. Press to make him walk."><picture><source media="(prefers-reduced-motion: reduce)" srcset="/img/sprite/synthalorian-64.png"><img src="/img/sprite/synthalorian-idle-64.gif" width="64" height="64" alt="" decoding="async"></picture></button>
+  <script src="/js/sprite.js?v=sw84" defer></script>
 </body>
 </html>

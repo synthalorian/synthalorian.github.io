@@ -1,55 +1,73 @@
 /* =========================================================
-   SYNTH — Blackshield Mercenary
-   Iron, bone, blood. The shield holds.
+   SYNTH — the synthalorian. Synthwave '84.
+   Deep purple night, magenta + cyan neon, sunset orange.
    ========================================================= */
 
+@font-face {
+  font-family: "3270 Nerd Font";
+  src: url("../fonts/3270-nerd-font.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  /* optional + preload: used on first paint or not at all, so text never reflows */
+  font-display: optional;
+}
+
 :root,
-html[data-theme="blackshield"] {
-  --bg-abyss: #070709;
-  --bg-deep: #0d0d11;
-  --bg-dark: #101014;
-  --bg-card: rgba(16, 16, 20, 0.78);
-  --bg-card-hover: rgba(38, 38, 46, 0.92);
-  --bg-glass: rgba(7, 7, 9, 0.82);
-  --text-bright: #f5f1e8;
-  --text-primary: #d8d3c8;
-  --text-secondary: #8f959c;
-  --text-muted: #8a8f98;
-  --accent: #c1121f;
-  --accent-2: #e5383b;
-  --accent-3: #d8d3c8;
-  --accent-4: #c9a227;
-  --accent-5: #c1121f;
-  --glow-pink: rgba(193, 18, 31, 0.35);
-  --glow-purple: rgba(193, 18, 31, 0.22);
-  --glow-cyan: rgba(216, 211, 200, 0.16);
-  --glow-yellow: rgba(201, 162, 39, 0.28);
-  --border: rgba(143, 149, 156, 0.28);
-  --border-hot: rgba(193, 18, 31, 0.55);
-  --ok: #6a994e;
-  --warn: #c9a227;
-  --font-display: "Cinzel", "Cormorant Garamond", serif;
-  --font-body: "Cormorant Garamond", "Liberation Serif", serif;
-  --font-mono: "Cinzel", "Cormorant Garamond", serif;
+html[data-theme="synthwave"] {
+  --bg-abyss: #0f0720;
+  --bg-deep: #1a0d33;
+  --bg-dark: #140a26;
+  --bg-card: rgba(28, 16, 51, 0.82);
+  --bg-card-hover: rgba(40, 22, 72, 0.94);
+  --bg-glass: rgba(20, 10, 38, 0.84);
+  --text-bright: #fff7ff;
+  --text-primary: #efe7ff;
+  --text-secondary: #c9bbe8;
+  --text-muted: #b9a8e0;
+  --accent: #ff4fa3;
+  --accent-2: #4fe3f0;
+  --accent-3: #4fe3f0;
+  --accent-4: #ff9a3c;
+  --accent-5: #ff4fa3;
+  --ink: #140a26;
+  --glow-pink: rgba(255, 79, 163, 0.35);
+  --glow-purple: rgba(157, 78, 221, 0.28);
+  --glow-cyan: rgba(79, 227, 240, 0.18);
+  --glow-yellow: rgba(255, 154, 60, 0.28);
+  --border: rgba(185, 168, 224, 0.26);
+  --border-hot: rgba(255, 79, 163, 0.6);
+  --ok: #72f1b8;
+  --warn: #ff9a3c;
+  --font-display: "3270 Nerd Font", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-body: "3270 Nerd Font", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-mono: "3270 Nerd Font", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   --nav-h: 72px;
-  --shadow-card: 0 18px 50px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 18px 50px rgba(5, 0, 15, 0.5);
   color-scheme: dark;
 }
 
 html[data-theme="daybreak"] {
-  --bg-abyss: #e7e0d4;
-  --bg-deep: #efe8dc;
-  --bg-dark: #f4efe6;
-  --bg-card: rgba(244, 239, 230, 0.9);
-  --bg-card-hover: rgba(255, 250, 242, 0.96);
-  --bg-glass: rgba(244, 239, 230, 0.9);
-  --text-bright: #101014;
-  --text-primary: #1c1a17;
-  --text-secondary: #3e3a34;
-  --text-muted: #6a655c;
-  --border: rgba(16, 16, 20, 0.16);
-  --border-hot: rgba(155, 21, 32, 0.45);
-  --shadow-card: 0 16px 40px rgba(16, 16, 20, 0.08);
+  --bg-abyss: #e9e0f7;
+  --bg-deep: #f2ecfb;
+  --bg-dark: #f7f3fd;
+  --bg-card: rgba(255, 251, 255, 0.92);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --bg-glass: rgba(247, 243, 253, 0.92);
+  --text-bright: #1a0d33;
+  --text-primary: #24143f;
+  --text-secondary: #3e2a66;
+  --text-muted: #5a467f;
+  --accent: #b0136a;
+  --accent-2: #006f7a;
+  --accent-3: #006f7a;
+  --accent-4: #a34b00;
+  --accent-5: #b0136a;
+  --ink: #fff7ff;
+  --border: rgba(26, 13, 51, 0.16);
+  --border-hot: rgba(176, 19, 106, 0.45);
+  --ok: #1d6b48;
+  --warn: #8a4a00;
+  --shadow-card: 0 16px 40px rgba(26, 13, 51, 0.08);
   color-scheme: light;
 }
 
@@ -59,8 +77,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(720px 360px at 82% 8%, rgba(193, 18, 31, 0.16), transparent 62%),
-    linear-gradient(180deg, var(--bg-deep), var(--bg-abyss) 42%, #070709);
+    radial-gradient(720px 360px at 82% 8%, rgba(255, 79, 163, 0.16), transparent 62%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg-abyss) 42%, #0f0720);
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 1.2rem;
@@ -76,7 +94,7 @@ button { font: inherit; }
   top: -48px;
   z-index: 1000;
   background: var(--accent-5);
-  color: #fff;
+  color: var(--ink);
   padding: 8px 12px;
 }
 .skip-link:focus { top: 8px; }
@@ -93,18 +111,18 @@ button { font: inherit; }
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  background: rgba(16, 16, 20, 0.55);
+  background: rgba(20, 10, 38, 0.55);
   border-bottom: 1px solid transparent;
   backdrop-filter: blur(14px);
 }
 .navbar.scrolled {
-  background: rgba(16, 16, 20, 0.9);
+  background: rgba(20, 10, 38, 0.9);
   border-bottom-color: var(--border);
-  box-shadow: 0 8px 30px rgba(193, 18, 31, 0.16);
+  box-shadow: 0 8px 30px rgba(255, 79, 163, 0.16);
 }
 html[data-theme="daybreak"] .navbar,
 html[data-theme="daybreak"] .navbar.scrolled {
-  background: rgba(244, 239, 230, 0.94);
+  background: rgba(247, 243, 253, 0.94);
 }
 .nav-container {
   width: min(1120px, calc(100% - 40px));
@@ -158,7 +176,7 @@ html[data-theme="daybreak"] .navbar.scrolled {
   place-items: center;
 }
 .theme-toggle svg { width: 18px; height: 18px; }
-html[data-theme="blackshield"] .theme-icon-moon,
+html[data-theme="synthwave"] .theme-icon-moon,
 html[data-theme="daybreak"] .theme-icon-sun { display: none; }
 .nav-toggle {
   display: none;
@@ -197,10 +215,10 @@ html[data-theme="daybreak"] .theme-icon-sun { display: none; }
 .hero-scene { inset: 0; }
 .hero-vignette {
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(7, 7, 9, 0.72) 100%);
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(15, 7, 32, 0.72) 100%);
 }
 html[data-theme="daybreak"] .hero-vignette {
-  background: radial-gradient(ellipse at center, transparent 46%, rgba(231, 224, 212, 0.55) 100%);
+  background: radial-gradient(ellipse at center, transparent 46%, rgba(233, 224, 247, 0.55) 100%);
 }
 .hero-shield {
   position: absolute;
@@ -222,7 +240,7 @@ html[data-theme="daybreak"] .hero-vignette {
   right: 2%;
   left: auto;
   top: 6%;
-  background: #c1121f;
+  background: #ff4fa3;
 }
 
 .hero-layout {
@@ -289,14 +307,14 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 .btn .icon { width: 18px; height: 18px; }
 .btn-primary {
-  background: #c1121f;
-  color: #f5f1e8;
+  background: var(--accent);
+  color: var(--ink);
 }
-.btn-primary:hover { color: #f5f1e8; filter: brightness(1.08); }
+.btn-primary:hover { color: var(--ink); filter: brightness(1.08); }
 .btn-secondary {
   border-color: var(--border);
   color: var(--text-primary);
-  background: rgba(16, 16, 20, 0.35);
+  background: rgba(20, 10, 38, 0.35);
 }
 .btn-secondary:hover { color: var(--text-bright); border-color: var(--accent); }
 .hero-readout {
@@ -308,7 +326,7 @@ html[data-theme="daybreak"] .hero-vignette {
 .hero-readout div {
   padding: 10px 12px;
   border-left: 2px solid var(--accent-2);
-  background: rgba(16, 16, 20, 0.38);
+  background: rgba(20, 10, 38, 0.38);
 }
 .hero-readout span {
   display: block;
@@ -436,7 +454,7 @@ html[data-theme="daybreak"] .hero-vignette {
   transform: translateY(-4px);
   border-color: var(--border-hot);
   background: var(--bg-card-hover);
-  box-shadow: 0 0 28px rgba(193, 18, 31, 0.16);
+  box-shadow: 0 0 28px rgba(255, 79, 163, 0.16);
 }
 .project-card--flagship { grid-column: 1 / -1; }
 .project-header, .project-meta, .project-tech, .project-stats, .contact-links {
@@ -459,13 +477,13 @@ html[data-theme="daybreak"] .hero-vignette {
 .project-icon svg { width: 22px; height: 22px; }
 .project-card:nth-child(3n) .project-icon {
   color: var(--accent);
-  background: rgba(193, 18, 31, 0.08);
-  border-color: rgba(193, 18, 31, 0.32);
+  background: rgba(255, 79, 163, 0.08);
+  border-color: rgba(255, 79, 163, 0.32);
 }
 .project-card:nth-child(3n+2) .project-icon {
   color: var(--accent-4);
-  background: rgba(201, 162, 39, 0.08);
-  border-color: rgba(201, 162, 39, 0.28);
+  background: rgba(255, 154, 60, 0.08);
+  border-color: rgba(255, 154, 60, 0.28);
 }
 .project-meta { flex-wrap: wrap; justify-content: flex-end; }
 .project-version, .project-status {
@@ -478,7 +496,7 @@ html[data-theme="daybreak"] .hero-vignette {
   border-radius: 999px;
 }
 .project-status.stable { color: var(--ok); border-color: rgba(114, 241, 184, 0.4); }
-.project-status.beta { color: var(--warn); border-color: rgba(201, 162, 39, 0.45); }
+.project-status.beta { color: var(--warn); border-color: rgba(255, 154, 60, 0.45); }
 .project-name { margin: 14px 0 8px; font-size: 1.25rem; font-family: var(--font-display); }
 .project-name a { color: var(--text-bright); }
 .project-name a:hover { color: var(--accent); }
@@ -507,8 +525,8 @@ html[data-theme="daybreak"] .hero-vignette {
 .tech-tag.ts { color: #c9a6ff; border-color: rgba(201, 166, 255, 0.45); }
 .tech-tag.ruby { color: #ff6b8a; border-color: rgba(255, 107, 138, 0.45); }
 .tech-tag.cpp { color: #9db7ff; border-color: rgba(157, 183, 255, 0.45); }
-.tech-tag.python { color: #c9a227; border-color: rgba(201, 162, 39, 0.45); }
-.tech-tag.elixir { color: #c1121f; border-color: rgba(193, 18, 31, 0.45); }
+.tech-tag.python { color: #ff9a3c; border-color: rgba(255, 154, 60, 0.45); }
+.tech-tag.elixir { color: #ff4fa3; border-color: rgba(255, 79, 163, 0.45); }
 .tech-tag.tauri { color: #74b8b4; border-color: rgba(116, 184, 180, 0.45); }
 
 .skills-category, .doctrine-card { padding: 20px; }
@@ -523,13 +541,13 @@ html[data-theme="daybreak"] .hero-vignette {
 .skill-bar {
   height: 6px;
   border-radius: 99px;
-  background: rgba(193, 18, 31, 0.18);
+  background: rgba(255, 79, 163, 0.18);
   overflow: hidden;
 }
 .skill-fill {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #c1121f, #8a1c24);
+  background: linear-gradient(90deg, #4fe3f0, #ff4fa3);
   box-shadow: 0 0 10px var(--glow-pink);
   transition: width 0.9s ease;
 }
@@ -560,11 +578,11 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 .contact-btn svg { width: 18px; height: 18px; }
 .contact-btn--primary {
-  background: #c1121f;
-  color: #f5f1e8;
+  background: var(--accent);
+  color: var(--ink);
   border-color: transparent;
 }
-.contact-btn--primary:hover { color: #f5f1e8; }
+.contact-btn--primary:hover { color: var(--ink); }
 
 .footer {
   position: relative;
@@ -576,7 +594,7 @@ html[data-theme="daybreak"] .hero-vignette {
   width: min(420px, 56%);
   height: 1px;
   margin: 0 auto 36px;
-  background: linear-gradient(90deg, transparent, #8f959c 18%, #c1121f 50%, #8f959c 82%, transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-2) 18%, var(--accent) 50%, var(--accent-2) 82%, transparent);
 }
 .footer-content { position: relative; z-index: 1; }
 .footer-kicker {
@@ -607,8 +625,8 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 .footer-meta a { color: var(--accent-3); }
 
-/* Knight A in the bottom-left corner of every page. A button: hover, focus, click. */
-.corner-knight {
+/* The pixel synthalorian in the bottom-left corner of every page. A button: hover, focus, click. */
+.corner-sprite {
   position: fixed;
   left: 1rem;
   bottom: 1rem;
@@ -623,7 +641,7 @@ html[data-theme="daybreak"] .hero-vignette {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-.corner-knight img {
+.corner-sprite img {
   width: 100%;
   height: 100%;
   image-rendering: pixelated;
@@ -632,13 +650,13 @@ html[data-theme="daybreak"] .hero-vignette {
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .55));
   transition: transform .18s ease-out;
 }
-.corner-knight:hover img, .corner-knight:focus-visible img { transform: translateY(-3px); }
-.corner-knight:focus { outline: none; }
-.corner-knight:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
-@media (max-width: 860px) { .corner-knight { width: 64px; height: 56px; left: .6rem; bottom: .6rem; } }
-@media (max-width: 480px) { .corner-knight { display: none; } }
-@media (prefers-reduced-motion: reduce) { .corner-knight img { transition: none; } .corner-knight:hover img, .corner-knight:focus-visible img { transform: none; } }
-@media print { .corner-knight { display: none; } }
+.corner-sprite:hover img, .corner-sprite:focus-visible img { transform: translateY(-3px); }
+.corner-sprite:focus { outline: none; }
+.corner-sprite:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
+@media (max-width: 860px) { .corner-sprite { width: 64px; height: 56px; left: .6rem; bottom: .6rem; } }
+@media (max-width: 480px) { .corner-sprite { display: none; } }
+@media (prefers-reduced-motion: reduce) { .corner-sprite img { transition: none; } .corner-sprite:hover img, .corner-sprite:focus-visible img { transform: none; } }
+@media print { .corner-sprite { display: none; } }
 
 .reveal-ready [data-reveal] {
   opacity: 0;
@@ -719,10 +737,10 @@ html[data-theme="daybreak"] .hero-vignette {
     gap: 0;
     margin: 0;
     padding: 8px 0 14px;
-    background: rgba(16, 16, 20, 0.97);
+    background: rgba(20, 10, 38, 0.97);
     border-bottom: 1px solid var(--border);
   }
-  html[data-theme="daybreak"] .nav-menu { background: rgba(244, 239, 230, 0.98); }
+  html[data-theme="daybreak"] .nav-menu { background: rgba(247, 243, 253, 0.98); }
   .nav-menu.open { display: flex; }
   .nav-link { display: block; padding: 12px 22px; }
   .hero-readout { grid-template-columns: 1fr; }
@@ -738,3 +756,131 @@ html[data-theme="daybreak"] .hero-vignette {
   }
   .reveal-ready [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* =========================================================
+   Synthwave '84 layer: gunship cover, sunset, perspective grid,
+   the cockpit avatar and the pixel synthalorian. Decorative
+   layers are absolutely positioned (no layout shift); motion is
+   transform-only and stops under prefers-reduced-motion.
+   ========================================================= */
+body {
+  font-size: 1.0625rem;
+  font-synthesis: none;
+  background:
+    radial-gradient(900px 420px at 82% 4%, rgba(255, 79, 163, 0.16), transparent 62%),
+    radial-gradient(700px 420px at -8% 30%, rgba(79, 227, 240, 0.06), transparent 60%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg-dark) 42%, var(--bg-abyss));
+}
+strong, b { font-weight: 400; color: var(--text-bright); }
+.nav-sigil img { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+.logo-text span { color: var(--accent-2); }
+
+.hero-sky { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.hero-sky picture, .hero-sky img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
+.hero-sky img { opacity: 0.5; }
+.hero-sky::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(20, 10, 38, 0.96) 0%, rgba(20, 10, 38, 0.9) 48%, rgba(20, 10, 38, 0.5) 100%),
+    linear-gradient(180deg, rgba(20, 10, 38, 0) 50%, rgba(20, 10, 38, 0.92) 100%);
+}
+html[data-theme="daybreak"] .hero-sky img { opacity: 0.22; }
+html[data-theme="daybreak"] .hero-sky::before {
+  background: linear-gradient(90deg, rgba(247, 243, 253, 0.97) 0%, rgba(247, 243, 253, 0.92) 50%, rgba(247, 243, 253, 0.6) 100%);
+}
+.hero-grid-floor {
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  bottom: 0;
+  height: 26%;
+  z-index: 2;
+  overflow: hidden;
+  opacity: 0.55;
+  transform: perspective(320px) rotateX(58deg);
+  transform-origin: 50% 100%;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 45%);
+}
+.hero-grid-floor::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -48px; bottom: 0;
+  background-image:
+    linear-gradient(rgba(255, 79, 163, 0.6) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(79, 227, 240, 0.4) 2px, transparent 2px);
+  background-size: 48px 48px;
+  animation: gridRun 2.4s linear infinite;
+  will-change: transform;
+}
+@keyframes gridRun { to { transform: translate3d(0, 48px, 0); } }
+
+.hero-avatar {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: min(300px, 30vw);
+  isolation: isolate;
+  pointer-events: none;
+}
+.hero-avatar::before {
+  /* striped outrun sun behind the cockpit */
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -16%;
+  top: -14%;
+  width: 82%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffd23f 0%, #ff9a3c 38%, #ff4fa3 72%, #8a2bb8 100%);
+  -webkit-mask-image: repeating-linear-gradient(180deg, #000 0 12px, transparent 12px 17px);
+  mask-image: repeating-linear-gradient(180deg, #000 0 12px, transparent 12px 17px);
+  animation: sunBreathe 9s ease-in-out infinite alternate;
+}
+@keyframes sunBreathe { to { transform: translate3d(0, 6px, 0) scale(1.02); } }
+.hero-avatar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border: 3px solid transparent;
+  background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box, linear-gradient(160deg, #ff4fa3, #3b2563 45%, #4fe3f0) border-box;
+  box-shadow: 0 0 32px rgba(255, 79, 163, 0.28);
+}
+.hero-title .line-accent { text-shadow: 0 0 20px rgba(255, 79, 163, 0.45); }
+html[data-theme="daybreak"] .hero-title .line-accent { text-shadow: none; }
+
+.company-flag img { display: block; width: 72px; height: 63px; image-rendering: pixelated; }
+
+.footer-sprite { display: block; width: 64px; height: 64px; margin: 0 auto 14px; image-rendering: pixelated; }
+.art-credit { margin: 10px 0 0; font-size: 0.78rem; color: var(--text-muted); }
+.corner-sprite { width: 64px; height: 64px; }
+.pixel { image-rendering: pixelated; }
+
+@media (max-width: 900px) {
+  .hero-avatar { position: relative; width: 200px; margin: 0 0 22px; right: auto; top: auto; }
+  .hero-sky::before { background: linear-gradient(180deg, rgba(20, 10, 38, 0.8) 0%, rgba(20, 10, 38, 0.92) 40%, rgba(20, 10, 38, 0.95) 100%); }
+  html[data-theme="daybreak"] .hero-sky::before { background: rgba(247, 243, 253, 0.94); }
+  .hero-grid-floor { height: 14%; }
+}
+@media (max-width: 860px) { .corner-sprite { width: 64px; height: 64px; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-grid-floor::before, .hero-avatar::before { animation: none !important; }
+}
+@media print { .hero-sky, .corner-sprite { display: none; } }
+
+/* Daybreak (light) keeps AA contrast on the language tags */
+html[data-theme="daybreak"] .tech-tag.rust { color: #a8401a; }
+html[data-theme="daybreak"] .tech-tag.dart, html[data-theme="daybreak"] .tech-tag.flutter { color: #0b5f8a; }
+html[data-theme="daybreak"] .tech-tag.ts { color: #6a3fb5; }
+html[data-theme="daybreak"] .tech-tag.ruby { color: #a3173f; }
+html[data-theme="daybreak"] .tech-tag.cpp { color: #2f4fb0; }
+html[data-theme="daybreak"] .tech-tag.python { color: #8a4a00; }
+html[data-theme="daybreak"] .tech-tag.elixir { color: #a0125f; }
+html[data-theme="daybreak"] .tech-tag.tauri { color: #2c6b67; }
+html[data-theme="daybreak"] .btn-secondary,
+html[data-theme="daybreak"] .hero-readout div { background: rgba(255, 255, 255, 0.72); }
