@@ -138,8 +138,9 @@ html[data-theme="daybreak"] .navbar.scrolled {
   color: var(--text-bright);
 }
 .nav-sigil {
-  width: 28px;
-  height: 28px;
+  flex: none;
+  width: 32px;
+  height: 32px;
   color: var(--accent);
 }
 .nav-sigil svg { width: 100%; height: 100%; display: block; }
@@ -625,14 +626,21 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 .footer-meta a { color: var(--accent-3); }
 
-/* The pixel synthalorian in the bottom-left corner of every page. A button: hover, focus, click. */
+/* The pixel synthalorian, fixed in the bottom-left corner at every width.
+   Below 1360px a native 32px sprite tucked into the 8px corner (it only
+   grazes the 20px page gutter while scrolling; the footer's 108px bottom
+   padding already clears it); at 1360px and up the gutter beside the
+   1120px container is wider than the 64px sprite, so it rides there at full
+   size. Fixed + explicit size: never in layout, CLS 0. A button: hover,
+   focus, click. */
 .corner-sprite {
+  --cs: 32px;
   position: fixed;
-  left: 1rem;
-  bottom: 1rem;
+  left: .5rem;
+  bottom: .5rem;
   z-index: 30;
-  width: 80px;
-  height: 70px;
+  width: 32px;
+  height: 32px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -640,6 +648,9 @@ html[data-theme="daybreak"] .hero-vignette {
   line-height: 0;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+}
+@media (min-width: 1360px) {
+  .corner-sprite { --cs: 64px; left: 1rem; bottom: 1rem; width: 64px; height: 64px; }
 }
 .corner-sprite img {
   width: 100%;
@@ -653,8 +664,6 @@ html[data-theme="daybreak"] .hero-vignette {
 .corner-sprite:hover img, .corner-sprite:focus-visible img { transform: translateY(-3px); }
 .corner-sprite:focus { outline: none; }
 .corner-sprite:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
-@media (max-width: 860px) { .corner-sprite { width: 64px; height: 56px; left: .6rem; bottom: .6rem; } }
-@media (max-width: 480px) { .corner-sprite { display: none; } }
 @media (prefers-reduced-motion: reduce) { .corner-sprite img { transition: none; } .corner-sprite:hover img, .corner-sprite:focus-visible img { transform: none; } }
 @media print { .corner-sprite { display: none; } }
 
@@ -772,7 +781,7 @@ body {
     linear-gradient(180deg, var(--bg-deep), var(--bg-dark) 42%, var(--bg-abyss));
 }
 strong, b { font-weight: 400; color: var(--text-bright); }
-.nav-sigil img { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+.nav-sigil .brand-sun { shape-rendering: crispEdges; }  /* code-drawn pixel sunset, 1:1 at 32px */
 .logo-text span { color: var(--accent-2); }
 
 .hero-sky {
@@ -861,7 +870,6 @@ html[data-theme="daybreak"] .hero-title .line-accent { text-shadow: none; }
 .company-flag img { display: block; width: 72px; height: 63px; image-rendering: pixelated; }
 
 .footer-sprite { display: block; width: 64px; height: 64px; margin: 0 auto 14px; image-rendering: pixelated; }
-.corner-sprite { width: 64px; height: 64px; }
 .pixel { image-rendering: pixelated; }
 
 @media (max-width: 900px) {
@@ -870,7 +878,6 @@ html[data-theme="daybreak"] .hero-title .line-accent { text-shadow: none; }
   html[data-theme="daybreak"] .hero-sky::before { background: rgba(247, 243, 253, 0.94); }
   .hero-grid-floor { height: 14%; }
 }
-@media (max-width: 860px) { .corner-sprite { width: 64px; height: 64px; } }
 @media (prefers-reduced-motion: reduce) {
   .hero-grid-floor::before, .hero-avatar::before { animation: none !important; }
   .skill-fill { transition: none; }
@@ -888,3 +895,43 @@ html[data-theme="daybreak"] .tech-tag.elixir { color: #a0125f; }
 html[data-theme="daybreak"] .tech-tag.tauri { color: #2c6b67; }
 html[data-theme="daybreak"] .btn-secondary,
 html[data-theme="daybreak"] .hero-readout div { background: rgba(255, 255, 255, 0.72); }
+
+/* ---------- Corner sprite: one-shot moves ----------
+   Click cycles thinking, working, success, error, blaster, jetpack. Each is a
+   6-frame sheet (native 32px below 1360px, 64px at and above), stepped once
+   with steps(6) at the move's own frame time, then sprite.js returns to idle. */
+.corner-sprite .cs-fx {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(var(--cs) * 6) var(--cs);
+  image-rendering: pixelated;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .55));
+}
+.corner-sprite[data-move] img { visibility: hidden; }
+.corner-sprite[data-move] .cs-fx { display: block; animation: cs-play var(--cs-dur, 720ms) steps(6) 1 backwards; }
+.corner-sprite[data-move="thinking"] { --cs-dur: 1440ms; }
+.corner-sprite[data-move="working"]  { --cs-dur: 660ms; }
+.corner-sprite[data-move="success"]  { --cs-dur: 780ms; }
+.corner-sprite[data-move="error"]    { --cs-dur: 840ms; }
+.corner-sprite[data-move="blaster"]  { --cs-dur: 660ms; }
+.corner-sprite[data-move="jetpack"]  { --cs-dur: 600ms; }
+@keyframes cs-play { from { background-position: 0 0; } to { background-position: calc(var(--cs) * -6) 0; } }
+.corner-sprite:hover .cs-fx, .corner-sprite:focus-visible .cs-fx { transform: translateY(-3px); }
+.corner-sprite[data-move="thinking"] .cs-fx { background-image: url(/img/sprite/synthalorian-thinking-sheet-32.png); }
+.corner-sprite[data-move="working"] .cs-fx { background-image: url(/img/sprite/synthalorian-working-sheet-32.png); }
+.corner-sprite[data-move="success"] .cs-fx { background-image: url(/img/sprite/synthalorian-success-sheet-32.png); }
+.corner-sprite[data-move="error"] .cs-fx { background-image: url(/img/sprite/synthalorian-error-sheet-32.png); }
+.corner-sprite[data-move="blaster"] .cs-fx { background-image: url(/img/sprite/synthalorian-blaster-sheet-32.png); }
+.corner-sprite[data-move="jetpack"] .cs-fx { background-image: url(/img/sprite/synthalorian-jetpack-sheet-32.png); }
+@media (min-width: 1360px) {
+  .corner-sprite[data-move="thinking"] .cs-fx { background-image: url(/img/sprite/synthalorian-thinking-sheet-64.png); }
+  .corner-sprite[data-move="working"] .cs-fx { background-image: url(/img/sprite/synthalorian-working-sheet-64.png); }
+  .corner-sprite[data-move="success"] .cs-fx { background-image: url(/img/sprite/synthalorian-success-sheet-64.png); }
+  .corner-sprite[data-move="error"] .cs-fx { background-image: url(/img/sprite/synthalorian-error-sheet-64.png); }
+  .corner-sprite[data-move="blaster"] .cs-fx { background-image: url(/img/sprite/synthalorian-blaster-sheet-64.png); }
+  .corner-sprite[data-move="jetpack"] .cs-fx { background-image: url(/img/sprite/synthalorian-jetpack-sheet-64.png); }
+}
