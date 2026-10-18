@@ -758,7 +758,7 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 
 /* =========================================================
-   Synthwave '84 layer: gunship cover, sunset, perspective grid,
+   Synthwave '84 layer: purple sky, sunset, perspective grid,
    the cockpit avatar and the pixel synthalorian. Decorative
    layers are absolutely positioned (no layout shift); motion is
    transform-only and stops under prefers-reduced-motion.
@@ -775,9 +775,13 @@ strong, b { font-weight: 400; color: var(--text-bright); }
 .nav-sigil img { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
 .logo-text span { color: var(--accent-2); }
 
-.hero-sky { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
-.hero-sky picture, .hero-sky img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
-.hero-sky img { opacity: 0.5; }
+.hero-sky {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(180deg, #140a26 0%, #2a0f4a 52%, #5a1659 76%, #140a26 100%);
+}
 .hero-sky::before {
   content: "";
   position: absolute;
@@ -787,7 +791,7 @@ strong, b { font-weight: 400; color: var(--text-bright); }
     linear-gradient(90deg, rgba(20, 10, 38, 0.96) 0%, rgba(20, 10, 38, 0.9) 48%, rgba(20, 10, 38, 0.5) 100%),
     linear-gradient(180deg, rgba(20, 10, 38, 0) 50%, rgba(20, 10, 38, 0.92) 100%);
 }
-html[data-theme="daybreak"] .hero-sky img { opacity: 0.22; }
+html[data-theme="daybreak"] .hero-sky { background: linear-gradient(180deg, #f7f3fd 0%, #f1e6fb 60%, #fbe3ef 82%, #f7f3fd 100%); }
 html[data-theme="daybreak"] .hero-sky::before {
   background: linear-gradient(90deg, rgba(247, 243, 253, 0.97) 0%, rgba(247, 243, 253, 0.92) 50%, rgba(247, 243, 253, 0.6) 100%);
 }
@@ -857,7 +861,6 @@ html[data-theme="daybreak"] .hero-title .line-accent { text-shadow: none; }
 .company-flag img { display: block; width: 72px; height: 63px; image-rendering: pixelated; }
 
 .footer-sprite { display: block; width: 64px; height: 64px; margin: 0 auto 14px; image-rendering: pixelated; }
-.art-credit { margin: 10px 0 0; font-size: 0.78rem; color: var(--text-muted); }
 .corner-sprite { width: 64px; height: 64px; }
 .pixel { image-rendering: pixelated; }
 
