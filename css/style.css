@@ -767,7 +767,7 @@ html[data-theme="daybreak"] .hero-vignette {
 }
 
 /* =========================================================
-   Synthwave '84 layer: purple sky, sunset, perspective grid,
+   Synthwave '84 layer: ship cover, purple sky, sunset, perspective grid,
    the cockpit avatar and the pixel synthalorian. Decorative
    layers are absolutely positioned (no layout shift); motion is
    transform-only and stops under prefers-reduced-motion.
@@ -791,6 +791,9 @@ strong, b { font-weight: 400; color: var(--text-bright); }
   pointer-events: none;
   background: linear-gradient(180deg, #140a26 0%, #2a0f4a 52%, #5a1659 76%, #140a26 100%);
 }
+.hero-sky picture, .hero-sky img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; }
+.hero-sky img { opacity: 0.5; }
+html[data-theme="daybreak"] .hero-sky img { opacity: 0.22; }
 .hero-sky::before {
   content: "";
   position: absolute;

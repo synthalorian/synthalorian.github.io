@@ -21,7 +21,8 @@ Knight A, the Blackshield Company mascot, appears only beside the Blackshield Co
 - `js/sprite.js` — the corner synthalorian (idle, walk on hover/focus, click plays the next move)
 - `fonts/3270-nerd-font.woff2` — self-hosted 3270 Nerd Font (Nerd Fonts v3.5.1, Latin subset), license in `fonts/3270-NERD-FONT-LICENSE.txt`
 - `img/synthalorian-avatar-*.{webp,jpg}` — cockpit avatar, 460 and 920 px
+- `img/cover-ship-1280.jpg`, `img/cover-ship-768.jpg` (+ WebP) — the ship hero cover
 - `img/og-synthalorian.jpg` — 1200×630 share card
 - `img/sprite/` — pixel synthalorian: idle, walk and error GIFs, 6-frame move sheets (32/64px), static PNGs
 - `img/knight/` — Knight A animated SVGs (Blackshield Company mascot)
-- `favicon.svg` — pixel synthwave sunset (same art as the nav icon); `apple-touch-icon.png` — the cockpit avatar
+- `favicon.svg` — pixel synthwave sunset (same art as the nav icon); `apple-touch-icon.png` — the gunship cockpit avatar
