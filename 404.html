@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="synthwave">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>Lost signal | Synth</title>
-  <link rel="preload" href="/fonts/3270-nerd-font.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=ship1">
-  <meta name="theme-color" content="#140a26">
-  <link rel="icon" href="/favicon.svg?v=sunset" type="image/svg+xml">
+  <title>Not found | synth</title>
+  <link rel="preload" href="/fonts/cinzel-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/blackshield.css?v=bs1">
+  <link rel="stylesheet" href="/css/knight.css?v=bs1">
+  <link rel="stylesheet" href="/css/style.css?v=bs1">
+  <meta name="theme-color" content="#101014">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="/favicon.svg?v=bs1" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
-  <main style="min-height:100vh;display:flex;align-items:center;padding:2rem">
-    <div class="container" style="display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem">
-      <picture><source media="(prefers-reduced-motion: reduce)" srcset="/img/sprite/synthalorian-64.png"><img src="/img/sprite/synthalorian-error-64.gif" width="192" height="192" alt="The pixel synthalorian, visor glitching red and sparking: signal lost" class="pixel" style="width:192px;height:192px"></picture>
+  <main class="notfound">
+    <div class="container notfound-inner">
+      <span class="knight knight-error" style="--k:6"><img src="/img/knight/error.png" width="128" height="28" alt="The Blackshield knight, struck and staggering: page not found."></span>
       <span class="section-label">Error 404</span>
-      <h1 style="font-size:clamp(2.2rem,6vw,4rem);margin:0">Lost signal, pilot.</h1>
-      <p style="max-width:46ch;margin:0;color:var(--text-secondary)">This sector of the grid is empty. The page was never built, or it has moved on. Plot a course home.</p>
-      <p style="margin:.5rem 0 0"><a class="btn btn-primary" href="/">Back to home base</a></p>
+      <h1>Nothing at this gate.</h1>
+      <p>The page was never built, or it has moved. Head back to the keep.</p>
+      <p><a class="btn btn-primary" href="/">Back to home</a></p>
     </div>
   </main>
-  <button type="button" class="corner-sprite" data-sprite-base="/img/sprite/" aria-label="The pixel synthalorian. Hover to make him walk; press to play his next move."><picture><source media="(prefers-reduced-motion: reduce) and (min-width: 1360px)" srcset="/img/sprite/synthalorian-64.png"><source media="(prefers-reduced-motion: reduce)" srcset="/img/sprite/synthalorian-32.png"><img src="/img/sprite/synthalorian-idle-64.gif" width="64" height="64" alt="" decoding="async"></picture><span class="cs-fx" aria-hidden="true"></span></button>
-  <script src="/js/sprite.js?v=moves1" defer></script>
 </body>
 </html>

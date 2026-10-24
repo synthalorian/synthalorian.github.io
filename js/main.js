@@ -1,41 +1,9 @@
 /* ============================================
-   SYNTH PORTFOLIO — SYNTHWAVE '84 INTERACTIVITY
+   SYNTH PORTFOLIO: INTERACTIVITY
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // =====================================================
-  // THEME TOGGLE — synthwave (default) ↔ daybreak
-  // =====================================================
-  const themeToggle = document.getElementById('theme-toggle');
-  const html = document.documentElement;
-  const STORAGE_KEY = 'synth-theme';
-
-  const normalizeTheme = (theme) => {
-    if (theme === 'daybreak' || theme === 'ironlight' || theme === 'cyberlight') return 'daybreak';
-    return 'synthwave';
-  };
-
-  const applyTheme = (theme) => {
-    const normalized = normalizeTheme(theme);
-    html.setAttribute('data-theme', normalized);
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    if (metaTheme) {
-      metaTheme.setAttribute('content', normalized === 'daybreak' ? '#f7f3fd' : '#140a26');
-    }
-  };
-
-  const savedTheme = localStorage.getItem(STORAGE_KEY);
-  applyTheme(savedTheme || 'synthwave');
-  html.classList.add('reveal-ready');
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const current = normalizeTheme(html.getAttribute('data-theme'));
-      const next = current === 'synthwave' ? 'daybreak' : 'synthwave';
-      applyTheme(next);
-      localStorage.setItem(STORAGE_KEY, next);
-    });
-  }
+  document.documentElement.classList.add('reveal-ready');
 
   // =====================================================
   // GITHUB API — shared repo payload
