@@ -1,29 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex">
-  <title>Not found | synth</title>
-  <link rel="preload" href="/fonts/cinzel-var.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/blackshield.css?v=bs1">
-  <link rel="stylesheet" href="/css/knight.css?v=bs1">
-  <link rel="stylesheet" href="/css/style.css?v=bs1">
-  <meta name="theme-color" content="#101014">
-  <meta name="color-scheme" content="dark">
-  <link rel="icon" href="/favicon.svg?v=bs1" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>synthalorian: page not found, redirecting</title>
+<meta http-equiv="refresh" content="0; url=https://synthalorian.pages.dev/">
+<link rel="canonical" href="https://synthalorian.pages.dev/">
+<meta name="description" content="This is the wave. The synthalorian site lives at synthalorian.pages.dev.">
+<meta name="theme-color" content="#1e0838">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:grid;place-items:center;padding:24px;background:#140527;color:#e0ccff;font:18px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden;position:relative}
+body::before{content:"";position:fixed;left:0;right:0;bottom:0;height:46vh;background:
+ linear-gradient(90deg,rgba(62,240,255,.28) 1px,transparent 1px) 0 0/64px 64px,
+ linear-gradient(0deg,rgba(181,123,255,.32) 1px,transparent 1px) 0 0/64px 64px,
+ linear-gradient(#1e0838,#0b0218);transform-origin:50% 0;transform:perspective(380px) rotateX(58deg) translateY(-8%);-webkit-mask-image:linear-gradient(transparent,#000 30%);mask-image:linear-gradient(transparent,#000 30%)}
+body::after{content:"";position:fixed;left:50%;bottom:40vh;width:min(46vw,300px);aspect-ratio:2/1;transform:translateX(-50%);border-radius:300px 300px 0 0;background:linear-gradient(#b57bff,#7b2cff);-webkit-mask-image:repeating-linear-gradient(180deg,#000 0 14px,transparent 14px 18px);mask-image:repeating-linear-gradient(180deg,#000 0 14px,transparent 14px 18px);opacity:.55}
+main{position:relative;z-index:1;max-width:34rem;padding:32px;border:1px solid #46287e;border-top:3px solid #3ef0ff;border-radius:6px;background:rgba(30,8,56,.92);box-shadow:0 0 40px -10px rgba(157,77,255,.8)}
+.mark{display:flex;align-items:center;gap:12px;margin:0 0 .75rem}
+.mark img{width:40px;height:40px;border-radius:50%;border:1px solid #9d4dff}
+.mark span{font-weight:700;letter-spacing:.04em}
+h1{margin:.2rem 0 .6rem;font-size:clamp(1.6rem,6vw,2.1rem);line-height:1.15;font-style:italic;background:linear-gradient(90deg,#b57bff,#3ef0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+p{margin:.4rem 0}
+a.go{display:inline-block;margin-top:1rem;padding:.7rem 1.2rem;border-radius:4px;background:#b57bff;color:#1e0838;font-weight:700;text-decoration:none}
+a.go:hover,a.go:focus-visible{background:#d6bcff;outline:2px solid #3ef0ff;outline-offset:3px}
+.url{margin-top:1rem;font-size:.95rem;color:#c8b0f4;overflow-wrap:anywhere}
+.url a{color:#3ef0ff}
+@media (max-width:420px){main{padding:24px 20px}}
+</style>
 </head>
 <body>
-  <main class="notfound">
-    <div class="container notfound-inner">
-      <span class="knight knight-error" style="--k:6"><img src="/img/knight/error.png" width="128" height="28" alt="The Blackshield knight, struck and staggering: page not found."></span>
-      <span class="section-label">Error 404</span>
-      <h1>Nothing at this gate.</h1>
-      <p>The page was never built, or it has moved. Head back to the keep.</p>
-      <p><a class="btn btn-primary" href="/">Back to home</a></p>
-    </div>
-  </main>
+<main>
+<p class="mark"><img src="/assets/mark-helm-56.png" alt="" width="40" height="40"><span>synthalorian</span></p>
+<h1>This is the wave.</h1>
+<p>That page is not here. The site lives at synthalorian.pages.dev, taking you there now.</p>
+<a class="go" href="https://synthalorian.pages.dev/">Go to synthalorian.pages.dev</a>
+<p class="url">If nothing happens, open <a href="https://synthalorian.pages.dev/">https://synthalorian.pages.dev/</a></p>
+</main>
 </body>
 </html>
